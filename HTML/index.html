@@ -17,28 +17,51 @@
       <!-- Consent Policy -->
 
 <!------------------------------------------------------------------------------------HEADER----------------------------------------------->
-       <header>
+       <header id="header">
         <div class="inner">
-            <div class="container">
+            <div class="header-container">
+            
+                <div class="header-menu">
 
-                <div class="logo">
-                 <a href="#">
-                   
-                    <img id="logo" src="C:\xampp\htdocs\Netmatters Website\images\Logo\main-logo.png" alt="Netmatters Logo">
-                
-                 </a>
-                </div>
-                    
-                <a class="mobile" id="phone" href="tel:01603704020">
-                    <span class="icon-phone-call"></span>
-                </a>
+                    <div class="logo-container">
+                        <a class="logo" href="#">
+                            <img src="C:\xampp\htdocs\Netmatters Website\images\Logo\main-logo.png" alt="Netmatters Logo">
+                        </a>
+                    </div>
+
+                    <div class="buttons">
+
+                        <span class="mobile" id="phone"> 
+                        <a href="tel:01603704020">
+                            <span class="icon-phone-call"></span>
+                        </a>
+                        </span>     
                         
-                 
-                <!-- <form  id="support" action="https://cwa-netmatters.screenconnect.com" target="_blank">
-                    <button input type="submit" value="Support"><span class="icon-mouse"></span> Support </button>
-                </form> -->
+                        <!-- <form  id="support" action="https://cwa-netmatters.screenconnect.com" target="_blank">
+                            <button input type="submit" value="Support"><span class="icon-mouse"></span> Support </button>
+                        </form> -->
+
+                        <button type="button" class="hamburger-button">   
+                            <div class="hamburger-menu">
+                                <div class="ham-bar ham-top"></div>
+                                <div class="ham-bar ham-mid"></div>
+                                <div class="ham-bar ham-bottom"></div>
+                            </div>
+                        </button> 
+
+                    </div>
+            </div>
+        
+        <form class="search-barm">
+            <input type="search" placeholder="Search..." id="search-bar">
+            <button><span class="icon-search"></span></button>
+        </form>
+        
+    </div>
+</div>
+</header>
 <!---------------------------------------------------------- Hamburger menu side-bar------------------------------------------------------------------->
-                    <div class="off-screen-menu sidebar">    
+                    <!-- <div class="off-screen-menu sidebar">    
                             <div class="container collapsed" role="menubar">
                                 <ul>
                                         <li class="contact-us side-item">
@@ -216,19 +239,459 @@
                                         </li>
 
                                         <li class="side-item">
-                                            <a href="#social-media-marketing" >
-                                                <span class="link-name">Social Media Marketing</span>
-                                            </a>
+                                        <a href="#social-media-marketing" >
+                                            <span class="link-name">Social Media Marketing</span>
+                                        </a>
                                         </li>
-
-                                        <li class="side-item">
-                                            <a href="#content-marketing">
-                                                <span class="link-name">Content Marketing</span>
-                                            </a>
-                                         </li>
-                                </ul>
+                                        
+                                                <li class="side-item">
+                                        <a href="#content-marketing" >
+                                                <span class="link-icon fa fa-pencil"></span>
+                                            </span>
+                                            <span class="link-name">Content Marketing</span>
+                                        </a>
+                                                                            </li>
+                                        </ul>
                         </div>
-<!------------------------------------------------------------------------------View Our Work----------------------------------------------------------------------->                                    
+                                        </li>
+                                                        <li data-key="telecoms" class="telecoms"  >
+                                            <a href="#telecoms-services" >
+                                                <span class="icon-phone_in_talk"></span>
+                                                <small>Telecoms</small>
+                                                Services
+                                            </a>
+                                                                    <div class="  sub-menu-banner">
+                            <ul class="container sub-menu" role="menu">
+                                <li class="h2 sub-menu-banner-title">
+                                    Our Telecoms Services
+                                    
+                                </li>
+                                                <li class="side-item">
+                                        <a href="#telecoms-services/business-mobile" >
+                                                <span class="link-icon fa fa-ticket"></span>
+                                            </span>
+                                            <span class="link-name">Business Mobile</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#telecoms-services/hosted-business-voip" >
+                                                <span class="link-icon fa fa-phone"></span>
+                                            </span>
+                                            <span class="link-name">Hosted VoIP Provider</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#telecoms-services/business-voip" >
+                                                <span class="link-icon fa fa-phone-square"></span>
+                                            </span>
+                                            <span class="link-name">Business VoIP Systems</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#telecoms-services/business-broadband-provider" >
+                                                <span class="link-icon fa fa-tachometer"></span>
+                                            </span>
+                                            <span class="link-name">Business Broadband</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#telecoms-services/leased-lines-provider" >
+                                                <span class="link-icon fa icon-handshake-o"></span>
+                                            </span>
+                                            <span class="link-name">Leased Lines Provider</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#telecoms-services/3cx-systems" >
+                                                <span class="link-icon mdi-notification-phone-in-talk"></span>
+                                            </span>
+                                            <span class="link-name">3CX Systems</span>
+                                        </a>
+                                                                            </li>
+                                        </ul>
+                        </div>
+                                        </li>
+                                                        <li data-key="web" class="web   >
+                                            <a href="#web-design" >
+                                                <span class="icon-code"></span>
+                                                <small>Web</small>
+                                                Design
+                                            </a>
+                                                                    <div class="  sub-menu-banner">
+                            <ul class="container sub-menu" role="menu">
+                                <li class="h2 sub-menu-banner-title">
+                                    Our Web Design
+                                    Services
+                                </li>
+                                                <li class="side-item">
+                                        <a href="#web-design/bespoke-website-design" >
+                                                <span class="link-icon fa fa-pencil"></span>
+                                            </span>
+                                            <span class="link-name">Bespoke Website Design</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#web-design/ecommerce-development" >
+                                                <span class="link-icon glyphicon glyphicon-shopping-cart"></span>
+                                            </span>
+                                            <span class="link-name">eCommerce Website Design</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#web-design/pay-monthly-websites" >
+                                                <span class="link-icon fa fa-desktop"></span>
+                                            </span>
+                                            <span class="link-name">Pay Monthly Websites</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#web-design/branding" >
+                                                <span class="link-icon fa fa-bullhorn"></span>
+                                            </span>
+                                            <span class="link-name">Branding & Design</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#web-design/mobile-app-development" >
+                                                <span class="link-icon glyphicon glyphicon-phone"></span>
+                                            </span>
+                                            <span class="link-name">Mobile App Development</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#web-design/web-hosting" >
+                                                <span class="link-icon glyphicon glyphicon-cloud"></span>
+                                            </span>
+                                            <span class="link-name">Web Hosting</span>
+                                        </a>
+                                                                            </li>
+                                        </ul>
+                        </div>
+                                        </li>
+                                                        <li data-key="security" class="security   >
+                                            <a href="#cyber-security">
+                                                <span class="icon-security"></span>
+                                                <small>Cyber</small>
+                                                Security
+                                            </a>
+                                                                    <div class="  sub-menu-banner">
+                            <ul class="container sub-menu" role="menu">
+                                <li class="h2 sub-menu-banner-title">
+                                    Our Cyber Security
+                                    Services
+                                </li>
+                                                <li class="side-item">
+                                        <a href="#cyber-security/cyber-security-assessment" >
+                                                <span class="link-icon fa fa-clipboard"></span>
+                                            </span>
+                                            <span class="link-name">Cyber Security Assessment</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#cyber-security/cyber-security-management" >
+                                                <span class="link-icon fa fa-clock-o"></span>
+                                            </span>
+                                            <span class="link-name">Cyber Security Management</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#cyber-security/cyber-penetration-testing" >
+                                                <span class="link-icon fa fa-flask"></span>
+                                            </span>
+                                            <span class="link-name">Cyber Penetration Testing</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#cyber-security/cyber-essentials-certification" >
+                                                <span class="link-icon mdi-social-school"></span>
+                                            </span>
+                                            <span class="link-name">Cyber Essentials Certification</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#cyber-security/pci-compliance" >
+                                                <span class="link-icon mdi-hardware-security"></span>
+                                            </span>
+                                            <span class="link-name">PCI Compliance</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#cyber-security/hacker-prevention" >
+                                                <span class="link-icon fa fa-lock"></span>
+                                            </span>
+                                            <span class="link-name">Hacking Prevention</span>
+                                        </a>
+                                                                            </li>
+                                        </ul>
+                        </div>
+                                        </li>
+                                                        <li data-key="523" class="developer-course   >
+                                            <a href="#train-for-a-career-in-tech" >
+                                                <span class="mdi-social-school"></span>
+                                                <small>Developer</small>
+                                                Course
+                                            </a>
+                                                                    <div class="  sub-menu-banner">
+                            <ul class="container sub-menu" role="menu">
+                                <li class="h2 sub-menu-banner-title">
+                                    Our Developer Course
+                                    Services
+                                </li>
+                                                <li class="side-item">
+                                        <a href="#train-for-a-career-in-tech" >
+                                                <span class="link-icon fa fa-laptop"></span>
+                                            </span>
+                                            <span class="link-name">Train For A Career In Tech</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#skills-bootcamp" >
+                                                <span class="link-icon icon-code"></span>
+                                            </span>
+                                            <span class="link-name">Skills Bootcamp</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#train-for-a-career-in-tech/scion-scheme-frequently-asked-questions" >
+                                                <span class="link-icon fa fa-question-circle"></span>
+                                            </span>
+                                            <span class="link-name">Scion Scheme Frequently Asked Questions</span>
+                                        </a>
+                                                                            </li>
+                                                <li class="side-item">
+                                        <a href="#train-for-a-career-in-tech/scion-collaborators" >
+                                                <span class="link-icon fa icon-handshake-o"></span>
+                                            </span>
+                                            <span class="link-name">Scion Collaborators</span>
+                                        </a>
+                                                                            </li>
+                                        </ul>
+                        </div>
+                                        </li>
+                                                </ul>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    </div>  -->
+<!----------------------------------------------------------------------------try -->
+<section class="carousel" aria-label="Gallery">
+    <ol class="carousel__viewport">
+
+      <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+          <div class="text-overlay">
+            <h2><strong>The East Of England's Leading Technology Company</strong></h2>
+          <p>Perfomance-driven digital and technology services with complete transparency.</p>
+          <a href="#why-choose-us"><button class="slider-button">Why choose us?</button></a>
+        </div>
+        <div class="carousel-img">
+            <img src="C:\xampp\htdocs\Netmatters Website\images\background\home-web-design.jpg">
+        </div>
+          <div class="carousel__snapper"></div>        
+      </li>
+
+
+      <li id="carousel__slide2" tabindex="0"  class="carousel__slide">
+          >
+        <div class="carousel__snapper"></div>
+      </li>
+
+      <li id="carousel__slide3"
+          tabindex="0"
+          class="carousel__slide">
+        <div class="carousel__snapper"></div>
+    </li>
+
+      <li id="carousel__slide4"
+          tabindex="0"
+          class="carousel__slide">
+        <div class="carousel__snapper"></div>
+      </li>
+
+      <li id="carousel__slide5"
+          tabindex="0"
+          class="carousel__slide">
+        <div class="carousel__snapper"></div>
+      </li>
+
+      <li id="carousel__slide6"
+          tabindex="0"
+          class="carousel__slide">
+        <div class="carousel__snapper"></div>
+      </li>
+
+      <li id="carousel__slide7"
+          tabindex="0"
+          class="carousel__slide">
+        <div class="carousel__snapper"></div>
+      </li>
+
+    </ol>
+    <aside class="carousel__navigation">
+      <ol class="carousel__navigation-list">
+        
+        <li class="carousel__navigation-item">
+          <a href="#carousel__slide1"
+             class="carousel__navigation-button"></a>
+        </li>
+        <li class="carousel__navigation-item">
+          <a href="#carousel__slide2"
+             class="carousel__navigation-button"></a>
+        </li>
+        <li class="carousel__navigation-item">
+          <a href="#carousel__slide3"
+             class="carousel__navigation-button"></a>
+        </li>
+        <li class="carousel__navigation-item">
+          <a href="#carousel__slide4"
+             class="carousel__navigation-button"></a>
+        </li>
+        <li class="carousel__navigation-item">
+            <a href="#carousel__slide5"
+               class="carousel__navigation-button"></a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide6"
+               class="carousel__navigation-button"></a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide7"
+               class="carousel__navigation-button"></a>
+          </li>
+      </ol>
+    </aside>
+  </section>
+
+<!----------------------------------------------------------Sliding banner--------------------------------------------------------------------->
+                <!-- <div class="carousel-wrapper autoplay">
+                  <div class="carousel-container">
+                    
+                        <div id="slide-1">
+                            <img class="slick"src="C:\xampp\htdocs\Netmatters Website\images\background\home-east.webp">
+                                <h2><strong>The East Of England's Leading Technology Company</strong></h2>
+                                    <p>Perfomance-driven digital and technology services with complete transparency.</p>
+                                <a href="#why-choose-us"><button class="slider-button">Why choose us?</button></a>
+                        </div>
+
+                        <div id="slide-2">
+                            <img class="slick"src="C:\xampp\htdocs\Netmatters Website\images\background\home-bespoke software.webp">
+                                <h2><strong>Bespoke Software</strong></h2>
+                                <p>Delivering expert bespoke software solutions across a range of industries.</p>
+                                <a href="#Bespoke Software"><button class="slider-button">Find out more</button></a>
+                        </div>
+
+                        <div id="slide-3"> 
+                            <img class="slick"src="C:\xampp\htdocs\Netmatters Website\images\background\home-it.webp">
+                                <h2><strong>IT Support</strong></h2>
+                                <p>Fast and cost-effective IT support services for your business.</p>
+                                <a href="#It Support"><button class="slider-button">Find out more</button></a>
+                        </div>
+
+                        <div id="slide-4">
+                            <img class="slick"src="C:\xampp\htdocs\Netmatters Website\images\background\home-digital.webp">
+                                    <h2><strong>Digital Marketing</strong></h2>
+                                    <p>Generating your new business through results-driven marketing activities.</p>
+                                <a href="#Digital Marketing"><button class="slider-button">Find out more</button></a>
+                        </div>
+
+                        <div id="slide-5">
+                            <img class="slick" src="C:\xampp\htdocs\Netmatters Website\images\background\home-telecome.webp">
+                                    <h2><strong>Telecoms Services</strong></h2>
+                                <p>A new approach to connectivity, see how we can help your business.</p>
+                                <a href="#Telecoms Services"><button class="slider-button">Find out more</button></a>
+                        </div>
+
+                        <div  id="slide-6">
+                            <img class="slick"src="C:\xampp\htdocs\Netmatters Website\images\background\home-web-design.jpg">
+                                    <h2><strong>Web Design</strong></h2>
+                                <p>For businesses looking to make a strong and effective first impression..</p>
+                                <a href="#Wed Design"><button class="slider-button">Find out more</button></a>
+                        </div>
+
+                        <div id="slide-7">
+                            <img class="slick"src="C:\xampp\htdocs\Netmatters Website\images\background\home-cyber.webp">
+                                    <h2><strong>Cyber Security</strong></h2>
+                                <p>Keeping businesses and their customers sensitive information protected.</p>
+                                <a href="#Cyber Security"><button class="slider-button">Find out more</button></a>
+                        </div>
+                   </div> 
+                </div>  ---> 
+
+<!----------------------------------------------------------------Main boxes--------------------------->
+                <main class="middle">
+                    <div class="container-middle">
+                    <div class="middle service-box">
+
+                        <div class="mid-header"><h2><strong>Our Services</strong></h2></div>
+
+                        <div class="col-icon">
+                            <span class="icon-software" id="bespoke-software">
+                                <span class="icon-cicles icon-laptop "></span>
+                                <span class="h2"><h2>Bespoke Software</h2></span>
+                                <span class="p"><p>Bespoke software solutions for all your business needs including integrations and reporting.</p></span>
+                                <button class="box-button">Read More</button>
+                            </span>
+                        </div>
+
+                        <div class="col-icon">
+                            <span class="icon-software" id="IT Support">
+                                <a href="/it-support"></a>
+                                <span class="icon-cicles icon-display"></span>
+                                <h2>IT Support</h2>
+                                <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
+                                <button class="box-button">Read More</button>
+                            </span>
+                        </div>
+
+                        <div class="col-icon">
+                            <span class="icon-software" id="Digital Marketing">
+                                <a href="/digital-marketing"></a>
+                                <span class=" icon-cicles icon-bar-graph"></span>
+                                <h2>Digital Marketing</h2>
+                                <p>Driven brand awareness &amp; ROI through creative digital marketing campaigns.</p>
+                                <button class="box-button">Read More</button>
+                            </span>
+                        </div>
+
+                        <div class="col-icon">
+                            <span class="icon-software" id="Telecoms Services">
+                                <a href="/telecoms-services"></a>
+                                <span class=" icon-cicles icon-phone-call"></span>
+                                <h2>Telecoms Services</h2>
+                                <p>Business telephony solutions including mobile &amp; connectivity solutions.</p>
+                                <button class="box-button">Read More</button>
+                            </span>
+                        </div>
+
+                        <div class="col-icon">
+                            <span class="icon-software" id="Web Design">
+                                <a href="/web-design"></a>
+                                <span class=" icon-cicles icon-embed"></span>
+                                <h2>Web Design</h2>
+                                <p>User-centric design for businesses looking to make a lasting impression.</p>
+                                <button class="box-button">Read More</button>
+                            </span>
+                        </div>
+
+                        <div class="col-icon">
+                            <span class="icon-software" id="Cyber Security">
+                                <a href="/cyber-security"></a>
+                                <span class="icon-cicles icon-security"></span>
+                                <h2>Cyber Security </h2>
+                                <p>Prevention, testing, consultancy &amp; breach management services.</p>
+                                <button class="box-button">Read More</button>
+                            </span>
+                        </div>
+
+                        <div class="col-icon">
+                        <span class="icon-cicles icon-software" id="Developer Training"><a href="/developer-training"></a><span class="icon-graduation-cap"></span><h2>Developer Training </h2>
+                            <p>Web design &amp; software training courses designed to secure a job in tech.</p>
+                            <button class="box-button">Read More</button>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                </main>
 
                     <a class="our-work" href="/View Our Work" href="/case-studies">View Our Work<em class="icon-arrow-right"></em></a>
                     <div class="Welcome-To-Netmatters slider">
@@ -388,9 +851,11 @@
                                                         </div>
                                     </div>
 <!-----------------------------------------------------------------------------Clients------------------------------------------------------->
-                                <span class="clients-list">
+                                <span class="clients-list sliding ">
+                                    <div class="sliding-track sliding-partners ">
+                                       
 
-                                    <span id="black-swan">
+                                   
                                         <!-- <div class="box">
                                                 <h3>Black Swan Care Group</h3>
                                             <p>Black Swan Care Group own and manage 21 high-quality care and residential homes with a focus on
@@ -399,59 +864,60 @@
                                             <a href="#case-studies/black-swan-care-group-home-management-software"<button>View Our Case Study</button></a>
                                         </div>
                                          -->
-                                            <picture>
+                                            <picture class="logo-img">
                                                 <img src="C:\xampp\htdocs\Netmatters Website\images\clients\black_swan_logo.webp" alt="Black Swan Logo">
                                             </picture>
-                                    </span>   
+                                      
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\xupes_logo.webp" alt="Xupes Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\beat_logo.webp" alt="Beat Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\survey_solutions_logo.webp" alt="Survey Solutions Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\girl_guides_anglia_logo.webp" alt="Girl Guiding Anglia Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\sweetzy_logo.webp" alt="Sweetzy Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\howespercivallogo.png" alt="Howes Percival Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\girl_guides_anglia_logo.webp" alt="Girls Day School Trust Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\ashcroftlogo_landscape_goldblack_DP60P-small.png" alt="Ashcroft Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\onetravellerlogo_white_figuire.png"alt="One Traveller Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\searles_logo.jpg" alt="Searles Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\busseys_logo.png" alt="Busseys Logo">
                                         </picture>
 
-                                        <picture>
+                                        <picture class="logo-img">
                                             <img src="C:\xampp\htdocs\Netmatters Website\images\clients\crane_logo.png" alt="Crane Logo">
                                         </picture>
                                 </span>
+                            </div>
 <!---------------------------------------------------------------------------------------Newspaper--------------------------------------------------->
                             <div class="newspaper">
                                 
@@ -484,7 +950,7 @@
                                 <picture>
                                     <img id="logo2" src="C:\xampp\htdocs\Netmatters Website\images\Logo\nm-logo-white-med.png" alt="Netmatters Logo">
                                 </picture> 
-                                <h4>Follow us on:</h4>
+                                <h2>Follow us on:</h2>
 
                                     <div class="social-media-links">
                                         <a class="facebook" href="#facebook.com/netmatters/" target="_blank">
@@ -506,7 +972,7 @@
                             
                         <div class="footer-links">
                             <div class="footer-about-netmatter">
-                                <h4>About Netmatters</h4>
+                                <h2>About Netmatters</h2>
                                     <ul class="about-list">
                                         <li><a href="#News">News</a></li>
                                         <li><a href="#Our Careers">Our Careers</a></li>
@@ -522,7 +988,7 @@
                             </div>    
 
                             <div class="footer-Services">
-                                <h4>Our Services</h4>
+                                <h2>Our Services</h2>
                                 <ul class="service-list">
                                     <li><a href="#Bespoke Software">Bespoke Software</a></li>
                                     <li><a href="#IT Support">IT Support</a></li>
@@ -535,7 +1001,7 @@
                             </div>
 
                             <div class="footer-Industries">
-                                <h4>Our Industries</h4>
+                                <h2>Our Industries</h2>
                                 <ul class="Service-list">
                                     <li><a href="#Financial Services">Financial Services</a></li>
                                     <li><a href="#Construction">Construction</a></li>
@@ -550,7 +1016,7 @@
 
 
                             <div class="footer-Location">
-                                <h4>Locations</h4>
+                                <h2>Locations</h2>
                                 <ul class="Location-list">
                                     <li><a href="#London Office">London Office</a></li>
                                     <li><a href="#Cambridge Office">Cambridge Office</a></li>
