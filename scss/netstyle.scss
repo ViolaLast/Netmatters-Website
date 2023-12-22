@@ -27,9 +27,17 @@
     margin: 0;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 0;
+
+    & a {
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
+      color: inherit;
+    }
   }
+  
 
 body{
     background-color: rgba(160, 169, 168, 0.018);
@@ -40,43 +48,47 @@ body{
     width: 100%;
     height: 100%;
     padding: 0;
+    display:grid;
 }
+
 
 
 //----------------------------------------------------------------Hamburger button---------------------------------------------------------/
 .hamburger-button{
 display: flex;
-height: 50px;
-width: 50px;
+height: 53px;
+width: 63px;
 position: relative;
 background-color: #333645;
 cursor: pointer;
 padding: 1rem;
-margin-left: 20px;
-justify-content: flex-end;
-align-items: flex-end;
-z-index: 2;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 0;
+  
 }
+
+
 .hamburger-menu {
-  &:active .ham-top {
-    transform: translate(-50%, -50%) rotate(-315deg);
-    top: 50%;
-  }
-  &:active .ham-mid {
-    opacity: 0;
-  }
-  &:active .ham-bottom {
-    transform: translate(-50%, -50%) rotate(-225deg);
-    top: 50%;
-  }
+    &:active .ham-top {
+      transform: translate(-50%, -50%) rotate(-315deg);
+      top: 50%;
+    }
+    &:active .ham-mid {
+      opacity: 0;
+    }
+    &:active .ham-bottom {
+      transform: translate(-50%, -50%) rotate(-225deg);
+      top: 50%;
+    }
 }
 
 
 .ham-bar {
-  width: 70%;
+  width: 50%;
   height: 4px;
   background-color: white;
-  border-radius: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,11 +97,14 @@ z-index: 2;
 }
 
 .ham-top {
-  top: 25%;
+  top: 30%;
+}
+.ham-mid{
+  top: 50%;
 }
 
 .ham-bottom {
-  top: 75%;
+  top: 70%;
 }
 
 //------------------------------------------------------Experiment-----
@@ -103,54 +118,52 @@ z-index: 2;
 .inner{
   padding: 20px 0;
 }
+
 .header-container{
-    margin-right: auto;
-    margin-left: auto;
-    padding:0 15px;
+  @include center;
     justify-content: space-between;
     align-items: center;
-    // padding-right: 15px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // padding: 20px 0;
-  // padding: 0 15px;
-  // display: flex;
-  // width: 100%;
-  // margin-left: auto;
-  // margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+  width: 100%;
 }
 
 #header a{
 display: flex;
 flex-direction: row;
+}
 
 .header-menu{
-display: flex-wrap;
 justify-content: space-between;
 align-items: center;
 width: 100%;
 padding-top: 2em;
-display: flex;
 flex-direction: row;
+display: flex;
+flex-wrap: wrap;
 }
 
 .buttons{
   display: flex;
   align-content: space-between;
+  display: inline-block
 }
 
-}
-.mobile, .hamburger-button {
+
+.mobile {
   height: 50px;
   width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #333645;
+  text-align: center;
   cursor: pointer;
 }
 
+
 //----------------------------------------------------header LOGO--------------
+
+
 .logo-container{
  width: 60%;
 }
@@ -173,13 +186,8 @@ padding: 0px;
 vertical-align: middle;
 font-size:32px ;
 float: none;
-display: block;
 margin-right: 10px;
 }
-
-  #phone:hover {
-    color: #121419;
-  }
   
   #phone:active {
   border-bottom:1px solid black;
@@ -192,7 +200,7 @@ margin-right: 10px;
 .search-barm{
   display:flex;
   align-items: center;
-   margin-top: 25px;
+  margin-top: 25px;
   justify-content: space-between;
   background-color: rgba( 0,0,0,.1);
     border:2px solid rgba(0,0,0,.1);
@@ -200,9 +208,10 @@ margin-right: 10px;
     width: 100%;
     border-radius: 2px;
     position: relative;
+    padding: 0 10px 0 0;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
   
- & input{
+  & input{
   background-color: transparent;
     height: 47px;
     width: 100%;
@@ -210,21 +219,20 @@ margin-right: 10px;
     font-size: 14px;
     border: none;
     outline: none;
-   }
-   & .icon-search{
-     align-items: center;
-     font-size: 20px;
-     position: relative;
-     border: none;
+  }
+  & .icon-search{
+  align-items: center;
+  font-size: 20px;
+  position: relative;
+  border: none;
     color: #333645;
     line-height: 47px;
-   }
-   & button{
+}
+  & button{
 width: auto;
 border: none;
 background-color: transparent;
-
-   }
+}
 }
 
 //----------------------------------------------------------------------------SLIDER-------------------------------------------------------------/
@@ -254,75 +262,6 @@ z-index:-1;
     }
 }
 //---------------------------------------------------------Animation
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
-
-
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-  z-index: 100%;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
 
 ol, li {
   list-style: none;
@@ -333,8 +272,17 @@ ol, li {
 .carousel {
   position: relative;
   padding-top: 100%;
-  perspective: 100px;;
+  perspective: 100px;
+  height: 70vh;
 }
+
+  // .icon-cicles h2{
+  //     font-size: 2.5rem;
+  //     line-height: 3rem;
+  //     margin: 0 0 1.25rem;
+  //     color: #fff;
+  //     font-weight: 600;
+  // }
 
 .carousel__viewport {
   position: absolute;
@@ -346,9 +294,15 @@ ol, li {
   overflow-x: scroll;
   counter-reset: item;
   scroll-behavior: smooth;
+  height: 100%;
   scroll-snap-type: x mandatory;
 }
+.text-overlay{
+  align-self: center;
+  width: 80%;
 
+
+}
 .carousel__slide {
   position: relative;
   flex: 0 0 100%;
@@ -356,17 +310,45 @@ ol, li {
   background-color: #323544;
   counter-increment: item;
 }
-
-
-.carousel__slide:before {
-  content: counter(item);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%,-40%,70px);
-  color: #fff;
-  font-size: 2em;
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  counter-increment: item;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; 
 }
+
+
+.carousel__slide:nth-child(1) {
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.png');
+}
+.carousel__slide:nth-child(2) {
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-O67Y.jpg');
+}
+.carousel__slide:nth-child(3) {
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-gay8.png');
+}
+.carousel__slide:nth-child(4) {
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-6yTp.png');
+}
+.carousel__slide:nth-child(5) {
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-J8Xx.png');
+}
+.carousel__slide:nth-child(6) {
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-K0pn.jpg');
+}
+.carousel__slide:nth-child(7) {
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-MSxH.png');
+}
+
+
 
 .carousel__snapper {
   position: absolute;
@@ -401,29 +383,6 @@ ol, li {
   animation-name: none;
 }
 
-.carousel__navigation {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
-.carousel__navigation-list,
-.carousel__navigation-item {
-  display: inline-block;
-}
-
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
 
 
 .carousel::before,
@@ -524,10 +483,7 @@ $numberOfSlides: 11;
 
 
 //-------------------------------------------------------------------------------------------------------------------
-.icon-star-full{
-color: gold;
 
-}
 .welcome-to-netmatters{
   background-color: #333645;
   color: #fff;
@@ -549,13 +505,12 @@ color: gold;
 
 
 .icon-software{
-  transition: .5s ease;
+ 
     top: 0;
     border: 1px solid #ccc;
     flex-direction: column;
     margin-bottom: 30px;
     position: relative;
-    transition: .5s ease;
     box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
     max-width: 720px;
     padding: 30px;
@@ -571,13 +526,14 @@ color: gold;
     text-align: center;
     align-self: center;
     margin: 0 auto 17px;
+    border:1px solid black ;
 }
 
 
 
 
 .col-icon{
-  border:1px solid black ;
+  
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -585,8 +541,6 @@ color: gold;
   align-items:center;
   padding: 10px;
 }
-
-.mid-header {}
 
 
 .h2 {
@@ -607,16 +561,121 @@ color: gold;
 .box-button{
     min-width: 130px;
     max-width: 130px;
-    font-size: 1.063rem;
     margin-bottom: 0;
     line-height: 35px;
     align-self: center;
+}
+
+  .btn-middle {
+    font-weight: 400;
+    height: auto;
+    line-height: 35px;
+    padding: 6px 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-right: 0;
+    background-color: #67809f;
+}
+//-----------------------------------------------------------------View Our Work------------------------------------
+
+.our-work{
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 0 15px;
+    font-size: 26px;
+}
+
+
+
+
+
+//-------------------------------------------------welcome-to-netmatters---------------------------------------------
+
+.welcome-to-netmatters{
+background-color: #323544;
+color: #fff;
+padding: 50px 0;
+@include center;
+
+  & p {
+    margin: 0 0 25px;
+  }
+ }
+
+ .ref-button{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: auto;
+    width: auto;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    line-height: 1.4;
+   background-color:#272936;
+   margin: 0 0 17px;
+
+}
+
+.h3{
+  margin:-6px 0 40px;
+  line-height: 1.1;
+    font-size: 36px;
+}
+
+.stars{
+ line-height: 1;
+ font-size: 50px;
+  & .icon-star-full{
+    color: gold;
+    }
+  }
+
+.btn-google{
+  background-color: #4387F6;
+margin: 20px 8px 0 0;
+padding:10px 30px;
+}
+.btn-pilot{
+  background-color: #00b67b;
+  margin: 20px 8px 0 0;
+  padding:10px 30px;
+}
+
+.icon-arrow-right{
+  margin-left: 12px;
+}
+
+
+
+//-----------------------------------------------NEWS--------------------------------------------------------------
+.news-container{
+@include center;
+
+}
+
+.news-header{
+  margin: 50px 0 0 0 ;
 }
 
 
 .newspaper{
 background-color: #666666;
 
+}
+
+.mlogo{
+  width:10vw;
+  height: 10vh;
 }
 
 strong {
@@ -704,29 +763,15 @@ padding: 3%;
 }
 /* ------------------------------------------------------------------------------------------------ Grid Layout */
 
-// .container {
-//     height: 100vh;
-//     display: grid;
-//     grid-template-columns: 1fr 2fr 1fr;
-//     grid-template-rows: 100px minmax(200px, 1fr) 100px; 
-//     grid-gap: 10px;
-//     grid-template-areas: 
-// }
+.container {
+   width: 100vw;
+    height: auto;
+    display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 100px minmax(200px, 1fr) 100px; 
+    grid-gap: 10px;
+  }
   
-//   header {
-//     grid-area: header;
-//     display: flex;
-//   }
-  
-//   main {
-//     grid-area: main;
-//   }
-  
-  
-//   footer {
-//     grid-area: footer;
-//   }
-  
-//   nav #side_main{
-//     grid-area: nav;
-//   }
+.header-container{
+  grid-template-rows:2fr, 1fr,1fr; 
+} 

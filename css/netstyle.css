@@ -256,8 +256,13 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid black;
   padding: 0;
+}
+* a {
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
 }
 
 body {
@@ -269,20 +274,21 @@ body {
   width: 100%;
   height: 100%;
   padding: 0;
+  display: grid;
 }
 
 .hamburger-button {
   display: flex;
-  height: 50px;
-  width: 50px;
+  height: 53px;
+  width: 63px;
   position: relative;
   background-color: #333645;
   cursor: pointer;
   padding: 1rem;
-  margin-left: 20px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 0;
 }
 
 .hamburger-menu:active .ham-top {
@@ -298,10 +304,9 @@ body {
 }
 
 .ham-bar {
-  width: 70%;
+  width: 50%;
   height: 4px;
   background-color: white;
-  border-radius: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -310,11 +315,15 @@ body {
 }
 
 .ham-top {
-  top: 25%;
+  top: 30%;
+}
+
+.ham-mid {
+  top: 50%;
 }
 
 .ham-bottom {
-  top: 75%;
+  top: 70%;
 }
 
 .inner {
@@ -324,36 +333,43 @@ body {
 .header-container {
   margin-right: auto;
   margin-left: auto;
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   justify-content: space-between;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 #header a {
   display: flex;
   flex-direction: row;
 }
-#header a .header-menu {
-  display: flex-wrap;
+
+.header-menu {
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding-top: 2em;
-  display: flex;
   flex-direction: row;
-}
-#header a .buttons {
   display: flex;
-  align-content: space-between;
+  flex-wrap: wrap;
 }
 
-.mobile, .hamburger-button {
+.buttons {
+  display: flex;
+  align-content: space-between;
+  display: inline-block;
+}
+
+.mobile {
   height: 50px;
   width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #333645;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -378,12 +394,7 @@ body {
   vertical-align: middle;
   font-size: 32px;
   float: none;
-  display: block;
   margin-right: 10px;
-}
-
-#phone:hover {
-  color: #121419;
 }
 
 #phone:active {
@@ -404,6 +415,7 @@ body {
   width: 100%;
   border-radius: 2px;
   position: relative;
+  padding: 0 10px 0 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .search-barm input {
@@ -457,72 +469,6 @@ body {
   border: 1px solid black;
 }
 
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-  z-index: 100%;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
-
 ol, li {
   list-style: none;
   margin: 0;
@@ -533,6 +479,7 @@ ol, li {
   position: relative;
   padding-top: 100%;
   perspective: 100px;
+  height: 70vh;
 }
 
 .carousel__viewport {
@@ -545,7 +492,13 @@ ol, li {
   overflow-x: scroll;
   counter-reset: item;
   scroll-behavior: smooth;
+  height: 100%;
   scroll-snap-type: x mandatory;
+}
+
+.text-overlay {
+  align-self: center;
+  width: 80%;
 }
 
 .carousel__slide {
@@ -556,14 +509,47 @@ ol, li {
   counter-increment: item;
 }
 
-.carousel__slide:before {
-  content: counter(item);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -40%, 70px);
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  counter-increment: item;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  font-size: 2em;
+}
+
+.carousel__slide:nth-child(1) {
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.png");
+}
+
+.carousel__slide:nth-child(2) {
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-O67Y.jpg");
+}
+
+.carousel__slide:nth-child(3) {
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-gay8.png");
+}
+
+.carousel__slide:nth-child(4) {
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-6yTp.png");
+}
+
+.carousel__slide:nth-child(5) {
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-J8Xx.png");
+}
+
+.carousel__slide:nth-child(6) {
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-K0pn.jpg");
+}
+
+.carousel__slide:nth-child(7) {
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-MSxH.png");
 }
 
 .carousel__snapper {
@@ -594,30 +580,6 @@ ol, li {
 .carousel:hover .carousel__snapper,
 .carousel:focus-within .carousel__snapper {
   animation-name: none;
-}
-
-.carousel__navigation {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
-.carousel__navigation-list,
-.carousel__navigation-item {
-  display: inline-block;
-}
-
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
 }
 
 .carousel::before,
@@ -698,10 +660,6 @@ ol, li {
   padding: 10px;
 }
 
-.icon-star-full {
-  color: gold;
-}
-
 .welcome-to-netmatters {
   background-color: #333645;
   color: #fff;
@@ -725,13 +683,11 @@ ol, li {
 }
 
 .icon-software {
-  transition: 0.5s ease;
   top: 0;
   border: 1px solid #ccc;
   flex-direction: column;
   margin-bottom: 30px;
   position: relative;
-  transition: 0.5s ease;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   max-width: 720px;
   padding: 30px;
@@ -747,10 +703,10 @@ ol, li {
   text-align: center;
   align-self: center;
   margin: 0 auto 17px;
+  border: 1px solid black;
 }
 
 .col-icon {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -778,14 +734,113 @@ ol, li {
 .box-button {
   min-width: 130px;
   max-width: 130px;
-  font-size: 1.063rem;
   margin-bottom: 0;
   line-height: 35px;
   align-self: center;
 }
 
+.btn-middle {
+  font-weight: 400;
+  height: auto;
+  line-height: 35px;
+  padding: 6px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-right: 0;
+  background-color: #67809f;
+}
+
+.our-work {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 0 15px;
+  font-size: 26px;
+}
+
+.welcome-to-netmatters {
+  background-color: #323544;
+  color: #fff;
+  padding: 50px 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.welcome-to-netmatters p {
+  margin: 0 0 25px;
+}
+
+.ref-button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: auto;
+  width: auto;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  line-height: 1.4;
+  background-color: #272936;
+  margin: 0 0 17px;
+}
+
+.h3 {
+  margin: -6px 0 40px;
+  line-height: 1.1;
+  font-size: 36px;
+}
+
+.stars {
+  line-height: 1;
+  font-size: 50px;
+}
+.stars .icon-star-full {
+  color: gold;
+}
+
+.btn-google {
+  background-color: #4387F6;
+  margin: 20px 8px 0 0;
+  padding: 10px 30px;
+}
+
+.btn-pilot {
+  background-color: #00b67b;
+  margin: 20px 8px 0 0;
+  padding: 10px 30px;
+}
+
+.icon-arrow-right {
+  margin-left: 12px;
+}
+
+.news-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.news-header {
+  margin: 50px 0 0 0;
+}
+
 .newspaper {
   background-color: #666666;
+}
+
+.mlogo {
+  width: 10vw;
+  height: 10vh;
 }
 
 strong {
@@ -859,5 +914,15 @@ footer {
 }
 
 /* ------------------------------------------------------------------------------------------------ Grid Layout */
+.container {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.header-container {
+  grid-template-rows: 2fr, 1fr, 1fr;
+}
 
 /*# sourceMappingURL=netstyle.css.map */
