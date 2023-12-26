@@ -29,6 +29,7 @@
     box-sizing: border-box;
     // border: 1px solid black;
     padding: 0;
+    list-style: none;
 
     & a {
       text-decoration: none;
@@ -44,7 +45,7 @@ body{
     margin:0%;
     font-size: 1rem;
     letter-spacing:.4px;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     width: 100%;
     height: 100%;
     padding: 0;
@@ -55,22 +56,77 @@ body{
 strong{
   font-weight: 600;
 }
+li{
+  font-size: .8125rem;
+  line-height: 1.375rem;
+}
+//-----------------------------------------------------------------------------------HEADERS-------------------------------------------------------------------------------------------
+.h1{
+
+}
+
+.h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 0 0 1.25rem;
+  color: #fff;
+  font-weight: 600;
+}
 
 
+.h3{
+  margin:-6px 0 40px;
+  line-height: 1.1;
+    font-size: 36px;
+}
+
+
+.h4{
+  margin-bottom: 15px;
+  color: #333645;
+  font-size: 2.7rem;
+  line-height: 1.1;
+}
+
+.ln-h4{
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin: 0 0 28px;
+    color: #333645;
+}
+
+
+.h5{
+  font-size: 1rem;
+  line-height: 1.5rem;
+    margin: 0 0 15px;
+   color: #4183d7;
+    font-weight: bold;
+    }
+
+
+.h6{
+      font-size: 1.3rem;
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 10px;
+      margin: 0 0 11px;
+    }
 
 //----------------------------------------------------------------Hamburger button---------------------------------------------------------/
 .hamburger-button{
+margin: 7px 0 ;
 display: flex;
-height: 53px;
+height: 56px;
 width: 63px;
 position: relative;
-background-color: #333645;
+background-color: #22242e;
+border-color: #191a22;
 cursor: pointer;
 padding: 1rem;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
-  border: 0;
   
 }
 
@@ -120,9 +176,6 @@ padding: 1rem;
 
 //---------------------------------------------HEADER-----------------------------------------------------/
 
-.inner{
-  padding: 20px 0;
-}
 
 .header-container{
   @include center;
@@ -131,6 +184,10 @@ padding: 1rem;
     display: flex;
     flex-wrap: wrap;
   width: 100%;
+}
+
+.inner {
+  padding: 20px 0;
 }
 
 #header a{
@@ -142,7 +199,6 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 width: 100%;
-padding-top: 2em;
 flex-direction: row;
 display: flex;
 flex-wrap: wrap;
@@ -205,7 +261,7 @@ margin-right: 10px;
 .search-barm{
   display:flex;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 17px;
   justify-content: space-between;
   background-color: rgba( 0,0,0,.1);
     border:2px solid rgba(0,0,0,.1);
@@ -240,17 +296,7 @@ background-color: transparent;
 }
 }
 
-//----------------------------------------------------------------------------SLIDER-------------------------------------------------------------/
-.carousel-container {
 
-&img{
-  position: relative;
-z-index:-1;
-}
-&h2 p{
-  z-index:1;
-}
-}
 //----------------------------------------------------------------grey to color partner images----------------------------------------------------------------------
 
 .sliding-partners img, {
@@ -266,28 +312,17 @@ z-index:-1;
       border:1px solid black;
     }
 }
-//---------------------------------------------------------Animation
 
-ol, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+//----------------------------------------------------------------------------SLIDER-------------------------------------------------------------/
 
 .carousel {
   position: relative;
-  padding-top: 100%;
+  z-index: 1;
   perspective: 100px;
-  height: 70vh;
+  height: 77vh;
+  padding: 3.75rem 0;
 }
 
-  // .icon-cicles h2{
-  //     font-size: 2.5rem;
-  //     line-height: 3rem;
-  //     margin: 0 0 1.25rem;
-  //     color: #fff;
-  //     font-weight: 600;
-  // }
 
 .carousel__viewport {
   position: absolute;
@@ -305,52 +340,63 @@ ol, li {
 .text-overlay{
   align-self: center;
   width: 80%;
+  color: #fff; 
+text-align: center;
 
 
+& p{
+    margin-bottom: .375rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
 }
+ }
+
+
 .carousel__slide {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #323544;
-  counter-increment: item;
-}
-.carousel__slide {
-  position: relative;
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%; 
+  box-sizing: border-box;
   background-size: cover; 
   background-position: center; 
-  background-repeat: no-repeat;
   counter-increment: item;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: #fff; 
+  z-index: -1;
+ 
 }
 
 
 .carousel__slide:nth-child(1) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.png');
+  filter:brightness(60%);
 }
 .carousel__slide:nth-child(2) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-O67Y.jpg');
+  filter:brightness(60%);
 }
 .carousel__slide:nth-child(3) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-gay8.png');
+  filter:brightness(60%);
 }
 .carousel__slide:nth-child(4) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-6yTp.png');
+  filter:brightness(60%);
 }
 .carousel__slide:nth-child(5) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-J8Xx.png');
+  filter:brightness(60%);
 }
 .carousel__slide:nth-child(6) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-K0pn.jpg');
+  filter:brightness(60%);
+
 }
 .carousel__slide:nth-child(7) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-MSxH.png');
+  filter:brightness(60%);
+
 }
 
 
@@ -405,10 +451,10 @@ ol, li {
 .carousel::before,
 .carousel::after {
   content: '';
-  z-index: 1;
+  // z-index: 1;
   background-color: #333;
   background-size: 1.5rem 1.5rem;
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background-position: center center;
   color: #fff;
   font-size: 2.5rem;
@@ -417,29 +463,70 @@ ol, li {
   pointer-events: none;
 }
 
+.slider-button{
+  margin-top: 1.938rem;
+  margin-bottom: 1.125rem;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+    line-height: 50px;
+    display: inline-block;
+    width: auto;
+    border: 1px solid transparent;
+}
+
+.sl-1{
+    background-color: #926fb1;
+    border-color: #926fb1;
+}
+.sl-2{
+background-color: #67809F;
+border-color: #67809f;
+}
+.sl-3{
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+.sl-4{
+  background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+.sl-5{
+  background-color: #d64541;
+  border-color: #d64541;
+}
+
+.sl-7{
+  background-color: #f62459;
+  border-color: #f62459;
+}
+
+
+
+
+
 //-----------------------------------------------Partner Animation-------------------------------------------------------------------------------
 
 $animationSpeed: 47s;
 $slideWidth: 120px;
 $numberOfSlides: 11;
 
-// Animation
+// --------------------------------------------Animation SLIDING PARTNERS---------------------------------------------------------------------------------------------------
 @keyframes scroll {
 	0% { transform: translate(0); }
 	100% { transform: translate(calc(-#{$slideWidth} * #{$numberOfSlides} + #{$slideWidth}));
 }}
 
-
-// Styling
 .slider {
 	height: auto;
 	margin: auto;
 	overflow:hidden;
 	position: relative;
 	width: 100%;
-  // padding: 50px;
-    // padding-top: 50px;
-  // padding-bottom: 50px;
+    padding-top: 50px;
+  padding-bottom: 50px;
+
 	
 	&::before,
 	&::after {
@@ -464,8 +551,8 @@ $numberOfSlides: 11;
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-    padding-top: 15px;
-    padding-bottom: 15px;
+       padding-top: 50px;
+    padding-bottom: 50px;
     margin: 0;
 		width:fit-content;
 	}
@@ -478,29 +565,24 @@ $numberOfSlides: 11;
     grid-template-columns: auto-fit;
     align-self: center;
     & img{
-      height:80%;
       width: auto;
       padding: 10px;
     }
 	}
 }
 
-
-
-//-------------------------------------------------------------------------------------------------------------------
-
-.welcome-to-netmatters{
-  background-color: #333645;
-  color: #fff;
-}
-//---------------------------------------------------Middle Boxes
+//---------------------------------------------------Middle Boxes----------------------------------------------------------------
 .middle{
- width: auto; 
 
 }
-.container-middle{
-@include center;
 
+.container-middle{
+ width: auto; 
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include center;
+  padding-left: 15px;  
+  padding-right: 15px;
 }
 .mid-header{
     display: flex;
@@ -511,7 +593,6 @@ $numberOfSlides: 11;
 
 .icon-software{
  
-    top: 0;
     border: 1px solid #ccc;
     flex-direction: column;
     margin-bottom: 30px;
@@ -522,8 +603,8 @@ $numberOfSlides: 11;
     display: flex;
     border-radius: 15px;
     text-align: center;
-}
 
+}
 .icon-cicles{
     width: 65px;
     height: 65px;
@@ -531,9 +612,18 @@ $numberOfSlides: 11;
     text-align: center;
     align-self: center;
     margin: 0 auto 17px;
-    border:1px solid black ;
+    color: #fff;
+    font-weight: 400;
+   
 }
 
+.icon{
+  font-size: 2rem;
+    line-height: 62px;
+}
+.c1{
+  background-color: #67809f;
+}
 
 
 
@@ -541,20 +631,10 @@ $numberOfSlides: 11;
   
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width:80%;
+  width:100%;
   align-items:center;
-  padding: 10px;
 }
 
-
-.h2 {
-    font-size: 1.3rem;
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 10px;
-    margin: 0 0 11px;
-  }
 
 .p{
     margin-top: 0;
@@ -585,7 +665,6 @@ $numberOfSlides: 11;
     text-transform: uppercase;
     border-radius: 3px;
     margin-right: 0;
-    background-color: #67809f;
 }
 //-----------------------------------------------------------------View Our Work------------------------------------
 
@@ -604,6 +683,7 @@ $numberOfSlides: 11;
 //-------------------------------------------------welcome-to-netmatters---------------------------------------------
 
 .welcome-to-netmatters{
+  display: inline-block;
 background-color: #323544;
 color: #fff;
 padding: 50px 0;
@@ -611,6 +691,7 @@ padding: 50px 0;
 
   & p {
     margin: 0 0 25px;
+    line-height: 1.875rem;
   }
  }
 
@@ -631,19 +712,36 @@ padding: 50px 0;
 
 }
 
-.h3{
-  margin:-6px 0 40px;
-  line-height: 1.1;
-    font-size: 36px;
-}
+
 
 .stars{
  line-height: 1;
  font-size: 50px;
   & .icon-star-full{
-    color: gold;
+    color: orange;
+    margin: -4px ;
     }
   }
+
+.client-quote{
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
+.client-quote-author{
+  font-style: normal;
+  font-weight: 600;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+  line-height: 1.875rem;
+  & aside{
+    color: #fff;
+    font-style: normal;
+  }
+}
 
 .btn-google{
   background-color: #4387F6;
@@ -681,6 +779,7 @@ padding:10px 30px;
       position: relative;
       transition: .5s ease;
       box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
   }
 
 .image-one{
@@ -696,13 +795,6 @@ padding:10px 30px;
   margin-top: -5px;
   text-align: left;
     font-size: 13px;
-    & .h5{
-        font-size: 1rem;
-        line-height: 1.5rem;
-          margin: 0 0 15px;
-         color: #4183d7;
-          font-weight: bold;
-          }
       p{
         text-wrap: wrap;
         line-height: 1.375rem;
@@ -741,6 +833,8 @@ padding:10px 30px;
 
 .news-header{
   margin: 50px 0 0 0 ;
+  display: flex;
+    justify-content: space-between
 }
 
 .read-time{
@@ -800,19 +894,18 @@ padding:10px 30px;
   border-color:  #ce4125;
 }
 
-//-------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------SLIDING PARTNERS-----------------------------------------------------------------------------------
 $animationSpeed: 30s;
 $slideWidth: 100px;
 $numberOfSlides: 13;
 
-// Animation
+
 @keyframes scroll {
 	0% { transform: translate(0); }
 	100% { transform: translate(calc(-#{$slideWidth} * #{$numberOfSlides} + #{$slideWidth}));
 }}
 
 
-// Styling
 .sliding {
 	height: auto;
 	margin: auto;
@@ -881,6 +974,7 @@ $numberOfSlides: 13;
     color: #333645;
       font-size: 2rem;
   }
+
 .form-container{
     display: flex;
     flex-wrap: wrap;
@@ -916,7 +1010,7 @@ i{
   &:focus{
       border-color: #5bc0de;
       outline: 0;
-      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
+      filter: drop-shadow(0 0 0.75rem rgba(3, 250, 250,.2));
   }
 }
 
@@ -970,42 +1064,72 @@ padding-right: 0;
 }
 
 
-//---------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------FOOTER------
 .footer-container{
   @include center;
   background-color:#323544 ;
-  margin:0%;
-  padding: 27px 0 0;
+  padding-top: 27px;
   width:100%;
-}
-
-.footer-inner{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   color: #fff;
 }
+
+.footer-inner{
+  float: left;
+
+}
 .foot-logo {
+  display: inline-block;
 width: 250px;
 }
 
+h4{
+margin-top:24px;
+text-transform: uppercase;
+font-size: 1rem;
+margin-bottom: 26px;
+}
+
+.social-media-links{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  width: 100%;
+
+}
+
+.media{
+  padding: 12px 22px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 26px;
+    width: 35%;
+    background-color: #212330;
+   
+}
+.footer-Location{
+  margin-bottom:30px;
+}
 
 footer{
-  color: #666;
-background-color: #212330;
-margin:0;
-padding:3%;
-position: relative;
+  background-color: #212330;
+  padding:3%;
+  flex-direction: column;
+  color: #fff;
+
 }
+
 /* ------------------------------------------------------------------------------------------------ Grid Layout */
 
 .container {
    width: 100vw;
-    height: auto;
+    height: 100vh;
     display: grid;
     // grid-template-columns: 1fr;
     // grid-template-rows: 100px minmax(200px, 1fr) 100px; 
-    grid-gap: 10px;
   }
   
 .header-container{
