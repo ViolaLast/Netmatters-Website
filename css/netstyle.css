@@ -1,3 +1,69 @@
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .search-barm {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .logo-container {
+    max-width: 374px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .btn-search {
+    display: inline !important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  .hidden-b {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .form-control {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .form-control {
+    display: inline !important;
+  }
+  .btn-search {
+    display: inline !important;
+    border-radius: 0 3px 3px 0 !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .buttons-hidden {
+    display: inline;
+  }
+  .btn-search {
+    display: inline !important;
+    flex-shrink: 1;
+  }
+  .inner {
+    width: 970px;
+    margin: 0 -15px;
+  }
+  .logo-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 42%;
+  }
+  .buttons-hidden {
+    width: 58%;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .form-control {
+    display: inline-block !important;
+    border-radius: 0;
+    width: 240px;
+  }
+}
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?x15v5l");
@@ -256,7 +322,6 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid black;
   padding: 0;
   list-style: none;
 }
@@ -341,19 +406,83 @@ li {
   color: #333645;
 }
 
-.hamburger-button {
-  margin: 7px 0;
+.header-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
+  align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.inner {
+  padding: 20px 0;
+}
+
+.header-top {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.logo {
+  width: 100%;
+  max-width: 402px;
+  display: block;
+}
+
+.mobile {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  float: right;
+}
+
+.icon-phone-call {
+  text-align: center;
+  font-size: 32px;
+  color: #333645;
+  margin-left: 15px;
+}
+
+#phone:hover {
+  border-bottom: 1px solid #333645;
+}
+
+.header-right {
+  float: right;
+}
+
+.hamburger-button {
   height: 56px;
   width: 63px;
   position: relative;
   background-color: #333645;
   cursor: pointer;
-  padding: 1rem;
-  align-items: center;
-  justify-content: center;
+  padding: 0 2rem;
   border-radius: 3px;
   border: 1px solid transparent;
+  margin: auto;
+  margin-right: 2%;
+  margin-left: 20px;
+}
+.hamburger-button:hover {
+  background-color: #22242e;
+  border-color: #191a22;
 }
 
 .hamburger-menu:active .ham-top {
@@ -371,7 +500,7 @@ li {
 .ham-bar {
   width: 50%;
   height: 4px;
-  background-color: white;
+  background-color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -389,76 +518,6 @@ li {
 
 .ham-bottom {
   top: 70%;
-}
-
-.header-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.inner {
-  padding: 20px 0;
-}
-
-#header a {
-  display: flex;
-  flex-direction: row;
-}
-
-.header-menu {
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.buttons {
-  display: flex;
-  align-content: space-between;
-  display: inline-block;
-}
-
-.mobile {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  float: none;
-  margin-right: 10px;
-}
-
-.icon-phone-call {
-  text-align: center;
-  font-size: 32px;
-  color: #333645;
-}
-
-#phone:hover {
-  border-bottom: 1px solid #333645;
-}
-
-.logo-container {
-  width: 60%;
-}
-
-.logo {
-  width: 100%;
-  max-width: 100%;
-  display: block;
-}
-.logoimg {
-  margin: auto;
-  width: 90%;
-  max-width: 100%;
 }
 
 .search-barm {
@@ -496,6 +555,109 @@ li {
   width: auto;
   border: none;
   background-color: transparent;
+}
+
+.button-container-hidden {
+  width: auto;
+  flex-grow: 1;
+}
+
+.buttons-hidden {
+  float: right;
+  padding: 7px 0;
+  display: flex;
+  width: auto;
+}
+
+.btn-support {
+  height: 56px;
+  line-height: 46px;
+  font-size: 1.125rem;
+  float: left;
+  margin-left: 20px;
+  background-color: #4183d7;
+  border-color: #4183d7;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: auto;
+  align-items: center;
+  display: flex;
+  color: #fff;
+}
+.btn-support span {
+  font-size: 1.438rem;
+  line-height: 45px;
+  margin-right: 5px;
+}
+.btn-support:hover {
+  color: #fff;
+  background-color: #2a6ec6;
+  border-color: #2665b5;
+}
+
+.btn-contact {
+  height: 56px;
+  line-height: 46px;
+  font-size: 1.125rem;
+  float: left;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: auto;
+  margin: 0 20px;
+  background-color: #999aa2;
+  border-color: #999aa2;
+  color: #fff;
+  align-items: center;
+  display: flex;
+}
+.btn-contact span {
+  font-size: 1.438rem;
+  line-height: 45px;
+  margin-right: 5px;
+}
+.btn-contact:hover {
+  background-color: #84858f;
+  border-color: #797a85;
+}
+
+.btn-search {
+  display: inline;
+  width: 63px;
+  height: 56px;
+  border-radius: 3px;
+  background-color: #999aa2;
+  border: none;
+  cursor: pointer;
+  padding: 0 2rem;
+}
+.btn-search span {
+  font-size: 1.438rem;
+  line-height: 45px;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+}
+.btn-search:hover {
+  background-color: #7e808a;
+}
+
+.search-form {
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.form-control {
+  width: 174px;
+  height: 56px;
+  padding: 6px 12px;
+  border: 1px solid #e5e5e5;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 .carousel {
@@ -908,7 +1070,7 @@ li {
   text-transform: uppercase;
   font-size: 14px;
   border: 1px solid;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   border-radius: 3px;
   margin-right: 0;
@@ -1476,10 +1638,6 @@ footer {
   width: 100vw;
   height: 100%;
   display: grid;
-}
-
-.header-container {
-  grid-template-rows: 2fr, 1fr, 1fr;
 }
 
 /*# sourceMappingURL=netstyle.css.map */
