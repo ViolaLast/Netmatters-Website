@@ -9,6 +9,11 @@
     width: 320px !important;
   }
 }
+@media screen and (min-width: 591px) {
+  .why-choose-us {
+    margin-bottom: 0 !important;
+  }
+}
 @media screen and (min-width: 768px) {
   .mobile {
     display: none !important;
@@ -91,6 +96,14 @@
     width: 50%;
     margin-bottom: 30px;
   }
+  .info {
+    display: inline;
+    padding: 5px 0 10px;
+    width: 100%;
+  }
+  .info br {
+    display: none;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 992px) {
   .hidden-b {
@@ -152,6 +165,9 @@
   .text-overlay p {
     font-size: 1.625rem;
     line-height: 2.5rem;
+  }
+  .why-choose-us {
+    margin-bottom: 17px !important;
   }
   .icon-nav-menu {
     display: inline-flex !important;
@@ -236,7 +252,7 @@
     margin: 0 15px;
   }
 }
-@media screen and (min-width: 1182px) {
+@media screen and (min-width: 1214px) {
   .why-choose-us {
     margin-bottom: 0px !important;
   }

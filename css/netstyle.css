@@ -9,6 +9,11 @@
     width: 320px !important;
   }
 }
+@media screen and (min-width: 591px) {
+  .why-choose-us {
+    margin-bottom: 0 !important;
+  }
+}
 @media screen and (min-width: 768px) {
   .mobile {
     display: none !important;
@@ -91,6 +96,14 @@
     width: 50%;
     margin-bottom: 30px;
   }
+  .info {
+    display: inline;
+    padding: 5px 0 10px;
+    width: 100%;
+  }
+  .info br {
+    display: none;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 992px) {
   .hidden-b {
@@ -152,6 +165,9 @@
   .text-overlay p {
     font-size: 1.625rem;
     line-height: 2.5rem;
+  }
+  .why-choose-us {
+    margin-bottom: 17px !important;
   }
   .icon-nav-menu {
     display: inline-flex !important;
@@ -236,7 +252,7 @@
     margin: 0 15px;
   }
 }
-@media screen and (min-width: 1182px) {
+@media screen and (min-width: 1214px) {
   .why-choose-us {
     margin-bottom: 0px !important;
   }
@@ -1814,7 +1830,7 @@ input:focus {
   border: 2px solid transparent;
   line-height: 1.4;
   background-color: #272936;
-  margin: 0x 8px 0 0;
+  margin: 0 8px 0 0;
 }
 
 .why-choose-us {
@@ -2021,30 +2037,16 @@ input:focus {
 }
 
 .sliding {
+  display: inline-flex;
   height: auto;
   margin: auto;
-  overflow: hidden;
   position: relative;
   width: 100%;
-}
-.sliding::before, .sliding::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.sliding::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-.sliding::before {
-  left: 0;
-  top: 0;
+  overflow-x: scroll;
 }
 .sliding .sliding-track {
   display: flex;
+  flex-direction: row;
   padding-top: 50px;
   padding-bottom: 50px;
   margin: 0;
@@ -2067,17 +2069,22 @@ input:focus {
 
 .detailed-box {
   display: none;
-  z-index: 5;
+  left: 100px;
+  right: 100px;
+  bottom: 100%;
+  text-align: center;
+  z-index: 100;
   max-width: 280px;
-  position: relative;
-  left: 50%;
 }
 
 .hidden-box {
   background-color: #333645;
   padding: 20px;
   font-size: 0.875rem;
+  max-width: 280px;
   color: #fff;
+  text-align: center;
+  margin: 0 auto 50px;
 }
 .hidden-box h3 {
   position: relative;
@@ -2090,14 +2097,20 @@ input:focus {
   line-height: 1.375rem;
 }
 
-#swan:hover .detailed-box {
-  display: block;
-  display: inline;
-  position: absolute;
-}
-
 #swan:hover {
   background: #ddd;
+}
+#swan:hover .detailed-box {
+  display: inline-block;
+  z-index: 1000%;
+}
+
+#xupes:hover {
+  background: #ddd;
+}
+#xupes:hover .detailed-box {
+  display: block;
+  z-index: 1000%;
 }
 
 .newspaper {
@@ -2213,6 +2226,7 @@ i {
   display: flex;
   flex-wrap: wrap;
   color: #fff;
+  padding: 3%;
 }
 
 .footer-inner {
@@ -2220,6 +2234,7 @@ i {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 .foot-logo {
@@ -2229,13 +2244,6 @@ i {
 
 h4 {
   margin-top: 24px;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-bottom: 26px;
-}
-
-.fh4 {
-  margin-top: 0;
   text-transform: uppercase;
   font-size: 1rem;
   margin-bottom: 26px;
@@ -2267,9 +2275,15 @@ h4 {
 
 footer {
   background-color: #212330;
-  padding: 3%;
+  padding-top: 10px;
   flex-direction: column;
   color: #fff;
+}
+
+.info {
+  display: flex;
+  padding: 5px 15px 10px;
+  flex-direction: column;
 }
 
 /* ------------------------------------------------------------------------------------------------ Grid Layout */
