@@ -1,187 +1,6 @@
 
-//------------------------------------------------------------------------------------------------------------------@media-------------------------------------------------------------------//
-
-                                                        @media screen and (min-width: 768px){
-
-  .mobile{
-    display: none !important;
-    visibility: hidden !important;
-  }
-  .search-barm{
-    display: none !important;
-    visibility: hidden !important;
-}
-  .logo-container{
-    max-width: 374px;
-    padding-left: 15px;
-  padding-right: 15px;
-  }
-  .hidden-bu {
-    display:none!important
-  }
-
-  .dis-md{
-    display: inline !important;
-  }
-  .no-dis-sm{
-    display:none;
-  }
-  .container-middle{
-    width: 750px !important;
-  }
-  // .btn-search{
-  //   display: inline !important;
-  // }
-                                }
-//----------------------------------------------------------------------------------------------BETWEEN @MEDIA-------------------------------------------------------------------------------------/
-                                      @media screen and (min-width:0px) and (max-width:992px) {
-
-  .hidden-b {
-    display:none!important
-  }
-                                }
-                                      @media screen and (min-width:0px) and (max-width:768px) {
-
-  // .form-control {
-  //   display: none;
-  //   visibility: hidden;
-  // }
-                                      }
-                                            @media screen and (min-width:768px) and (max-width:992px) {
-
-  .form-control{
-    display: inline !important;
-  }
-  .btn-search{
-    display: inline !important;
-    border-radius:0 3px 3px 0 !important;
-  }
-                                           }
-                                              @media screen and (min-width: 993px) and (max-width: 1259px) {
-
-
-   .btn-search:focus {
-     .form-control {
-     display: inline-block !important;
-     width: 300px !important;
-     }
-    #contact, #support{     
-     display: none !important;
-      }
-   }
-
-
-
-                                            }                                         
-//--------------------------------------------------------------------------------------------------------------------------------
-                                                  @media screen and (min-width: 992px) {
-    .btn-search{
-      display: inline !important;
-    }                                               
-    // .container {
-    //   width: 970px !important;
-    //   justify-content: center;
-    // }
-
-    .buttons-hidden{
-      display: inline;
-    }
-
-    .inner {
-      width: 970px;
-      margin:0 -15px;
-    }
-    .logo-container{
-      padding-left: 15px;
-    padding-right: 15px;
-    width: 42%;
-    }
-    .buttons-hidden{
-    width: 58%;
-    }
-    .text-overlay{
-    text-align:left !important;
-      & .h2{
-        font-size: 4rem;
-      line-height: 5rem;
-      }
-      & p{
-        font-size: 1.625rem;
-      line-height: 2.5rem;
-    }
-  }
-
-  .icon-nav-menu{
-    display: inline-flex !important;
-  }
-  .bs, .it, .dm, .ts, .wd, .cs, .dc{
-    display: flex !important;
-    min-width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .container-middle{
-    width: 970px !important;
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    width: auto;
-    
-    & .m1, .m2, .m3 {
-        width: 33%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        float: left;
-    }
-    & .m4, .m5, .m6, .m7{
-        flex-direction:column;
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        float: left;
-      
-    }
-  }
-  .welcome-to-netmatters{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  
-  & .welcome-selection{
-      width: 50%;
-      display:flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      float: left;
-      padding: 0 15px;
-    }
-  & .our-clients{
-      width: 50%;
-      display:flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      float: left;
-      padding: 0 15px;
-    }
-  }
-                                                                      }
-                                                                                @media screen and (min-width:1260px) {
-
- .form-control {
-    display: inline-block !important;
-    border-radius: 0;
-    width: 240px;
-  }
-  .logo{
-    width: 370px !important;
-  }
-
-                                                                     }
 //-------------------------------------------------------------------------------------------------------------------Imports-----------------------------------------------------------------
-
-
+@import "media";
 @import "icomoon";
 
 
@@ -255,10 +74,11 @@ body{
     padding: 0;
     display:grid;
     // font: inherit;
+    max-width: 100% !important;
 }
 
 .container {
-  max-width: 100% !important;
+ 
     width: 100vw;
      height: 100%;
    }
@@ -274,6 +94,11 @@ input:focus{
   border-color: #5bc0de !important;
   outline: 0;
   filter: drop-shadow(0 0 0.75rem rgba(3, 250, 250,.2));
+}
+.policy{
+  & a{
+    text-decoration: underline;
+  }
 }
 //-----------------------------------------------------------------------------------H1 - H6-------------------------------------------------------------------------------------------
 
@@ -330,8 +155,6 @@ input:focus{
   color: #333645;
 }
 
-
-
 //------------------------------------------------------------------------------------------------------HEADER-----------------------------------------------------/
 
 .header-container{
@@ -367,10 +190,48 @@ input:focus{
 //   display: inline-block
 // }
 
-
-
-//----------------------------------------------------------------------------------------------------------------header LOGO--------------
-
+.cookie-btn{
+  color: $color-primary;
+  position: fixed;
+    line-height: 22px;
+    width: auto;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background: #75788a;
+    border: solid #75788a;
+    border-width: 1px 1px 0 0;
+    border-top-right-radius: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 10;
+}
+.chat-container{
+& button{
+  width:65px;
+  height:65px;
+  position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #333645;
+    border: 1px solid #333645;
+    border-radius:50%;
+    z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+}
+.icon-message{
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:$color-primary;
+  font-size: 2em;
+  padding: 5px 5px 5px 0px;
+}
+//----------------------------------------------------------------------------------------------------------------header LOGO-----------------------------------------------------------------------------------------/-
 
 .logo-container{
     vertical-align: middle;
@@ -472,18 +333,16 @@ input:focus{
 //-----------------------------------------------------------------------------------------------------------------------------SEARCH bar------------------------------------------
 .search-barm{
   display:flex;
-  align-items: center;
   margin-top: 17px;
-  justify-content: space-between;
-  background-color: rgba( 0,0,0,.1);
-    border:2px solid rgba(0,0,0,.1);
+  background-color: rgba( 0,0,0,.2);
     outline: 1px solid hsla(0,0%,100%,.2);
     width: 100%;
     border-radius: 2px;
     position: relative;
     padding: 0 10px 0 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
+    border: 2px solid rgba(0,0,0,.1);
+
   & input{
   background-color: transparent;
     height: 47px;
@@ -492,6 +351,7 @@ input:focus{
     font-size: 14px;
     border: none;
     outline: none;
+    
   }
   & .icon-search{
   align-items: center;
@@ -605,6 +465,8 @@ background-color: transparent;
   padding: 6px 12px;
   border: 1px solid #e5e5e5;
   height: 47px;
+  border-color: #ccc;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
   }
 
 //--------------------------------------------------------------------------------------------------NAV-HIDDEN-MENU----------------------------------------------------------------------------/
@@ -631,6 +493,7 @@ background-color: transparent;
   // width: 970px;
   padding: 0 10%;
   align-items: center;
+  justify-content: center;
 
     & .nav-item{
       text-align: center;
@@ -736,14 +599,23 @@ background-color: transparent;
   flex-wrap: wrap;
   margin-left: 15px;
   text-align: left;
-  max-width: 970px;
+  width: 970px;
+}
+.triangle{
+width: 0px;
+height: 0px;
+z-index: 5;
+border-style: solid;
+border-width: 73px 83px 0 83px;
+transform: rotate(0deg);
+border-color:#67809f transparent transparent;
 }
 
- .software:hover > .bs{
+ .software:hover > .bs {
   visibility: visible;
-  color:#67809f;
-  background-color:#67809f;
-  border-color:#67809f transparent transparent;
+  color:#526781;
+  background-color:#526781;
+  width: 100% !important;
  }
  .icon-laptop{
   color: #526781;
@@ -861,7 +733,6 @@ background-color: transparent;
   height: 100%;
   scroll-snap-type: x mandatory;
   z-index: 1;
-  background-color: #151515;
 }
 .text-overlay{
   align-self: center;
@@ -895,13 +766,10 @@ z-index: 4;
   display: flex;
   justify-content: center;
   z-index: 1;
-  background-color: #151515;
 }
 
 #carousel__slide1 {
-  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.png');
-  filter:saturate(80%);
-  filter:brightness(60%)
+  background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.webp');
   }
   
 
@@ -1272,7 +1140,7 @@ border-color: $color-primary;
     border-radius: 3px;
     margin-right: 0;
 }
-//------------------------------------------------------------------------------------------------------------View Our Work------------------------------------
+//------------------------------------------------------------------------------------------------------------View Our Work-----------------------------------------------------------------------------------------
 .view-all-container{
   text-align: center;
   margin-top: 50px;
@@ -1372,13 +1240,16 @@ padding: 50px 0;
 @include center;
 
   & p {
-    margin: 0 0 25px;
+    margin: 0px 0 25px;
     line-height: 1.875rem;
   }
  }
 .welcome-selection{
   padding-bottom: 50px;
-}
+  & p {
+    margin: 16px 0 25px;
+    line-height: 1.875rem;
+}}
 
  .ref-button{
     display: inline-block;
@@ -1393,12 +1264,15 @@ padding: 50px 0;
     border: 2px solid transparent;
     line-height: 1.4;
    background-color:#272936;
-   margin: 20px 8px 0 0;
-
+   margin: 0x 8px 0 0;
+}
+.why-choose-us{
+  margin-bottom: 17px;
 }
 
 .stars{
  line-height: 1;
+ margin-bottom: 25px;
   & .icon-star-full{
     color: orange;
     font-size: 50px;
@@ -1410,7 +1284,8 @@ padding: 50px 0;
   font-size: 1.3rem;
   font-style: italic;
   line-height: 1.875rem;
-  margin-bottom: 25px;
+  margin: 0px 0 25px;
+  line-height: 1.875rem;
 }
 
 .quote-author{
@@ -1446,14 +1321,42 @@ padding:10px 30px;
 
 
 
-//--------------------------------------------------------------------------------------------------------NEWS--------------------------------------------------------------
-.news-container{
-@include center;
+//--------------------------------------------------------------------------------------------------------LATEST NEWS--------------------------------------------------------------
+// .news-container{
+
+// }
+
+.news-header{
+  display: flex;
+    justify-content: space-between;
+      margin: 50px 0 0 0 ;
+    }
+
+.news-view-all{
+    color: #333645;
+    font-size: 1.625rem;
+    display: inline-flex;
+    float: inline-end;
+  & a{
+    width: auto
+  }}
+  .view-all{
+
+    & h3:hover{
+      border-bottom: 2px solid #333645;
+      
+    }
 }
 
+.news-articles{
+  @include center;
+  padding-bottom: 50px;
+
+}
 .article-link{
       top:0;
-      transition: top -10px.5s;
+      transition: top .5s;
+      z-index: 2;
       border: 1px solid #ccc;
       border-radius: 0 0 3px 3px;
       flex-direction: column;
@@ -1462,7 +1365,7 @@ padding:10px 30px;
       box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
       margin-top: 30px;
       &:hover{
-        transition: top -10px.5s;
+        transition: -10px;
       }
   }
 
@@ -1515,11 +1418,7 @@ padding:10px 30px;
   border-color:  #ce4125;
 }
 
-.news-header{
-  margin: 50px 0 0 0 ;
-  display: flex;
-    justify-content: space-between
-}
+
 
 .read-time{
     display: inline;
@@ -1541,16 +1440,16 @@ padding:10px 30px;
     display: flex;
 
   
-  & .mlogo{
-  width:20%;
-  display: inline-block;
-  margin: 1px;
- }
- & .details{
-    padding-left: 15px;
-    line-height: 1.375rem;
-    font-size: .875rem;
-}
+    & .mlogo{
+    width:60px;
+    display: inline-block;
+  }
+
+    & .details{
+        padding-left: 15px;
+        line-height: 1.375rem;
+        font-size: .875rem;
+    }
  }
 
 
@@ -1579,18 +1478,16 @@ padding:10px 30px;
 }
 
 
-
-
 //-----------------------------------------------------------------------------------SLIDING PARTNERS-----------------------------------------------------------------------------------
-$animationSpeed: 60s;
-$slideWidth: 100px;
-$numberOfSlides: 13;
+// $animationSpeed: 60s;
+// $slideWidth: 100px;
+// $numberOfSlides: 13;
 
 
-@keyframes scroll {
-	0% { transform: translate(0); }
-	100% { transform: translate(calc(-#{$slideWidth} * #{$numberOfSlides} + #{$slideWidth}));
-}}
+// @keyframes scroll {
+// 	0% { transform: translate(0); }
+// 	100% { transform: translate(calc(-#{$slideWidth} * #{$numberOfSlides} + #{$slideWidth}));
+// }}
 
 
 .sliding {
@@ -1700,7 +1597,7 @@ $numberOfSlides: 13;
   } 
 
 
-//--------------------------------------------------------NEWSPAPER sign up----------/
+//-------------------------------------------------------------------------------------------------------NEWSPAPER sign up---------------------------------------------------------------------------------------------------/
 .newspaper{
 @include center;
   background-color: #ddd;
@@ -1751,7 +1648,7 @@ i{
 
 
 .left-check{
-height: 160px;
+
 width:52px;
 }
 .checkbox{
@@ -1786,6 +1683,7 @@ width:52px;
 .tick{
   line-height: 32px;
   display: flex;
+  margin-bottom: 15px;
 
 }
 
@@ -1795,7 +1693,7 @@ width:52px;
   border-color: #333645;
 }
 
-//---------------------------------------------------------------------------------------------------------FOOTER------
+//---------------------------------------------------------------------------------------------------------FOOTER------------------------------------------------------------------------------------------------/--
 .footer-container{
   @include center;
   background-color:#323544 ;
@@ -1808,6 +1706,10 @@ width:52px;
 
 .footer-inner{
   float: left;
+  display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
 
 }
 .foot-logo {
@@ -1822,11 +1724,20 @@ font-size: 1rem;
 margin-bottom: 26px;
 }
 
+.fh4{
+  margin-top: 0;
+  text-transform: uppercase;
+font-size: 1rem;
+margin-bottom: 26px;
+}
+
 .social-media-links{
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   margin-bottom: 30px;
-  width: 100%;
+  width: 300px;
+ 
 
 }
 
@@ -1841,7 +1752,7 @@ margin-bottom: 26px;
     background-color: #212330;
    
 }
-.footer-Location{
+.footer-links{
   margin-bottom:30px;
 }
 

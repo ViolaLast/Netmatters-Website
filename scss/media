@@ -1,0 +1,387 @@
+
+//------------------------------------------------------------------------------------------------------------------@media-------------------------------------------------------------------//
+@media screen and (min-width: 480px){
+
+  .social-media-links{
+    flex-wrap: nowrap !important;
+  
+  }
+  .media{
+  width: 35% !important;
+}
+.foot-logo{
+width: 320px !important;
+}
+}
+                                                        @media screen and (min-width: 768px){
+
+  .mobile{
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .search-barm{
+    display: none !important;
+    visibility: hidden !important;
+}
+  .logo-container{
+    max-width: 374px;
+    padding-left: 15px;
+  padding-right: 15px;
+  }
+  .hidden-bu {
+    display:none!important
+  }
+
+  .dis-md{
+    display: inline-flex !important;
+    float: right !important;
+  }
+  .no-dis-sm{
+    display:none;
+  }
+  .container-middle{
+    width: 750px !important;
+  }
+  // .btn-search{
+  //   display: inline !important;
+  // }
+
+  .form-control{
+    height: 56px !important;
+  }
+.news-container{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+  .news-articles{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: hidden;
+    width: 750px;
+    justify-self: center;
+    padding: 0 !important;
+  }
+
+  .article-link{
+    min-width:345px;
+    justify-content: space-between;
+    float: left;
+    margin:0 15px;
+  }
+  .a3{
+    display: none;
+  }
+  .m750 {
+    width: 750px !important;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-links{
+    display:flex;
+    flex-wrap: wrap;
+  }
+  .social-media-links{
+    justify-content: space-between;
+    width: 300px;
+    & .media{
+      padding: 12px 22px 16px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+                                }
+//----------------------------------------------------------------------------------------------BETWEEN @MEDIA-------------------------------------------------------------------------------------/
+                                      @media screen and (min-width:0px) and (max-width:992px) {
+
+  .hidden-b {
+    display:none!important
+  }
+                                }
+                                      @media screen and (min-width:0px) and (max-width:768px) {
+
+  // .form-control {
+  //   display: none;
+  //   visibility: hidden;
+  // }
+                                      }
+                                            @media screen and (min-width:768px) and (max-width:992px) {
+
+  .form-control{
+    display: inline !important;
+  }
+  .btn-search{
+    display: inline !important;
+    border-radius:0 3px 3px 0 !important;
+  }
+  .footer-links{
+    margin-bottom:30px;
+    display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1 !important;
+      flex-direction: row !important;
+  }
+  .fl{
+    width: 50%;
+  }
+                                           }
+                                              @media screen and (min-width: 993px) and (max-width: 1259px) {
+
+
+   .btn-search:focus {
+     .form-control {
+     display: inline-block !important;
+     width: 300px !important;
+     }
+    #contact, #support{     
+     display: none !important;
+      }
+   }
+
+
+
+                                            }                                         
+//--------------------------------------------------------------------------------------------------------------------------------
+                                                  @media screen and (min-width: 992px) {
+    .btn-search{
+      display: inline !important;
+    }                                               
+    .m970 {
+      min-width: 970px !important;
+      justify-content: center;
+      margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+    .buttons-hidden{
+      display: inline;
+    }
+
+    .inner {
+      width: 970px;
+      margin:0 -15px;
+    }
+    .logo-container{
+      padding-left: 15px;
+    padding-right: 15px;
+    width: 42%;
+    }
+    .buttons-hidden{
+    width: 58%;
+    }
+    .text-overlay{
+    text-align:left !important;
+      & .h2{
+        font-size: 4rem;
+      line-height: 5rem;
+      }
+      & p{
+        font-size: 1.625rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .icon-nav-menu{
+    display: inline-flex !important;
+  }
+  .bs, .it, .dm, .ts, .wd, .cs, .dc{
+    display: flex !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .container-middle{
+    width: 970px !important;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    width: auto;
+    
+    & .m33 {
+        width: 33%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        float: left;
+    }
+    & .m50{
+        flex-direction:column;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        float: left;
+      
+    }
+  }
+  .welcome-to-netmatters{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  
+  & .welcome-selection{
+      width: 50%;
+      display:flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      float: left;
+      padding: 0 15px;
+    }
+  & .our-clients{
+      width: 50%;
+      display:flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      float: left;
+      padding: 0 15px;
+    }
+  }
+
+
+  .news-articles{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: hidden;
+    width: 970px;
+
+  }
+
+  .input-news{
+    width: 970px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin:0 15px 15px 0;
+  }
+  .form-input{
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  @media screen and (min-width:1182px) {
+    .why-choose-us{
+      margin-bottom: 0px !important;
+    }                 
+                                                              }
+                                                                                @media screen and (min-width:1260px) {
+
+ .form-control {
+    display: inline-block !important;
+    border-radius: 0;
+    width: 240px;
+  }
+  .logo{
+    width: 370px !important;
+  }
+.w1200{
+  width: 1200px !important;
+}
+
+  .sub-menu{
+    width: 1200px !important;
+  }
+  .btn-search{
+    display: inline !important;
+    border-radius:0 3px 3px 0 !important;
+  }
+.welcome-container{
+  max-width: 1200px !important;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.nav-box{
+  max-width: 150px;
+}
+
+.ref-button{
+  margin: 25px 6px 0 0 !important;
+  padding: 15px 15px !important;
+}
+.review-btn{
+display: inline-block;
+}
+.btn-pilot{
+  margin-right: 0px !important;
+
+}
+.container-middle{
+  width: 1200px !important;
+}
+.our-service{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.h-box{
+  margin-bottom: 0px !important;
+}
+.m50{
+    width:25% !important;
+  flex-wrap: nowrap   !important;
+  padding: 0 15px !important;
+  justify-content: space-between !important;
+  margin-left:0 !important;
+  margin-right: 0 !important;
+  & .p{
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-size: 0.8rem;
+  }
+}
+.c1,.c2,.c3,.c4,.c5,.c6,.c7{
+  height: 313px;
+}
+.m33{
+  padding: 0 15px !important;
+  width: 33%;
+  & .p{
+    font-size: 0.8rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+  }
+}
+  .news-articles{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 1200px;
+
+}
+.article-link{
+  width: 33%;
+  float: left;
+  margin:0 15px;
+}
+.a3{
+  display:block;
+}
+.input-news{
+  display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-grow: 1;
+}
+    .inline{
+      margin-top: -6px;
+    }
+                                                                                                    }
