@@ -340,17 +340,22 @@
   .inline {
     margin-top: -6px;
   }
+  .footer-container {
+    padding-top: 47px !important;
+  }
   .media-menu {
-    width: auto;
+    width: 400px;
   }
   .footer-links {
     display: flex;
     flex-direction: row !important;
     flex-wrap: wrap;
     float: left;
+    width: auto;
+    margin-bottom: 40px !important;
   }
   .fl {
-    width: 15%;
+    width: 20%;
     margin: 0 15px;
   }
 }
@@ -2245,7 +2250,7 @@ h4 {
 }
 
 .media {
-  padding: 12px 22px 16px;
+  padding: 15px 22px 15px;
   margin-right: 10px;
   margin-bottom: 10px;
   line-height: 26px;
@@ -2253,6 +2258,7 @@ h4 {
   font-size: 26px;
   width: 35%;
   background-color: #212330;
+  align-items: center;
 }
 
 .footer-links {
