@@ -59,6 +59,7 @@ $color-pink:#f62459;
       background: transparent;
       cursor: pointer;
       color: inherit;
+      width:auto;
     }
   }
 
@@ -885,7 +886,7 @@ border-color: #67809f;
 }
 .box-h{
     display: flex;
-    margin-bottom: 45px;
+    margin:0 15px 45px 15px;
     color: #333645;
 
 }
@@ -1327,7 +1328,7 @@ padding:10px 30px;
 .news-header{
   display: flex;
     justify-content: space-between;
-      margin: 50px 0 0 0 ;
+      margin: 50px 15px 0 15px ;
     }
 
 .news-view-all{
@@ -1389,7 +1390,7 @@ padding:10px 30px;
       }
     }
       
-#two{
+.two{
   color: #ce4125;
 }
 
@@ -1478,16 +1479,13 @@ padding:10px 30px;
 
 //-----------------------------------------------------------------------------------SLIDING PARTNERS-----------------------------------------------------------------------------------
 
-
 .sliding {
   display: inline-flex;
-	height: auto;
 	margin: auto;
 	position: relative;
 	width: 100%;
-  overflow-x: scroll;
+  overflow: inherit;
 
-	
 	.sliding-track {
 		display: flex;
     flex-direction: row;
@@ -1495,6 +1493,7 @@ padding:10px 30px;
     padding-bottom: 50px;
     margin: 0;
 		width:fit-content;
+  
 	}
 	
 	.logo-img{
@@ -1515,13 +1514,12 @@ padding:10px 30px;
 //------------------------------------------------------------------hidden-sliding-partner---------------------------------------------------------------------------------------------------------------------------/
 
 .detailed-box{
-   display: none;
-  left: 100px;
-    right: 100px;
+display: none;
     bottom: 100%;
   text-align: center;
   z-index: 100;
     max-width: 280px;
+    position: absolute;
 }
 
 
@@ -1529,7 +1527,6 @@ padding:10px 30px;
   background-color: #333645;
   padding: 20px;
   font-size: .875rem;
-  max-width: 280px;
   color: $color-primary;
   text-align: center;
   margin: 0 auto 50px;
@@ -1554,18 +1551,19 @@ padding:10px 30px;
 #swan:hover { 
   background:#ddd; 
 
-  .detailed-box{
+  .detailed-box .sw{
     display:inline-block;
-    z-index: 1000%;
-  
+    z-index: 15;
     } 
-}
+   } 
+
 #xupes:hover{
   background:#ddd; 
 
-  .detailed-box{
-    display:block;
-    z-index: 1000%;
+  .xu{
+    visibility: visible;
+    z-index: 100;
+    display: inline-flex
     
 }
 }

@@ -33,7 +33,7 @@
   }
   .dis-md {
     display: inline-flex !important;
-    float: right !important;
+    justify-content: flex-end;
   }
   .no-dis-sm {
     display: none;

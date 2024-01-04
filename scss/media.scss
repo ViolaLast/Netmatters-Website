@@ -17,7 +17,17 @@ width: 320px !important;
 .why-choose-us {
   margin-bottom: 0 !important;
 }
-}
+
+// .sw, .xu, .be, .su, .gi, .sw, .ho, .gd, .as, .ot, .se, .bu, .cr{
+//   display: flex !important;
+//   margin: 0 !important;
+// }
+// #xupes:hover > .xu{
+//     z-index: 100;
+//     display: inline-flex !important;
+  
+// }
+                                                  }
                                                         @media screen and (min-width: 768px){
 
   .mobile{
@@ -39,7 +49,7 @@ width: 320px !important;
 
   .dis-md{
     display: inline-flex !important;
-    float: right !important;
+    justify-content: flex-end;
   }
   .no-dis-sm{
     display:none;

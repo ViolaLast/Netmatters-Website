@@ -33,7 +33,7 @@
   }
   .dis-md {
     display: inline-flex !important;
-    float: right !important;
+    justify-content: flex-end;
   }
   .no-dis-sm {
     display: none;
@@ -645,6 +645,7 @@
   background: transparent;
   cursor: pointer;
   color: inherit;
+  width: auto;
 }
 
 body {
@@ -1459,7 +1460,7 @@ input:focus {
 
 .box-h {
   display: flex;
-  margin-bottom: 45px;
+  margin: 0 15px 45px 15px;
   color: #333645;
 }
 
@@ -1886,7 +1887,7 @@ input:focus {
 .news-header {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0 0 0;
+  margin: 50px 15px 0 15px;
 }
 
 .news-view-all {
@@ -1949,7 +1950,7 @@ input:focus {
   margin-bottom: 25px;
 }
 
-#two {
+.two {
   color: #ce4125;
 }
 
@@ -2038,11 +2039,10 @@ input:focus {
 
 .sliding {
   display: inline-flex;
-  height: auto;
   margin: auto;
   position: relative;
   width: 100%;
-  overflow-x: scroll;
+  overflow: inherit;
 }
 .sliding .sliding-track {
   display: flex;
@@ -2069,19 +2069,17 @@ input:focus {
 
 .detailed-box {
   display: none;
-  left: 100px;
-  right: 100px;
   bottom: 100%;
   text-align: center;
   z-index: 100;
   max-width: 280px;
+  position: absolute;
 }
 
 .hidden-box {
   background-color: #333645;
   padding: 20px;
   font-size: 0.875rem;
-  max-width: 280px;
   color: #fff;
   text-align: center;
   margin: 0 auto 50px;
@@ -2100,17 +2098,18 @@ input:focus {
 #swan:hover {
   background: #ddd;
 }
-#swan:hover .detailed-box {
+#swan:hover .detailed-box .sw {
   display: inline-block;
-  z-index: 1000%;
+  z-index: 15;
 }
 
 #xupes:hover {
   background: #ddd;
 }
-#xupes:hover .detailed-box {
-  display: block;
-  z-index: 1000%;
+#xupes:hover .xu {
+  visibility: visible;
+  z-index: 100;
+  display: inline-flex;
 }
 
 .newspaper {
