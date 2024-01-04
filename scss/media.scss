@@ -1,5 +1,14 @@
 
 //------------------------------------------------------------------------------------------------------------------@media-------------------------------------------------------------------//
+@media screen and (min-width: 0px) and (max-width: 480px){
+
+.text-overlay{
+width: 50%;
+}
+
+}
+
+
 @media screen and (min-width: 480px){
 
   .social-media-links{
@@ -53,9 +62,13 @@ width: 320px !important;
   }
   .no-dis-sm{
     display:none;
+    display: flex;
   }
-  .container-middle{
-    width: 750px !important;
+  .m50{
+    width: 50% !important;
+    flex-wrap: wrap !important;
+  flex-direction: row !important;
+  float: left;
   }
   // .btn-search{
   //   display: inline !important;

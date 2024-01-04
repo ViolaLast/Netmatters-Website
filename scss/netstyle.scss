@@ -2,7 +2,7 @@
 //-------------------------------------------------------------------------------------------------------------------Imports-----------------------------------------------------------------
 @import "media";
 @import "icomoon";
-
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Poppins:ital,wght@0,100;0,400;0,600;1,400;1,600&display=swap');
 
 //-----------------------------------------------------------------------------------------------------------------------mixins----------------------------------------------------------------------------/
 @mixin grey-to-color {
@@ -42,7 +42,7 @@ $color-purple:#926fb1;
 
 $color-pink:#f62459;
 
-
+//----------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------BODY-----------------------------------------------------------------------------------/ 
 
@@ -53,6 +53,12 @@ $color-pink:#f62459;
   // border: 1px solid black;
     padding: 0;
     list-style: none;
+ right: 0;
+
+  *::before,
+  ::after {
+    box-sizing: border-box;
+  }
 
     & a {
       text-decoration: none;
@@ -69,7 +75,9 @@ body{
     margin:0%;
     font-size: 1rem;
     letter-spacing:.4px;
-    font-family: Poppins, sans-serif;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     width: 100vw;
     height: 100%;
     padding: 0;
@@ -195,7 +203,7 @@ input:focus{
   color: $color-primary;
   position: fixed;
     line-height: 22px;
-    width: auto;
+    max-width: 132px;
     bottom: 0;
     left: 0;
     display: flex;
@@ -206,9 +214,14 @@ input:focus{
     padding: 0 10px;
     cursor: pointer;
     font-weight: 600;
-    z-index: 10;
+    z-index: 100;
+    font-size: .8rem;
 }
 .chat-container{
+      position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 30;
 & button{
   width:65px;
   height:65px;
@@ -853,27 +866,45 @@ z-index: 4;
 .sl-1{
     background-color: $color-purple;
     border-color: $color-purple;
+    &:hover {
+      background: darken($color-purple, 10%)
+    }
 }
 .sl-2{
 background-color: #67809F;
 border-color: #67809f;
+&:hover {
+  background: darken(#67809f, 10%)
+}
 }
 .sl-3{
   background-color: $color-blue;
   border-color: $color-blue;
+  &:hover {
+    background: darken($color-blue, 10%)
+  }
 }
 .sl-4{
   background-color: $color-green;
     border-color: $color-green;
+    &:hover {
+      background: darken($color-green, 10%)
+    }
 }
 .sl-5{
   background-color: $color-red;
   border-color: $color-red;
+  &:hover {
+    background: darken($color-red, 10%)
+  }
 }
 
 .sl-7{
   background-color: $color-pink;
   border-color: $color-pink;
+  &:hover {
+    background: darken($color-pink, 10%)
+  }
 }
 
 //----------------------------------------------------------------------------------------------------------------MAIN-Middle Boxes----------------------------------------------------------------
@@ -1264,10 +1295,14 @@ padding: 50px 0;
     line-height: 1.4;
    background-color:#272936;
    margin: 0 8px 0 0;
+   &:hover {
+    background: darken(#272936, 10%)
 }
+ }
 .why-choose-us{
   margin-bottom: 17px;
 }
+ 
 
 .stars{
  line-height: 1;
@@ -1303,17 +1338,18 @@ padding: 50px 0;
   background-color: #4387F6;
 margin: 20px 8px 0 0;
 padding:10px 30px;
-// display: inline-flex;
-//     white-space: nowrap;
+&:hover {
+  background: darken(#4387F6, 10%)
+}
 }
 .btn-pilot{
   background-color: #00b67b;
   margin: 20px 8px 0 0;
   padding:10px 30px;
-  // display: inline-flex;
-  //   white-space: nowrap;
+  &:hover {
+    background: darken(#00b67b, 10%)
+  }
 }
-
 .icon-arrow-right{
   margin-left: 12px;
 }
@@ -1353,8 +1389,8 @@ padding:10px 30px;
 
 }
 .article-link{
+      transition: top .5s ease;
       top:0;
-      transition: top .5s;
       z-index: 2;
       border: 1px solid #ccc;
       border-radius: 0 0 3px 3px;
@@ -1363,10 +1399,19 @@ padding:10px 30px;
       position: relative;
       box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
       margin-top: 30px;
-      &:hover{
-        transition: -10px;
+    }
+      .a{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
       }
-  }
+
+      .article-link:hover{
+        top: -10px;
+      }
 
 .image-one{
     position: relative;
@@ -1407,6 +1452,9 @@ padding:10px 30px;
     line-height: 1.438rem;
     font-weight: 600;
     z-index: 1;
+    &:hover{
+      text-decoration: underline;
+    }
 }
 .pin-one{
   background-color: $color-blue;
@@ -1484,7 +1532,8 @@ padding:10px 30px;
 	margin: auto;
 	position: relative;
 	width: 100%;
-  overflow: inherit;
+  // overflow: inherit;
+  overflow-x: scroll;
 
 	.sliding-track {
 		display: flex;
@@ -1493,7 +1542,6 @@ padding:10px 30px;
     padding-bottom: 50px;
     margin: 0;
 		width:fit-content;
-  
 	}
 	
 	.logo-img{
@@ -1551,7 +1599,7 @@ display: none;
 #swan:hover { 
   background:#ddd; 
 
-  .detailed-box .sw{
+  .detailed-box{
     display:inline-block;
     z-index: 15;
     } 
@@ -1661,6 +1709,10 @@ width:52px;
   @include news-btn;
   background-color: #333645;
   border-color: #333645;
+  cursor: pointer;
+  &:hover {
+    background: darken(#333645, 10%)
+  }
 }
 
 //---------------------------------------------------------------------------------------------------------FOOTER------------------------------------------------------------------------------------------------/--
@@ -1702,7 +1754,7 @@ margin-bottom: 26px;
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: 30px;
-  width: 300px;
+  max-width: 300px;
  
 
 }
