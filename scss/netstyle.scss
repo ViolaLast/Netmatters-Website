@@ -55,11 +55,6 @@ $color-pink:#f62459;
     list-style: none;
  right: 0;
 
-  *::before,
-  ::after {
-    box-sizing: border-box;
-  }
-
     & a {
       text-decoration: none;
       background: transparent;
@@ -68,21 +63,22 @@ $color-pink:#f62459;
       width:auto;
     }
   }
+  *::before,
+  ::after {
+    box-sizing: border-box;
+  }
 
 body{
-  @include center;
     background-color: rgba(160, 169, 168, 0.018);
     margin:0%;
     font-size: 1rem;
     letter-spacing:.4px;
-    font-family: 'Hedvig Letters Serif', serif;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     width: 100vw;
     height: 100%;
     padding: 0;
     display:grid;
-    // font: inherit;
     max-width: 100% !important;
 }
 
@@ -90,6 +86,9 @@ body{
  
     width: 100vw;
      height: 100%;
+     font: inherit;
+    position: relative;
+    overflow-x: hidden;
    }
 
 strong{
@@ -235,7 +234,7 @@ input:focus{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 }
 }
-.icon-message{
+.icon-flight{
   position: relative;
   cursor: pointer;
   display: flex;
@@ -244,7 +243,8 @@ input:focus{
   color:$color-primary;
   font-size: 2em;
   padding: 5px 5px 5px 0px;
-}
+  }
+
 //----------------------------------------------------------------------------------------------------------------header LOGO-----------------------------------------------------------------------------------------/-
 
 .logo-container{
@@ -752,7 +752,6 @@ border-color:#67809f transparent transparent;
   color: $color-primary; 
 text-align: center;
 position: relative ;
-z-index: 4;
 
 
 & p{
@@ -1532,7 +1531,6 @@ padding:10px 30px;
 	margin: auto;
 	position: relative;
 	width: 100%;
-  // overflow: inherit;
   overflow-x: scroll;
 
 	.sliding-track {
@@ -1578,6 +1576,7 @@ display: none;
   color: $color-primary;
   text-align: center;
   margin: 0 auto 50px;
+  width: 280px;
 
 
   & h3{ 
@@ -1592,9 +1591,46 @@ display: none;
     line-height: 1.375rem;
   
   }
-
 }
+.btn{
+    margin-top: 11px;
+    font-size: 1 rem;
+      height: auto;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      display: inline-block;
+      line-height: 35px;
+  }
 
+  .btn-grn{
+    background-color: $color-green;
+    border-color: $color-green;
+    &:hover{
+    background: darken($color-green, 10%)
+  }
+}
+.btn-blu{
+  background-color: $color-blue;
+  border-color: $color-blue;
+  &:hover{
+    background: darken($color-blue, 10%)
+  }
+}
+.btn-gray{
+background-color: #67809F;
+border-color: #67809F;
+&:hover{
+  background: darken(#67809f, 10%)
+}
+}
+.btn-pur{
+  background-color: $color-purple;
+  border-color: $color-purple;
+  &:hover{
+    background: darken($color-purple, 10%)
+  }
+}
 
 #swan:hover { 
   background:#ddd; 
@@ -1677,9 +1713,29 @@ width:52px;
     float: left;
     margin-right: 20px;
     border: 3px solid #333645;
+  }
 
-}
+    .checkbox:active{
+    border-radius: 3px;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    border: 3px solid #333645;
+    .icon-checkbox-checked{
+      display: inline-flex;
+    }
+    }
+    .icon-checkbox-checked{
+      display: none;
+      position: relative;
+          border-radius: 3px;
+          height: 32px;
+          width: 32px;
 
+
+    }
 .checkbox input{
   // display: none;
   opacity: 0;
@@ -1690,7 +1746,6 @@ width:52px;
 
 .checkbox input:checked{
   opacity: 100%;
-  background-color: #151515;
   color: $color-primary;
     display: block;
       line-height: 26px;
@@ -1702,6 +1757,15 @@ width:52px;
   line-height: 32px;
   display: flex;
   margin-bottom: 15px;
+  cursor: pointer;
+  &:active{
+    .icon-checkbox-checked{
+      display: inline-flex;
+      border-radius: 3px;
+      height: 32px;
+      width: 32px;
+    }
+  }
 
 }
 

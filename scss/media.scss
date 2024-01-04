@@ -1,13 +1,5 @@
 
 //------------------------------------------------------------------------------------------------------------------@media-------------------------------------------------------------------//
-@media screen and (min-width: 0px) and (max-width: 480px){
-
-.text-overlay{
-width: 50%;
-}
-
-}
-
 
 @media screen and (min-width: 480px){
 
@@ -91,7 +83,6 @@ width: 320px !important;
     display:flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    overflow-x: hidden;
     width: 750px;
     justify-self: center;
     padding: 0 !important;
