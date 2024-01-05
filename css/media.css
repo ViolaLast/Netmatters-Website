@@ -108,6 +108,9 @@
   .info br {
     display: none;
   }
+  .sm {
+    display: inline !important;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 992px) {
   .hidden-b {
@@ -187,7 +190,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     width: auto;
-    padding-bottom: 50px;
   }
   .container-middle .m33 {
     width: 33%;
@@ -259,7 +261,7 @@
     margin: 0 15px;
   }
 }
-@media screen and (min-width: 1214px) {
+@media screen and (min-width: 1171px) {
   .why-choose-us {
     margin-bottom: 0px !important;
   }
@@ -294,14 +296,14 @@
     max-width: 150px;
   }
   .ref-button {
-    margin: 25px 6px 0 0 !important;
+    margin: 0;
     padding: 15px 15px !important;
   }
   .review-btn {
     display: inline-block;
   }
-  .btn-pilot {
-    margin-right: 0px !important;
+  .btn-pilot, .btn-google {
+    margin: 30px 8px 0 0 !important;
   }
   .container-middle {
     width: 1200px !important;
