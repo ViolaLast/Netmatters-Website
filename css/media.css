@@ -44,6 +44,7 @@
     flex-direction: row !important;
     float: left;
     margin-top: 0;
+    padding: 0 10px !important;
   }
   .form-control {
     height: 56px !important;
@@ -172,7 +173,7 @@
   .why-choose-us {
     margin-bottom: 17px !important;
   }
-  .icon-nav-menu {
+  .ikon-nav-menu {
     display: inline-flex !important;
   }
   .bs, .it, .dm, .ts, .wd, .cs, .dc {
@@ -328,6 +329,9 @@
   }
   .c1, .c2, .c3, .c4, .c5, .c6, .c7 {
     height: 313px;
+  }
+  .c7 {
+    margin-bottom: 0 !important;
   }
   .m33 {
     padding: 0 15px !important;

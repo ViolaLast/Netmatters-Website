@@ -19,15 +19,6 @@ width: 320px !important;
   margin-bottom: 0 !important;
 }
 
-// .sw, .xu, .be, .su, .gi, .sw, .ho, .gd, .as, .ot, .se, .bu, .cr{
-//   display: flex !important;
-//   margin: 0 !important;
-// }
-// #xupes:hover > .xu{
-//     z-index: 100;
-//     display: inline-flex !important;
-  
-// }
                                                   }
                                                         @media screen and (min-width: 768px){
 
@@ -62,6 +53,7 @@ width: 320px !important;
   flex-direction: row !important;
   float: left;
   margin-top: 0;
+  padding: 0 10px !important;
   }
   // .btn-search{
   //   display: inline !important;
@@ -222,7 +214,7 @@ width: 320px !important;
     }
 
 
-  .icon-nav-menu{
+  .ikon-nav-menu{
     display: inline-flex !important;
   }
   .bs, .it, .dm, .ts, .wd, .cs, .dc{
@@ -393,6 +385,9 @@ display: inline-block;
 }
 .c1,.c2,.c3,.c4,.c5,.c6,.c7{
   height: 313px;
+}
+.c7{
+  margin-bottom: 0 !important;
 }
 .m33{
   padding: 0 15px !important;

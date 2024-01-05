@@ -152,7 +152,7 @@ input:focus{
 
 
 .h6{
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       position: relative;
       padding-top: 0;
       padding-bottom: 10px;
@@ -475,7 +475,7 @@ background-color: transparent;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
   }
 //--------------------------------------------------------------------------------------------------NAV-HIDDEN-MENU----------------------------------------------------------------------------/
-.icon-nav-menu{
+.ikon-nav-menu{
   display: none;
   background-color:#333645;
   margin: 0;
@@ -507,7 +507,7 @@ background-color: transparent;
           display: block;
           padding-bottom: 10px;
         }
-    & .icon-a {
+    & .ikon-a {
         position: relative;
         display: block;
         color: #fff;
@@ -720,7 +720,6 @@ background-color: transparent;
   }
 }
 //-----------------------------------------------------------------------------------------------------------SLIDER-CAROUSEL------------------------------------------------------------/
-
 .carousel {
   position: relative;
   z-index: 1;
@@ -935,7 +934,7 @@ cursor: pointer;
     vertical-align: baseline;
 }
 
-.icon-software{
+.ikon-software{
  
     border: 1px solid #ccc;
     flex-direction: column;
@@ -948,7 +947,7 @@ cursor: pointer;
     text-align: center;
 
 }
-.icon-circles{
+.ikon-circles{
     width: 65px;
     height: 65px;
     border-radius: 50%;
@@ -960,7 +959,7 @@ cursor: pointer;
    
 }
 
-.icon{
+.ikon{
   font-size: 2rem;
     line-height: 62px;
 }
@@ -973,7 +972,7 @@ cursor: pointer;
 border-color: #67809f;
 top: -10px;
 
-  & .icon-circles{
+  & .ikon-circles{
     background-color: $color-primary;
   }
   & .icon-laptop, .btn-middle{
@@ -997,7 +996,7 @@ border-color: $color-primary;
   border-color: $color-blue;
   top: -10px;
 
-  & .icon-circles{
+  & .ikon-circles{
     background-color: $color-primary;
   }
   & .icon-display, .btn-middle{
@@ -1021,7 +1020,7 @@ border-color: $color-primary;
   border-color: $color-green;
   top: -10px;
 
-  & .icon-circles{
+  & .ikon-circles{
     background-color: $color-primary;
   }
   & .icon-bar-graph, .btn-middle{
@@ -1045,7 +1044,7 @@ border-color: $color-primary;
   border-color: $color-red;
   top: -10px;
 
-  & .icon-circles{
+  & .ikon-circles{
     background-color: $color-primary;
   }
   & .icon-phone-call, .btn-middle{
@@ -1069,7 +1068,7 @@ border-color: $color-primary;
   border-color: $color-purple;
   top: -10px;
 
-  & .icon-circles{
+  & .ikon-circles{
     background-color: $color-primary;
   }
   & .icon-embed, .btn-middle{
@@ -1093,7 +1092,7 @@ border-color: $color-primary;
     border-color: $color-pink;
   top: -10px;
 
-  & .icon-circles{
+  & .ikon-circles{
     background-color: $color-primary;
   }
   & .icon-security, .btn-middle{
@@ -1110,13 +1109,14 @@ border-color: $color-primary;
  .c7{
   top: 0px;
   transition: top .5s;
+  margin-bottom: 30px;
 }
 .c7:hover{
   background-color: $color-red;
   border-color: $color-red;
   top: -10px;
 
-  & .icon-circles{
+  & .ikon-circles{
     background-color: $color-primary;
   }
   & .icon-graduation-cap, .btn-middle{
@@ -1137,7 +1137,6 @@ border-color: $color-primary;
   flex-direction: column;
   width:100%;
   align-items:center;
-  margin-bottom: 30px;
   margin-top: 30px;
   padding: 0 15px;
 }
@@ -1576,8 +1575,8 @@ padding:10px 30px;
 
 #top {
  bottom: 100px;
- left: -50%;
- right: -50%;
+ left: -100%;
+ right: -100%;
 }
 
 #top::before {
@@ -1883,11 +1882,17 @@ footer{
   padding-top: 10px;
   flex-direction: column;
   color: $color-primary;
+  & li{
+    font-size: .8125rem;
+    line-height: 1.375rem;
+  }
 
 }
 .info{
   display: flex;
   padding: 5px 15px 10px;
   flex-direction: column;  
+  font-size: .8125rem;
+  line-height: 1.375rem;
 }
 
