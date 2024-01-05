@@ -43,6 +43,7 @@
     flex-wrap: wrap !important;
     flex-direction: row !important;
     float: left;
+    margin-top: 0;
   }
   .form-control {
     height: 56px !important;
@@ -85,7 +86,7 @@
     width: 300px;
   }
   .social-media-links .media {
-    padding: 12px 22px 16px;
+    padding: 15px 22px 15px;
     margin-right: 10px;
     margin-bottom: 10px;
   }

@@ -44,6 +44,7 @@
     flex-wrap: wrap !important;
     flex-direction: row !important;
     float: left;
+    margin-top: 0;
   }
   .form-control {
     height: 56px !important;
@@ -86,7 +87,7 @@
     width: 300px;
   }
   .social-media-links .media {
-    padding: 12px 22px 16px;
+    padding: 15px 22px 15px;
     margin-right: 10px;
     margin-bottom: 10px;
   }
@@ -1181,16 +1182,6 @@ input:focus {
   width: 970px;
 }
 
-.triangle {
-  width: 0px;
-  height: 0px;
-  z-index: 5;
-  border-style: solid;
-  border-width: 73px 83px 0 83px;
-  transform: rotate(0deg);
-  border-color: #67809f transparent transparent;
-}
-
 .software:hover > .bs {
   visibility: visible;
   color: #526781;
@@ -1356,6 +1347,7 @@ input:focus {
 
 #carousel__slide1 {
   background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.webp");
+  filter: saturate(80%);
 }
 
 .carousel__slide:nth-child(2) {
@@ -2100,7 +2092,6 @@ input:focus {
 }
 
 .sliding {
-  display: inline-flex;
   margin: auto;
   position: relative;
   width: 100%;
@@ -2129,13 +2120,42 @@ input:focus {
   margin-left: 30px;
 }
 
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  width: 280px;
+}
+
+.hover-img:hover .tooltip-text {
+  visibility: visible;
+}
+
+#top {
+  bottom: 100px;
+  left: -50%;
+  right: -50%;
+}
+
+#top::before {
+  top: 80%;
+  left: 45%;
+}
+
+.hover-img {
+  position: relative;
+  display: inline;
+  text-align: center;
+}
+
 .detailed-box {
-  display: none;
+  visibility: hidden;
   bottom: 100%;
   text-align: center;
   z-index: 100;
   max-width: 280px;
   position: absolute;
+  top: 1%;
 }
 
 .hidden-box {
@@ -2201,21 +2221,17 @@ input:focus {
   background: #79539a;
 }
 
-#swan:hover {
-  background: #ddd;
-}
-#swan:hover .detailed-box {
-  display: inline-block;
-  z-index: 15;
-}
-
-#xupes:hover {
-  background: #ddd;
-}
-#xupes:hover .xu {
-  visibility: visible;
-  z-index: 100;
-  display: inline-flex;
+.triangle-c {
+  width: 0px;
+  height: 0px;
+  z-index: 5;
+  border-style: solid;
+  border-width: 0px 30px 30px 30px;
+  transform: rotate(180deg);
+  position: absolute;
+  border-color: transparent transparent #333645 transparent;
+  left: 40%;
+  bottom: -29px;
 }
 
 .newspaper {
@@ -2385,6 +2401,18 @@ h4 {
   flex-direction: row;
   margin-bottom: 30px;
   max-width: 300px;
+}
+.social-media-links .facebook:hover {
+  background-color: #3b5998;
+}
+.social-media-links .linkedin:hover {
+  background-color: #0077b5;
+}
+.social-media-links .twitter:hover {
+  background-color: #00aced;
+}
+.social-media-links .instagram:hover {
+  background-color: #d93175;
 }
 
 .media {

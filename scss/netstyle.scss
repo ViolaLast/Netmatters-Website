@@ -474,7 +474,6 @@ background-color: transparent;
   border-color: #ccc;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
   }
-
 //--------------------------------------------------------------------------------------------------NAV-HIDDEN-MENU----------------------------------------------------------------------------/
 .icon-nav-menu{
   display: none;
@@ -607,15 +606,20 @@ background-color: transparent;
   text-align: left;
   width: 970px;
 }
-.triangle{
-width: 0px;
-height: 0px;
-z-index: 5;
-border-style: solid;
-border-width: 73px 83px 0 83px;
-transform: rotate(0deg);
-border-color:#67809f transparent transparent;
-}
+
+// .triangle{
+//   visibility: hidden;
+//   display:block;
+//   content:"";
+//   width: 0px;
+//   height: 0px;
+//   border-style: solid;
+//   border-width: 0px 70px 36px 70px;
+//   border-color: transparent transparent #526781 transparent;
+//   transform: rotate(180deg);
+//   position:absolute;
+//   z-index:10;
+// }
 
  .software:hover > .bs {
   visibility: visible;
@@ -632,7 +636,8 @@ border-color:#67809f transparent transparent;
   .icon-laptop{
     color: $color-primary;
   }
-}
+  }
+
  .it-support:hover > .it{
   visibility: visible;
   color:$color-primary;
@@ -775,6 +780,7 @@ z-index: 1;
 
 #carousel__slide1 {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.webp');
+  filter:saturate(80%);
   }
   
 
@@ -1524,7 +1530,7 @@ padding:10px 30px;
 //-----------------------------------------------------------------------------------SLIDING PARTNERS-----------------------------------------------------------------------------------
 
 .sliding {
-  display: inline-flex;
+  // display: inline-flex;
 	margin: auto;
 	position: relative;
 	width: 100%;
@@ -1556,13 +1562,49 @@ padding:10px 30px;
 }
 //------------------------------------------------------------------hidden-sliding-partner---------------------------------------------------------------------------------------------------------------------------/
 
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+ width: 280px;
+}
+
+
+.hover-img:hover .tooltip-text {
+  visibility: visible;
+}
+
+#top {
+ bottom: 100px;
+ left: -50%;
+ right: -50%;
+}
+
+#top::before {
+  top: 80%;
+  left: 45%;
+}
+
+.hover-img {
+  position: relative;
+  display: inline;
+  text-align: center;
+}
+
+
+
+
+
+
+
 .detailed-box{
-display: none;
+visibility: hidden;
     bottom: 100%;
   text-align: center;
   z-index: 100;
     max-width: 280px;
     position: absolute;
+    top:1%;
 }
 
 
@@ -1628,26 +1670,19 @@ border-color: #67809F;
     background: darken($color-purple, 10%)
   }
 }
+.triangle-c{
+  width: 0px;
+  height: 0px;
+  z-index: 5;
+  border-style: solid;
+  border-width: 0px 30px 30px 30px;
+  transform: rotate(180deg);
+  position:absolute;
+  border-color: transparent transparent #333645 transparent;
+  left: 40%;
+  bottom: -29px;
+  }
 
-#swan:hover { 
-  background:#ddd; 
-
-  .detailed-box{
-    display:inline-block;
-    z-index: 15;
-    } 
-   } 
-
-#xupes:hover{
-  background:#ddd; 
-
-  .xu{
-    visibility: visible;
-    z-index: 100;
-    display: inline-flex
-    
-}
-}
 //-------------------------------------------------------------------------------------------------------NEWSPAPER sign up---------------------------------------------------------------------------------------------------/
 .newspaper{
 @include center;
@@ -1810,8 +1845,18 @@ margin-bottom: 26px;
   flex-direction: row;
   margin-bottom: 30px;
   max-width: 300px;
- 
-
+    & .facebook:hover{
+      background-color: #3b5998;
+    }
+    & .linkedin:hover{
+      background-color: #0077b5;
+    }  
+    & .twitter:hover{
+      background-color: #00aced;
+    }
+    & .instagram:hover{
+      background-color: #d93175;
+    }
 }
 
 .media{
