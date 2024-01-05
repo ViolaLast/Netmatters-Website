@@ -37,8 +37,7 @@
     justify-content: flex-end;
   }
   .no-dis-sm {
-    display: none;
-    display: flex;
+    display: none !important;
   }
   .m50 {
     width: 50% !important;
@@ -187,6 +186,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     width: auto;
+    padding-bottom: 50px;
   }
   .container-middle .m33 {
     width: 33%;
@@ -194,6 +194,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     float: left;
+    margin: 0;
   }
   .container-middle .m50 {
     flex-direction: column;
@@ -202,6 +203,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     float: left;
+    margin-bottom: 0;
   }
   .welcome-to-netmatters {
     display: flex;
@@ -236,7 +238,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 0 15px 15px 0;
+    margin: 0 15px 0px -15px !important;
   }
   .form-input {
     width: 50%;
@@ -1328,6 +1330,7 @@ input:focus {
   color: #fff;
   text-align: center;
   position: relative;
+  z-index: 1;
 }
 .text-overlay p {
   margin-bottom: 0.375rem;
@@ -1336,7 +1339,6 @@ input:focus {
   font-weight: 600;
   color: #fff;
   position: relative;
-  z-index: 4;
 }
 
 .carousel__slide {
@@ -1429,11 +1431,13 @@ input:focus {
   display: inline-block;
   width: auto;
   border: 1px solid transparent;
+  z-index: 2;
 }
 
 .sl-1 {
   background-color: #926fb1;
   border-color: #926fb1;
+  cursor: pointer;
 }
 .sl-1:hover {
   background: #79539a;
@@ -1442,6 +1446,7 @@ input:focus {
 .sl-2 {
   background-color: #67809F;
   border-color: #67809f;
+  cursor: pointer;
 }
 .sl-2:hover {
   background: #526781;
@@ -1450,6 +1455,7 @@ input:focus {
 .sl-3 {
   background-color: #4183d7;
   border-color: #4183d7;
+  cursor: pointer;
 }
 .sl-3:hover {
   background: #286abd;
@@ -1458,6 +1464,7 @@ input:focus {
 .sl-4 {
   background-color: #2ecc71;
   border-color: #2ecc71;
+  cursor: pointer;
 }
 .sl-4:hover {
   background: #25a25a;
@@ -1466,6 +1473,7 @@ input:focus {
 .sl-5 {
   background-color: #d64541;
   border-color: #d64541;
+  cursor: pointer;
 }
 .sl-5:hover {
   background: #bc2c28;
@@ -1474,6 +1482,7 @@ input:focus {
 .sl-7 {
   background-color: #f62459;
   border-color: #f62459;
+  cursor: pointer;
 }
 .sl-7:hover {
   background: #de093f;
@@ -1500,9 +1509,6 @@ input:focus {
   text-align: right;
   margin-top: 13px;
   vertical-align: baseline;
-}
-.dis-md a:hover {
-  border-bottom: 2px solid #333654;
 }
 
 .icon-software {
@@ -1927,6 +1933,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   margin: 50px 15px 0 15px;
+  align-items: baseline;
 }
 
 .news-view-all {
@@ -1934,13 +1941,17 @@ input:focus {
   font-size: 1.625rem;
   display: inline-flex;
   float: inline-end;
+  display: none;
 }
 .news-view-all a {
   width: auto;
 }
+.news-view-all a:hover {
+  text-decoration: underline;
+}
 
-.view-all h3:hover {
-  border-bottom: 2px solid #333645;
+.our-work:hover {
+  text-decoration: underline;
 }
 
 .news-articles {
@@ -1948,7 +1959,6 @@ input:focus {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 50px;
 }
 
 .article-link {
@@ -2247,6 +2257,10 @@ i {
   color: #d24d57;
 }
 
+.input-news {
+  margin-bottom: 15px;
+}
+
 #newsletter-email, #newsletter-name {
   height: 47px;
   padding: 5px 15px;
@@ -2269,9 +2283,10 @@ i {
   float: left;
   margin-right: 20px;
   border: 3px solid #333645;
+  text-align: center;
 }
 
-.checkbox:active {
+.checkbox:focus {
   border-radius: 3px;
   height: 32px;
   width: 32px;
@@ -2280,32 +2295,18 @@ i {
   margin-right: 20px;
   border: 3px solid #333645;
 }
-.checkbox:active .icon-checkbox-checked {
+.checkbox:focus .icon-checkbox-checked {
   display: inline-flex;
+  margin-left: -5px;
 }
 
 .icon-checkbox-checked {
   display: none;
   position: relative;
-  border-radius: 3px;
-  height: 32px;
-  width: 32px;
-}
-
-.checkbox input {
-  opacity: 0;
-  height: 32px;
-  width: 32px;
-  position: relative;
-}
-
-.checkbox input:checked {
-  opacity: 100%;
-  color: #fff;
-  display: block;
-  line-height: 26px;
+  font-size: 2em;
   text-align: center;
-  font-size: 22px;
+  line-height: 26px;
+  border: none;
 }
 
 .tick {
@@ -2314,11 +2315,14 @@ i {
   margin-bottom: 15px;
   cursor: pointer;
 }
-.tick:active .icon-checkbox-checked {
+.tick:focus .icon-checkbox-checked {
   display: inline-flex;
-  border-radius: 3px;
-  height: 32px;
-  width: 32px;
+  position: relative;
+  font-size: 2em;
+  text-align: center;
+  line-height: 26px;
+  margin-left: -5px;
+  border: none;
 }
 
 .submit {
@@ -2398,6 +2402,9 @@ h4 {
 .footer-links {
   margin-bottom: 30px;
 }
+.footer-links a:hover {
+  text-decoration: underline;
+}
 
 footer {
   background-color: #212330;
@@ -2411,7 +2418,5 @@ footer {
   padding: 5px 15px 10px;
   flex-direction: column;
 }
-
-/* ------------------------------------------------------------------------------------------------ Grid Layout */
 
 /*# sourceMappingURL=netstyle.css.map */

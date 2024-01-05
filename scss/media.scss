@@ -51,10 +51,10 @@ width: 320px !important;
   .dis-md{
     display: inline-flex !important;
     justify-content: flex-end;
-  }
+    }
+  
   .no-dis-sm{
-    display:none;
-    display: flex;
+    display:none !important;
   }
   .m50{
     width: 50% !important;
@@ -236,6 +236,7 @@ width: 320px !important;
     flex-wrap:wrap;
     flex-direction: row;
     width: auto;
+    padding-bottom: 50px;
     
     & .m33 {
         width: 33%;
@@ -243,6 +244,7 @@ width: 320px !important;
         flex-wrap: wrap;
         flex-direction: row;
         float: left;
+        margin: 0;
     }
     & .m50{
         flex-direction:column;
@@ -251,6 +253,7 @@ width: 320px !important;
         flex-wrap: wrap;
         flex-direction: row;
         float: left;
+        margin-bottom: 0;
       
     }
   }
@@ -292,7 +295,7 @@ width: 320px !important;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin:0 15px 15px 0;
+    margin:0 15px 0px -15px !important;
   }
   .form-input{
       width: 50%;

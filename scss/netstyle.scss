@@ -192,12 +192,6 @@ input:focus{
 
 }
 
-// .buttons{
-//   display: flex;
-//   align-content: space-between;
-//   display: inline-block
-// }
-
 .cookie-btn{
   color: $color-primary;
   position: fixed;
@@ -752,6 +746,7 @@ border-color:#67809f transparent transparent;
   color: $color-primary; 
 text-align: center;
 position: relative ;
+z-index: 1;
 
 
 & p{
@@ -761,7 +756,6 @@ position: relative ;
     font-weight: 600;
     color: $color-primary ;
     position: relative;
-z-index: 4;
 }
  }
 
@@ -837,7 +831,6 @@ z-index: 4;
 .carousel::before,
 .carousel::after {
   content: '';
-  // z-index: 1;
   background-color: #333;
   background-size: 1.5rem 1.5rem;
   // background-repeat: no-repeat;
@@ -860,11 +853,13 @@ z-index: 4;
     display: inline-block;
     width: auto;
     border: 1px solid transparent;
+    z-index: 2;
 }
 
 .sl-1{
     background-color: $color-purple;
     border-color: $color-purple;
+    cursor: pointer;
     &:hover {
       background: darken($color-purple, 10%)
     }
@@ -872,6 +867,7 @@ z-index: 4;
 .sl-2{
 background-color: #67809F;
 border-color: #67809f;
+cursor: pointer;
 &:hover {
   background: darken(#67809f, 10%)
 }
@@ -879,6 +875,7 @@ border-color: #67809f;
 .sl-3{
   background-color: $color-blue;
   border-color: $color-blue;
+  cursor: pointer;
   &:hover {
     background: darken($color-blue, 10%)
   }
@@ -886,6 +883,7 @@ border-color: #67809f;
 .sl-4{
   background-color: $color-green;
     border-color: $color-green;
+    cursor: pointer;
     &:hover {
       background: darken($color-green, 10%)
     }
@@ -893,6 +891,7 @@ border-color: #67809f;
 .sl-5{
   background-color: $color-red;
   border-color: $color-red;
+  cursor: pointer;
   &:hover {
     background: darken($color-red, 10%)
   }
@@ -901,6 +900,7 @@ border-color: #67809f;
 .sl-7{
   background-color: $color-pink;
   border-color: $color-pink;
+  cursor: pointer;
   &:hover {
     background: darken($color-pink, 10%)
   }
@@ -927,9 +927,6 @@ border-color: #67809f;
     text-align: right;
     margin-top: 13px;
     vertical-align: baseline;
-    & a:hover{
-    border-bottom: 2px solid #333654;
-    }
 }
 
 .icon-software{
@@ -1356,14 +1353,13 @@ padding:10px 30px;
 
 
 //--------------------------------------------------------------------------------------------------------LATEST NEWS--------------------------------------------------------------
-// .news-container{
 
-// }
 
 .news-header{
   display: flex;
     justify-content: space-between;
       margin: 50px 15px 0 15px ;
+      align-items: baseline;
     }
 
 .news-view-all{
@@ -1371,20 +1367,22 @@ padding:10px 30px;
     font-size: 1.625rem;
     display: inline-flex;
     float: inline-end;
+    display:none;
   & a{
-    width: auto
-  }}
-  .view-all{
+    width: auto;
+    &:hover{
+      text-decoration: underline;
 
-    & h3:hover{
-      border-bottom: 2px solid #333645;
-      
     }
+  }
 }
+
+  .our-work:hover{
+        text-decoration: underline;
+    }
 
 .news-articles{
   @include center;
-  padding-bottom: 50px;
 
 }
 .article-link{
@@ -1437,7 +1435,6 @@ padding:10px 30px;
 .two{
   color: #ce4125;
 }
-
 
 .news-pin{
   position: absolute;
@@ -1688,7 +1685,9 @@ label{
 i{
     color: #d24d57;
 }
-
+.input-news{
+  margin-bottom: 15px;
+}
 
 #newsletter-email, #newsletter-name {
   height: 47px;
@@ -1713,9 +1712,10 @@ width:52px;
     float: left;
     margin-right: 20px;
     border: 3px solid #333645;
+    text-align: center;
   }
 
-    .checkbox:active{
+    .checkbox:focus{
     border-radius: 3px;
     height: 32px;
     width: 32px;
@@ -1725,49 +1725,40 @@ width:52px;
     border: 3px solid #333645;
     .icon-checkbox-checked{
       display: inline-flex;
+      margin-left: -5px;
     }
     }
+
     .icon-checkbox-checked{
       display: none;
       position: relative;
-          border-radius: 3px;
-          height: 32px;
-          width: 32px;
-
-
-    }
-.checkbox input{
-  // display: none;
-  opacity: 0;
-    height: 32px;
-    width: 32px;
-    position: relative;
-}          
-
-.checkbox input:checked{
-  opacity: 100%;
-  color: $color-primary;
-    display: block;
-      line-height: 26px;
+      font-size: 2em;
       text-align: center;
-      font-size: 22px;
-}
+          line-height: 26px;
+        border: none;
+        }     
 
 .tick{
   line-height: 32px;
   display: flex;
   margin-bottom: 15px;
   cursor: pointer;
-  &:active{
-    .icon-checkbox-checked{
-      display: inline-flex;
-      border-radius: 3px;
-      height: 32px;
-      width: 32px;
-    }
-  }
 
+  &:focus{
+    .icon-checkbox-checked{
+     display: inline-flex;
+     position: relative;
+      font-size: 2em;
+      text-align: center;
+          line-height: 26px;
+        // font-size: 31px;
+        margin-left: -5px;
+        border: none;
+     }
+  }
 }
+
+
 
 .submit{
   @include news-btn;
@@ -1837,6 +1828,9 @@ margin-bottom: 26px;
 }
 .footer-links{
   margin-bottom:30px;
+  & a:hover{
+    text-decoration: underline;
+  }
 }
 
 footer{
@@ -1852,4 +1846,3 @@ footer{
   flex-direction: column;  
 }
 
-/* ------------------------------------------------------------------------------------------------ Grid Layout */
