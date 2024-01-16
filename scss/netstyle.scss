@@ -500,7 +500,6 @@ background-color: transparent;
   display:inline-flex;
   flex-wrap: nowrap;
   flex-direction:row;
-  // width: 970px;
   padding: 0 10%;
   align-items: center;
   justify-content: center;
@@ -1087,7 +1086,6 @@ border-color: $color-primary;
 border-color: $color-primary;
   }
 }
-
 .c6{
   top: 0px;
   transition: top .5s;
@@ -1187,13 +1185,10 @@ border-color: $color-primary;
     text-align: center;
     color: #333645;
     font-size: 1.625rem;
-    & a:hover{
-      border-bottom: 2px solid #333645;
-    }
 }
 .our-work:hover{
-  border-bottom: 2px solid #333645;
-}
+ text-decoration: underline;
+  }
 //--------------------------------------------------------------------------------------grey to color partner images----------------------------------------------------------------------
 
 .sliding-partners img {
@@ -1361,9 +1356,6 @@ padding:10px 30px;
   &:hover {
     background: darken(#00b67b, 10%)
   }
-}
-.icon-arrow-right{
-  margin-left: 12px;
 }
 
 

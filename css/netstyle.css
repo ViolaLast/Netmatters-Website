@@ -36,6 +36,9 @@
     display: inline-flex !important;
     justify-content: flex-end;
   }
+  .dis-md:hover {
+    text-decoration: underline;
+  }
   .no-dis-sm {
     display: none !important;
   }
@@ -1760,12 +1763,9 @@ input:focus {
   color: #333645;
   font-size: 1.625rem;
 }
-.our-work a:hover {
-  border-bottom: 2px solid #333645;
-}
 
 .our-work:hover {
-  border-bottom: 2px solid #333645;
+  text-decoration: underline;
 }
 
 .sliding-partners img {
@@ -1931,10 +1931,6 @@ input:focus {
 }
 .btn-pilot:hover {
   background: #008359;
-}
-
-.icon-arrow-right {
-  margin-left: 12px;
 }
 
 .news-header {

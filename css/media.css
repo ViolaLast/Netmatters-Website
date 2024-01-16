@@ -35,6 +35,9 @@
     display: inline-flex !important;
     justify-content: flex-end;
   }
+  .dis-md:hover {
+    text-decoration: underline;
+  }
   .no-dis-sm {
     display: none !important;
   }

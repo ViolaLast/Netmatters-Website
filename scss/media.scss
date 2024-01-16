@@ -42,6 +42,9 @@ width: 320px !important;
   .dis-md{
     display: inline-flex !important;
     justify-content: flex-end;
+    &:hover{
+      text-decoration: underline;
+    }
     }
   
   .no-dis-sm{
