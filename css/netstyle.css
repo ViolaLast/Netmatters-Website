@@ -809,7 +809,7 @@ input:focus {
   bottom: 20px;
   z-index: 30;
 }
-.chat-container button {
+.chat-container i {
   width: 65px;
   height: 65px;
   position: fixed;
