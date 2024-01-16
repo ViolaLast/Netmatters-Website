@@ -298,15 +298,16 @@
   .nav-box {
     max-width: 150px;
   }
-  .ref-button {
-    margin: 0;
-    padding: 15px 15px !important;
-  }
   .review-btn {
     display: inline-block;
   }
-  .btn-pilot, .btn-google {
+  .btn-google {
     margin: 30px 8px 0 0 !important;
+    font-size: 1rem !important;
+  }
+  .btn-pilot {
+    margin: 30px 0px 0 0 !important;
+    font-size: 1rem !important;
   }
   .container-middle {
     width: 1200px !important;

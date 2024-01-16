@@ -23,19 +23,9 @@ padding: 50px 0;
 }}
 
  .ref-button{
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    height: auto;
-    width: auto;
-    text-transform: uppercase;
-    padding: 10px 30px;
-    font-size: 20px;
-    border-radius: 6px;
-    border: 2px solid transparent;
-    line-height: 1.4;
+  @include ref-btn;
    background-color:#272936;
-   margin: 0 8px 0 0;
+
    &:hover {
     background: darken(#272936, 10%)
 }
@@ -77,7 +67,6 @@ padding: 50px 0;
 .btn-google{
   background-color: #4387F6;
 margin: 20px 8px 0 0;
-padding:10px 30px;
 &:hover {
   background: darken(#4387F6, 10%)
 }
@@ -85,7 +74,6 @@ padding:10px 30px;
 .btn-pilot{
   background-color: #00b67b;
   margin: 20px 8px 0 0;
-  padding:10px 30px;
   &:hover {
     background: darken(#00b67b, 10%)
   }
