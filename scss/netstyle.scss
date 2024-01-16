@@ -1582,13 +1582,13 @@ padding:10px 30px;
   visibility: visible;
 }
 
-#top {
+.top {
  bottom: 100px;
  left: -100%;
  right: -100%;
 }
 
-#top::before {
+.top::before {
   top: 80%;
   left: 45%;
 }
@@ -1598,12 +1598,6 @@ padding:10px 30px;
   display: inline;
   text-align: center;
 }
-
-
-
-
-
-
 
 .detailed-box{
 visibility: hidden;
@@ -1615,7 +1609,6 @@ visibility: hidden;
     top:1%;
 }
 
-
 .hidden-box{
   background-color: #333645;
   padding: 20px;
@@ -1625,15 +1618,13 @@ visibility: hidden;
   margin: 0 auto 50px;
   width: 280px;
 
-
   & h3{ 
     position: relative;
     font-size: 1.125rem;
     color: $color-primary;
     padding-bottom: 17px;
- 
   }
-  & p{
+  & span{
     font-size: .8125rem;
     line-height: 1.375rem;
   
