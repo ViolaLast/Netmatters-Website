@@ -677,7 +677,7 @@ body {
   height: 100%;
   padding: 0;
   display: grid;
-  max-width: 100% !important;
+  max-width: 100%;
 }
 
 .container {
@@ -769,7 +769,6 @@ input:focus {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .inner {
@@ -777,14 +776,12 @@ input:focus {
 }
 
 .header-top {
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   flex-direction: row;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
 }
 
 .cookie-btn {
@@ -1154,7 +1151,7 @@ input:focus {
 
 .item-icon {
   display: flex;
-  justify-content: left;
+  float: left;
   color: #fff !important;
   width: auto;
   margin-left: 30px;
@@ -1311,7 +1308,6 @@ input:focus {
   perspective: 100px;
   height: 77vh;
   padding: 3.75rem 0;
-  z-index: 1;
 }
 
 .carousel__viewport {
@@ -1717,7 +1713,6 @@ input:focus {
 .col-icon {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
   margin-top: 30px;
   padding: 0 15px;
@@ -1749,7 +1744,6 @@ input:focus {
   font-size: 14px;
   border: 1px solid;
   color: #fff;
-  text-transform: uppercase;
   border-radius: 3px;
   margin-right: 0;
 }
@@ -1900,7 +1894,6 @@ input:focus {
   font-style: italic;
   line-height: 1.875rem;
   margin: 0px 0 25px;
-  line-height: 1.875rem;
 }
 
 .quote-author {
@@ -1950,9 +1943,6 @@ input:focus {
 .news-view-all a {
   width: auto;
 }
-.news-view-all a:hover {
-  border-bottom: 2px solid #333645;
-}
 
 .news-articles {
   margin-right: auto;
@@ -1995,17 +1985,14 @@ input:focus {
 
 .article-one {
   display: block;
-  font-size: 0.8125rem;
   padding: 30px;
   margin-top: -5px;
   text-align: left;
   font-size: 13px;
 }
 .article-one p {
-  text-wrap: wrap;
+  text-wrap: pretty;
   line-height: 1.375rem;
-  font-size: 0.8125rem;
-  font-size: 1em;
   margin-bottom: 25px;
 }
 
@@ -2181,7 +2168,7 @@ input:focus {
   color: #fff;
   padding-bottom: 17px;
 }
-.hidden-box span {
+.hidden-box p {
   font-size: 0.8125rem;
   line-height: 1.375rem;
 }
@@ -2376,7 +2363,6 @@ i {
   padding-right: 15px;
   background-color: #323544;
   padding-top: 27px;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   color: #fff;
