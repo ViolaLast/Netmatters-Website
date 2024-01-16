@@ -1,0 +1,147 @@
+
+//-----------------------------------------------------------------------------------SLIDING client-----------------------------------------------------------------------------------
+
+.sliding {
+  // display: inline-flex;
+	margin: auto;
+	position: relative;
+	width: 100%;
+  overflow-x: scroll;
+
+	.sliding-track {
+		display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0;
+		width:fit-content;
+	}
+	
+	.logo-img{
+    margin-right: 10px;
+		height: 100px;
+		width: auto;
+    display: grid;
+    grid-template-columns: auto-fit;
+    align-self: center;
+    & img{
+      height:60%;
+      width: auto;
+      padding: 10px;
+      margin-left:30px;
+    }
+	}
+}
+//------------------------------------------------------------------hidden-sliding-client---------------------------------------------------------------------------------------------------------------------------/
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+ width: 280px;
+}
+
+
+.hover-img:hover .tooltip-text {
+  visibility: visible;
+}
+
+.top {
+ bottom: 100px;
+ left: -100%;
+ right: -100%;
+}
+
+.top::before {
+  top: 80%;
+  left: 45%;
+}
+
+.hover-img {
+  position: relative;
+  display: inline;
+  text-align: center;
+}
+
+.detailed-box{
+visibility: hidden;
+    bottom: 100%;
+  text-align: center;
+  z-index: 100;
+    max-width: 280px;
+    position: absolute;
+    top:1%;
+}
+
+.hidden-box{
+  background-color: #333645;
+  padding: 20px;
+  font-size: .875rem;
+  color: $color-primary;
+  text-align: center;
+  margin: 0 auto 50px;
+  width: 280px;
+
+  & h3{ 
+    position: relative;
+    font-size: 1.125rem;
+    color: $color-primary;
+    padding-bottom: 17px;
+  }
+  & p{
+    font-size: .8125rem;
+    line-height: 1.375rem;
+  
+  }
+}
+.btn{
+    margin-top: 11px;
+    font-size: 1 rem;
+      height: auto;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      display: inline-block;
+      line-height: 35px;
+  }
+
+  .btn-grn{
+    background-color: $color-green;
+    border-color: $color-green;
+    &:hover{
+    background: darken($color-green, 10%)
+  }
+}
+.btn-blu{
+  background-color: $color-blue;
+  border-color: $color-blue;
+  &:hover{
+    background: darken($color-blue, 10%)
+  }
+}
+.btn-gray{
+background-color: #67809F;
+border-color: #67809F;
+&:hover{
+  background: darken(#67809f, 10%)
+}
+}
+.btn-pur{
+  background-color: $color-purple;
+  border-color: $color-purple;
+  &:hover{
+    background: darken($color-purple, 10%)
+  }
+}
+.triangle-c{
+  width: 0px;
+  height: 0px;
+  z-index: 5;
+  border-style: solid;
+  border-width: 0px 30px 30px 30px;
+  transform: rotate(180deg);
+  position:absolute;
+  border-color: transparent transparent #333645 transparent;
+  left: 40%;
+  bottom: -29px;
+  }

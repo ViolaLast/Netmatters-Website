@@ -1,0 +1,72 @@
+//--------------------------------------------------------------------------------------grey to color partner images----------------------------------------------------------------------
+
+.sliding-partners img {
+  @include grey-to-color;
+}
+  
+  .clients-list {
+    display: inline;
+    & img{
+    @include grey-to-color;
+    }
+  }
+//----------------------------------------------Google-Partner Animation-------------------------------------------------------------------------------
+
+$animationSpeed: 47s;
+$slideWidth: 120px;
+$numberOfSlides: 11;
+
+@keyframes scroll {
+	0% { transform: translate(0); }
+	100% { transform: translate(calc(-#{$slideWidth} * #{$numberOfSlides} + #{$slideWidth}));
+}}
+
+.slider {
+	height: auto;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+    padding-top: 50px;
+  padding-bottom: 50px;
+
+	
+	&::before,
+	&::after {
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+    margin: 0;
+		width:fit-content;
+	}
+	
+	.slide {
+    margin-right: 10px;
+		height: auto;
+		width: auto;
+    display: grid;
+    align-self: center;
+    & img{
+      width: auto;
+      padding: 10px;
+      margin-left: 30px;
+    }
+	}
+}

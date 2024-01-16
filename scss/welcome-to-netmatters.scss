@@ -1,0 +1,92 @@
+//------------------------------------------------------------------------------------------------welcome-to-netmatters---------------------------------------------
+
+.welcome-to-netmatters{
+  display: inline-block;
+background-color: #323544;
+color: $color-primary;
+padding: 50px 0;
+@include center;
+
+  & p {
+    margin: 0px 0 25px;
+    line-height: 1.875rem;
+  }
+  & a:hover{
+    text-decoration: underline;
+  }
+ }
+.welcome-selection{
+  padding-bottom: 50px;
+  & p {
+    margin: 0px 0 25px;
+    line-height: 1.875rem;
+}}
+
+ .ref-button{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: auto;
+    width: auto;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    line-height: 1.4;
+   background-color:#272936;
+   margin: 0 8px 0 0;
+   &:hover {
+    background: darken(#272936, 10%)
+}
+ }
+.why-choose-us{
+  margin-bottom: 17px;
+}
+ 
+
+.stars{
+ line-height: 1;
+ margin-bottom: 25px;
+  & .icon-star-full{
+    color: orange;
+    font-size: 50px;
+    }
+  }
+
+.client-quote{
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.875rem;
+  margin: 0px 0 25px;
+}
+
+.quote-author{
+  font-style: normal;
+  font-weight: 600;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+  line-height: 1.875rem;
+  & cite{
+    color: $color-primary;
+    font-style: normal;
+  }
+}
+
+.btn-google{
+  background-color: #4387F6;
+margin: 20px 8px 0 0;
+padding:10px 30px;
+&:hover {
+  background: darken(#4387F6, 10%)
+}
+}
+.btn-pilot{
+  background-color: #00b67b;
+  margin: 20px 8px 0 0;
+  padding:10px 30px;
+  &:hover {
+    background: darken(#00b67b, 10%)
+  }
+}
