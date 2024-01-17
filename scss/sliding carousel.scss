@@ -3,7 +3,7 @@
   position: relative;
   z-index: 1;
   perspective: 100px;
-  height: 77vh;
+  height: 550px;
   padding: 3.75rem 0;
 }
 
@@ -21,6 +21,7 @@
   height: 100%;
   scroll-snap-type: x mandatory;
   z-index: 1;
+  
 }
 .text-overlay{
   align-self: center;
@@ -28,8 +29,9 @@
   color: $color-primary; 
 text-align: center;
 position: relative ;
-z-index: 1;
-
+z-index: 4;display: flex;
+flex-direction: column;
+align-items: center;
 
 & p{
     margin-bottom: .375rem;
@@ -53,17 +55,18 @@ z-index: 1;
   display: flex;
   justify-content: center;
   z-index: 1;
+  
 }
 
 #carousel__slide1 {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.webp');
   filter:saturate(80%);
   }
-  
 
 .carousel__slide:nth-child(2) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-O67Y.jpg');
   filter:saturate(80%);
+
 }
 .carousel__slide:nth-child(3) {
   background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-gay8.png');

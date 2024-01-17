@@ -1,7 +1,6 @@
 
 //-------------------------------------------------------------------------------------------------------NEWSPAPER sign up---------------------------------------------------------------------------------------------------/
 .newspaper{
-@include center;
   background-color: #ddd;
   & .newspaper-container{
       padding: 50px 0;
@@ -30,7 +29,7 @@ label{
     font-weight: 700;
     color: #333645;
     display: inline-block;
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 i{
@@ -38,6 +37,7 @@ i{
 }
 .input-news{
   margin-bottom: 15px;
+  justify-content: space-between;
 }
 
 #newsletter-email, #newsletter-name {
@@ -112,10 +112,11 @@ width:52px;
 
 
 .submit{
-  @include news-btn;
+  @include header-btn;
+  height:auto;
   background-color: #333645;
   border-color: #333645;
-  cursor: pointer;
+  font-size: 1.063rem;
   &:hover {
     background: darken(#333645, 10%)
   }

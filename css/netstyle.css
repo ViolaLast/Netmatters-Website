@@ -10,9 +10,12 @@
     width: 320px !important;
   }
 }
-@media screen and (min-width: 591px) {
-  .why-choose-us {
-    margin-bottom: 0 !important;
+@media screen and (min-width: 553px) {
+  .why-choose-us, .our-culture {
+    margin-bottom: 50px !important;
+  }
+  .welcome-selection {
+    padding-bottom: 0px !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -27,10 +30,16 @@
   .logo-container {
     max-width: 374px;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 45px;
   }
   .hidden-bu {
     display: none !important;
+  }
+  .text-overlay {
+    position: relative;
+    z-index: 4;
+    padding: 3.75rem 0;
+    text-align: center !important;
   }
   .dis-md {
     display: inline-flex !important;
@@ -42,13 +51,16 @@
   .no-dis-sm {
     display: none !important;
   }
+  .m33 {
+    padding: 0 15px !important;
+  }
   .m50 {
     width: 50% !important;
     flex-wrap: wrap !important;
     flex-direction: row !important;
     float: left;
     margin-top: 0;
-    padding: 0 10px !important;
+    padding: 0 15px !important;
   }
   .form-control {
     height: 56px !important;
@@ -83,8 +95,6 @@
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .social-media-links {
     justify-content: space-between;
@@ -144,19 +154,17 @@
     display: inline !important;
   }
   .m970 {
-    min-width: 970px !important;
+    width: 970px !important;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .buttons-hidden {
     display: inline;
   }
-  .inner {
-    width: 970px;
-    margin: 0 -15px;
+  .logo-container {
+    margin-right: 100px !important;
+    width: 100%;
   }
   .logo-container {
     padding-left: 15px;
@@ -168,6 +176,7 @@
   }
   .text-overlay {
     text-align: left !important;
+    align-items: flex-start !important;
   }
   .text-overlay .h2 {
     font-size: 4rem;
@@ -176,9 +185,6 @@
   .text-overlay p {
     font-size: 1.625rem;
     line-height: 2.5rem;
-  }
-  .why-choose-us {
-    margin-bottom: 17px !important;
   }
   .ikon-nav-menu {
     display: inline-flex !important;
@@ -193,11 +199,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: auto;
   }
   .container-middle .m33 {
     width: 33%;
     display: flex;
+    padding: 0 15px;
     flex-wrap: wrap;
     flex-direction: row;
     float: left;
@@ -223,7 +229,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     float: left;
-    padding: 0 15px;
   }
   .welcome-to-netmatters .our-clients {
     width: 50%;
@@ -233,11 +238,19 @@
     float: left;
     padding: 0 15px;
   }
+  .why-choose-us {
+    margin-bottom: 17px !important;
+  }
+  .our-culture {
+    margin-bottom: 0px !important;
+  }
+  .btn-google {
+    margin: 40px 8px 0 0 !important;
+  }
   .news-articles {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    overflow-x: hidden;
     width: 970px;
   }
   .input-news {
@@ -264,10 +277,8 @@
     width: 25%;
     margin: 0 15px;
   }
-}
-@media screen and (min-width: 1171px) {
-  .why-choose-us {
-    margin-bottom: 0px !important;
+  .box-h {
+    margin: 0 15px 45px 15px !important;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -281,6 +292,10 @@
   }
   .w1200 {
     width: 1200px !important;
+    justify-content: center;
+  }
+  .why-choose-us, .our-culture {
+    margin-bottom: 50px !important;
   }
   .sub-menu {
     width: 1200px !important;
@@ -303,12 +318,13 @@
     display: inline-block;
   }
   .btn-google {
-    margin: 30px 8px 0 0 !important;
-    font-size: 1rem !important;
+    margin: 0px 8px 0 0 !important;
+    font-size: 1.2rem !important;
   }
   .btn-pilot {
-    margin: 30px 0px 0 0 !important;
-    font-size: 1rem !important;
+    margin: 0px 0px 0 0 !important;
+    font-size: 1.2rem !important;
+    padding: 10px 20px !important;
   }
   .container-middle {
     width: 1200px !important;
@@ -316,7 +332,7 @@
   .our-service {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between !important;
   }
   .h-box {
     margin-bottom: 0px !important;
@@ -333,9 +349,6 @@
     line-height: 1.375rem;
     margin-bottom: 13px;
     font-size: 0.8rem;
-  }
-  .c1, .c2, .c3, .c4, .c5, .c6, .c7 {
-    height: 313px;
   }
   .c7 {
     margin-bottom: 0 !important;
@@ -388,8 +401,9 @@
     margin-bottom: 40px !important;
   }
   .fl {
-    width: 20%;
-    margin: 0 15px;
+    width: 25%;
+    padding: 0 15px;
+    margin: 0 !important;
   }
 }
 @font-face {
@@ -647,10 +661,6 @@
 }
 
 .header-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -721,7 +731,7 @@
 
 .logo-container {
   vertical-align: middle;
-  max-width: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -753,6 +763,18 @@
 }
 
 .hamburger-button {
+  height: 56px;
+  line-height: 35px;
+  font-size: 1.125rem;
+  float: left;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: auto;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
   height: 56px;
   width: 63px;
   position: relative;
@@ -807,7 +829,7 @@
 
 .search-barm {
   display: flex;
-  margin-top: 17px;
+  margin-top: 11px;
   background-color: rgba(0, 0, 0, 0.1);
   outline: 1px solid hsla(0, 0%, 100%, 0.2);
   width: 100%;
@@ -842,12 +864,10 @@
 
 .button-container-hidden {
   width: auto;
-  flex-grow: 1;
 }
 
 .buttons-hidden {
   float: right;
-  padding: 7px 0;
   display: flex;
   width: auto;
 }
@@ -919,10 +939,10 @@
   display: flex;
   cursor: pointer;
   display: none;
-  width: 63px;
   height: 56px;
+  font-size: 1.063rem;
   border: none;
-  padding: 0 2rem;
+  padding: 7px 20px 3px;
   background-color: #999aa2;
 }
 .btn-search span {
@@ -965,10 +985,6 @@
 }
 
 .nav-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   position: relative;
   display: inline-flex;
   flex-wrap: nowrap;
@@ -1202,7 +1218,7 @@
   position: relative;
   z-index: 1;
   perspective: 100px;
-  height: 77vh;
+  height: 550px;
   padding: 3.75rem 0;
 }
 
@@ -1227,7 +1243,10 @@
   color: #fff;
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .text-overlay p {
   margin-bottom: 0.375rem;
@@ -1393,15 +1412,10 @@
 .container-middle {
   width: auto;
   padding-top: 50px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .box-h {
   display: flex;
-  margin: 0 15px 45px 15px;
   color: #333645;
 }
 
@@ -1413,16 +1427,23 @@
   vertical-align: baseline;
 }
 
+.our-service {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .ikon-software {
   border: 1px solid #ccc;
   flex-direction: column;
   position: relative;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  max-width: 720px;
   padding: 30px;
   display: flex;
   border-radius: 15px;
   text-align: center;
+  align-self: stretch;
 }
 
 .ikon-circles {
@@ -1588,7 +1609,6 @@
 .c7 {
   top: 0px;
   transition: top 0.5s;
-  margin-bottom: 30px;
 }
 
 .c7:hover {
@@ -1615,7 +1635,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  padding: 0 15px;
+  width: 100%;
+  align-self: stretch;
 }
 
 .p {
@@ -1645,11 +1666,11 @@
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
   line-height: 46px;
   border-radius: 2px;
   align-items: center;
   height: auto;
+  margin-top: auto;
   line-height: 35px;
   padding: 5px 15px;
   text-transform: uppercase;
@@ -1666,6 +1687,7 @@
   text-align: center;
   color: #333645;
   font-size: 1.625rem;
+  margin-top: 30px;
 }
 
 .our-work:hover {
@@ -1745,10 +1767,6 @@
   background-color: #323544;
   color: #fff;
   padding: 50px 0;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .welcome-to-netmatters p {
   margin: 0px 0 25px;
@@ -1773,12 +1791,14 @@
   width: auto;
   height: 57px;
   text-transform: uppercase;
+  text-decoration: none !important;
   padding: 10px 30px;
   font-size: 20px;
   border-radius: 6px;
   border: 1px solid transparent;
   line-height: 35px;
   margin: 0 8px 0 0;
+  cursor: pointer;
   background-color: #272936;
 }
 .ref-button:hover {
@@ -1791,7 +1811,6 @@
 
 .stars {
   line-height: 1;
-  margin-bottom: 25px;
 }
 .stars .icon-star-full {
   color: orange;
@@ -1803,7 +1822,7 @@
   font-size: 1.3rem;
   font-style: italic;
   line-height: 1.875rem;
-  margin: 0px 0 25px;
+  margin: 25px 0 25px;
 }
 
 .quote-author {
@@ -1850,13 +1869,6 @@
 }
 .news-view-all a {
   width: auto;
-}
-
-.news-articles {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .article-link {
@@ -2024,25 +2036,24 @@
 }
 
 .tooltip-text {
-  visibility: hidden;
+  display: none;
   position: absolute;
   z-index: 2;
   width: 280px;
+  justify-content: center;
 }
 
 .hover-img:hover .tooltip-text {
-  visibility: visible;
+  display: flex;
+  flex-wrap: wrap;
+  user-select: auto;
+  justify-content: center;
 }
 
 .top {
   bottom: 100px;
   left: -100%;
   right: -100%;
-}
-
-.top::before {
-  top: 80%;
-  left: 45%;
 }
 
 .hover-img {
@@ -2052,13 +2063,14 @@
 }
 
 .detailed-box {
-  visibility: hidden;
+  display: none;
   bottom: 100%;
   text-align: center;
   z-index: 100;
   max-width: 280px;
   position: absolute;
   top: 1%;
+  justify-content: center;
 }
 
 .hidden-box {
@@ -2069,6 +2081,7 @@
   text-align: center;
   margin: 0 auto 50px;
   width: 280px;
+  justify-items: center;
 }
 .hidden-box h3 {
   position: relative;
@@ -2138,10 +2151,6 @@
 }
 
 .newspaper {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   background-color: #ddd;
 }
 .newspaper .newspaper-container {
@@ -2169,7 +2178,7 @@ label {
   font-weight: 700;
   color: #333645;
   display: inline-block;
-  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 i {
@@ -2178,6 +2187,7 @@ i {
 
 .input-news {
   margin-bottom: 15px;
+  justify-content: space-between;
 }
 
 #newsletter-email, #newsletter-name {
@@ -2245,20 +2255,22 @@ i {
 }
 
 .submit {
-  color: #fff;
+  height: 56px;
   line-height: 35px;
-  width: auto;
+  font-size: 1.125rem;
+  float: left;
   padding: 5px 15px;
   text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  font-size: 1.063rem;
-  border: 1px solid transparent;
   border-radius: 3px;
-  font-weight: 500;
+  width: auto;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  height: auto;
   background-color: #333645;
   border-color: #333645;
-  cursor: pointer;
+  font-size: 1.063rem;
 }
 .submit:hover {
   background: #1d1f28;
@@ -2297,6 +2309,7 @@ body {
   padding: 0;
   display: grid;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -2326,10 +2339,6 @@ input:focus {
   filter: drop-shadow(0 0 0.75rem rgba(3, 250, 250, 0.2));
 }
 
-.policy a {
-  text-decoration: underline;
-}
-
 .h2 {
   font-size: 2.5rem;
   line-height: 3rem;
@@ -2342,6 +2351,10 @@ input:focus {
   margin: -6px 0 40px;
   line-height: 1.1;
   font-size: 36px;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 .h4 {
@@ -2379,11 +2392,14 @@ input:focus {
   color: #333645;
 }
 
-.footer-container {
+.general {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.footer-container {
   background-color: #323544;
   padding-top: 27px;
   display: flex;
@@ -2446,6 +2462,7 @@ h4 {
 
 .footer-links {
   margin-bottom: 30px;
+  justify-content: space-between;
 }
 .footer-links a:hover {
   text-decoration: underline;
@@ -2472,6 +2489,10 @@ footer li {
 
 .sm {
   display: none;
+}
+
+.policy a {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=netstyle.css.map */

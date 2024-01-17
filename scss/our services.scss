@@ -5,12 +5,11 @@
 .container-middle{
  width: auto; 
   padding-top: 50px;
-  @include center;
 
 }
 .box-h{
     display: flex;
-    margin:0 15px 45px 15px;
+    // margin:0 15px 45px 15px;
     color: #333645;
 
 }
@@ -23,17 +22,24 @@
     vertical-align: baseline;
 }
 
+.our-service{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
 .ikon-software{
  
     border: 1px solid #ccc;
     flex-direction: column;
     position: relative;
     box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-    max-width: 720px;
     padding: 30px;
     display: flex;
     border-radius: 15px;
     text-align: center;
+    align-self: stretch;
 
 }
 .ikon-circles{
@@ -45,7 +51,6 @@
     margin: 0 auto 17px;
     color: $color-primary;
     font-weight: 400;
-   
 }
 
 .ikon{
@@ -197,7 +202,6 @@ border-color: $color-primary;
  .c7{
   top: 0px;
   transition: top .5s;
-  margin-bottom: 30px;
 }
 .c7:hover{
   background-color: $color-red;
@@ -224,7 +228,8 @@ border-color: $color-primary;
   flex-direction: column;
   align-items:center;
   margin-top: 30px;
-  padding: 0 15px;
+  width: 100%;
+  align-self: stretch;
 }
 
 .p{
@@ -245,24 +250,29 @@ border-color: $color-primary;
   .btn-middle {
     @include mid-btn;
     height: auto;
+    margin-top: auto;
     line-height: 35px;
     padding: 5px 15px;
     text-transform: uppercase;
     color: $color-primary;
     border-radius: 3px;
     margin-right: 0;
+    // position: absolute;
+    // bottom: 30px;
+    // left: auto;
+    // right: auto;
 }
 //------------------------------------------------------------------------------------------------------------View Our Work-----------------------------------------------------------------------------------------
 .view-all-container{
   text-align: center;
-  // margin-top: 50px;
-  // margin-bottom: 35px;
+
 }
 
 .our-work{
     text-align: center;
     color: #333645;
     font-size: 1.625rem;
+    margin-top: 30px;
 }
 .our-work:hover{
  text-decoration: underline;

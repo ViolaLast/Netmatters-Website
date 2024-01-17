@@ -35,15 +35,22 @@
 //------------------------------------------------------------------hidden-sliding-client---------------------------------------------------------------------------------------------------------------------------/
 
 .tooltip-text {
-  visibility: hidden;
+  // visibility: hidden;
+  display: none;
   position: absolute;
   z-index: 2;
  width: 280px;
+ justify-content: center;
 }
 
 
 .hover-img:hover .tooltip-text {
-  visibility: visible;
+  // visibility: visible;
+  display:flex;
+  flex-wrap: wrap;
+  user-select: auto;
+  justify-content: center;
+
 }
 
 .top {
@@ -52,10 +59,10 @@
  right: -100%;
 }
 
-.top::before {
-  top: 80%;
-  left: 45%;
-}
+// .top::before {
+//   top: 80%;
+//   left: 45%;
+// }
 
 .hover-img {
   position: relative;
@@ -64,13 +71,14 @@
 }
 
 .detailed-box{
-visibility: hidden;
+display:none;
     bottom: 100%;
   text-align: center;
   z-index: 100;
     max-width: 280px;
     position: absolute;
     top:1%;
+    justify-content: center;
 }
 
 .hidden-box{
@@ -81,6 +89,7 @@ visibility: hidden;
   text-align: center;
   margin: 0 auto 50px;
   width: 280px;
+  justify-items: center;
 
   & h3{ 
     position: relative;
