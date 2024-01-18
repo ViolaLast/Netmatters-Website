@@ -66,7 +66,7 @@ width:52px;
     text-align: center;
   }
 
-    .checkbox:focus{
+    .checkbox:checked{
     border-radius: 3px;
     height: 32px;
     width: 32px;
@@ -108,8 +108,6 @@ width:52px;
      }
   }
 }
-
-
 
 .submit{
   @include header-btn;
