@@ -35,22 +35,25 @@
 //------------------------------------------------------------------hidden-sliding-client---------------------------------------------------------------------------------------------------------------------------/
 
 .tooltip-text {
-  // visibility: hidden;
-  display: none;
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  z-index: 2;
- width: 280px;
- justify-content: center;
+  z-index: 5;
+width: 280px;
+justify-content: center;
+transition: visibility 0s, opacity 0.5s linear;
 }
 
-
 .hover-img:hover .tooltip-text {
-  // visibility: visible;
-  display:flex;
-  flex-wrap: wrap;
+  visibility: visible;
+  opacity: 1;
+  transition: display 10s ;
+  // display:inline-flex;
+  // flex-wrap: wrap;
   user-select: auto;
   justify-content: center;
-
+  transition: display 5s ease;
 }
 
 .top {
@@ -68,10 +71,14 @@
   position: relative;
   display: inline;
   text-align: center;
+  // &:hover .hidden-box::before {
+  //   display: inline-flex; // Adjust as needed
+  // }
 }
 
 .detailed-box{
-display:none;
+// display:none;
+visibility: hidden;
     bottom: 100%;
   text-align: center;
   z-index: 100;
@@ -80,6 +87,7 @@ display:none;
     top:1%;
     justify-content: center;
 }
+
 
 .hidden-box{
   background-color: #333645;
@@ -90,6 +98,7 @@ display:none;
   margin: 0 auto 50px;
   width: 280px;
   justify-items: center;
+  transition: delay 0.5s ease;
 
   & h3{ 
     position: relative;
@@ -153,4 +162,5 @@ border-color: #67809F;
   border-color: transparent transparent #333645 transparent;
   left: 40%;
   bottom: -29px;
+  transition: delay 0.5s ease;
   }

@@ -1104,10 +1104,26 @@
   width: 970px;
 }
 
+.triangle {
+  visibility: hidden;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 0px;
+  border-style: solid;
+  border-width: 0px 75px 40px 75px;
+  border-color: transparent transparent #050505 transparent;
+  transform: rotate(180deg);
+  background-color: transparent;
+  position: absolute;
+  top: 98px;
+  z-index: 1100;
+}
+
 .software:hover > .bs {
   visibility: visible;
   color: #526781;
-  background-color: #526781;
+  background-color: #3e4e62;
   width: 100% !important;
 }
 
@@ -1122,11 +1138,15 @@
 .software:hover .icon-laptop {
   color: #fff;
 }
+.software:hover .triangle {
+  visibility: visible;
+  border-color: transparent transparent #526781 transparent;
+}
 
 .it-support:hover > .it {
   visibility: visible;
   color: #fff;
-  background-color: #4183d7;
+  background-color: #286abd;
   border-color: #4183d7 transparent transparent;
 }
 
@@ -1137,11 +1157,15 @@
 .it-support:hover .icon-display {
   color: #fff;
 }
+.it-support:hover .triangle {
+  visibility: visible;
+  border-color: transparent transparent #4183d7 transparent;
+}
 
 .marketing:hover > .dm {
   visibility: visible;
   color: #fff;
-  background-color: #2ecc71;
+  background-color: #25a25a;
   border-color: #2ecc71 transparent transparent;
 }
 
@@ -1152,11 +1176,15 @@
 .marketing:hover .icon-bar-graph {
   color: #fff;
 }
+.marketing:hover .triangle {
+  visibility: visible;
+  border-color: transparent transparent #2ecc71 transparent;
+}
 
 .telecoms:hover > .ts {
   visibility: visible;
   color: #fff;
-  background-color: #d64541;
+  background-color: #bc2c28;
   border-color: #d64541 transparent transparent;
 }
 
@@ -1167,11 +1195,15 @@
 .telecoms:hover .icon-phone-call {
   color: #fff;
 }
+.telecoms:hover .triangle {
+  visibility: visible;
+  border-color: transparent transparent #d64541 transparent;
+}
 
 .web:hover > .wd {
   visibility: visible;
   color: #fff;
-  background-color: #926fb1;
+  background-color: #79539a;
   border-color: #926fb1 transparent transparent;
 }
 
@@ -1182,11 +1214,15 @@
 .web:hover .icon-embed {
   color: #fff;
 }
+.web:hover .triangle {
+  visibility: visible;
+  border-color: transparent transparent #926fb1 transparent;
+}
 
 .cyber:hover > .cs {
   visibility: visible;
   color: #fff;
-  background-color: #f62459;
+  background-color: #de093f;
   border-color: #f62459 transparent transparent;
 }
 
@@ -1197,11 +1233,15 @@
 .cyber:hover .icon-security {
   color: #fff;
 }
+.cyber:hover .triangle {
+  visibility: visible;
+  border-color: transparent transparent #f62459 transparent;
+}
 
 .developer:hover > .dc {
   visibility: visible;
   color: #fff;
-  background-color: #d64541;
+  background-color: #bc2c28;
   border-color: #d64541 transparent transparent;
 }
 
@@ -1211,6 +1251,10 @@
 }
 .developer:hover .icon-graduation-cap {
   color: #fff;
+}
+.developer:hover .triangle {
+  visibility: visible;
+  border-color: transparent transparent #d64541 transparent;
 }
 
 .carousel {
@@ -1966,7 +2010,10 @@
 }
 .posted .mlogo {
   width: 60px;
+  height: 50px;
   display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .posted .details {
   padding-left: 15px;
@@ -2036,18 +2083,22 @@
 }
 
 .tooltip-text {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   width: 280px;
   justify-content: center;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .hover-img:hover .tooltip-text {
-  display: flex;
-  flex-wrap: wrap;
+  visibility: visible;
+  opacity: 1;
+  transition: display 10s;
   user-select: auto;
   justify-content: center;
+  transition: display 5s ease;
 }
 
 .top {
@@ -2063,7 +2114,7 @@
 }
 
 .detailed-box {
-  display: none;
+  visibility: hidden;
   bottom: 100%;
   text-align: center;
   z-index: 100;
@@ -2082,6 +2133,7 @@
   margin: 0 auto 50px;
   width: 280px;
   justify-items: center;
+  transition: delay 0.5s ease;
 }
 .hidden-box h3 {
   position: relative;
@@ -2148,6 +2200,7 @@
   border-color: transparent transparent #333645 transparent;
   left: 40%;
   bottom: -29px;
+  transition: delay 0.5s ease;
 }
 
 .newspaper {

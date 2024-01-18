@@ -408,24 +408,26 @@ background-color: transparent;
   width: 970px;
 }
 
-// .triangle{
-//   visibility: hidden;
-//   display:block;
-//   content:"";
-//   width: 0px;
-//   height: 0px;
-//   border-style: solid;
-//   border-width: 0px 70px 36px 70px;
-//   border-color: transparent transparent #526781 transparent;
-//   transform: rotate(180deg);
-//   position:absolute;
-//   z-index:10;
-// }
+.triangle{
+  visibility: hidden;
+  display:block;
+  content:"";
+  width: 100%;
+  height: 0px;
+  border-style: solid;
+  border-width: 0px 75px 40px 75px;
+  border-color: transparent transparent #050505 transparent;
+  transform: rotate(180deg);
+  background-color:transparent;
+  position:absolute;
+  top: 98px;
+  z-index:1100;
+}
 
  .software:hover > .bs {
   visibility: visible;
   color:#526781;
-  background-color:#526781;
+  background-color:darken(#526781, 10%);
   width: 100% !important;
  }
  .icon-laptop{
@@ -437,12 +439,16 @@ background-color: transparent;
   .icon-laptop{
     color: $color-primary;
   }
+  .triangle{
+    visibility: visible;
+    border-color: transparent transparent #526781 transparent;
+  }
   }
 
 .it-support:hover > .it{
   visibility: visible;
   color:$color-primary;
-  background-color:$color-blue;
+  background-color:darken($color-blue, 10%);
   border-color:$color-blue transparent transparent;
 }
 .it-support:hover{
@@ -451,11 +457,15 @@ background-color: transparent;
   .icon-display{
     color: $color-primary;
   }
+  .triangle{
+    visibility: visible;
+    border-color: transparent transparent $color-blue transparent;
+  }
 }
 .marketing:hover > .dm{
   visibility: visible;
   color:$color-primary;
-  background-color: $color-green;
+  background-color:darken($color-green, 10%);
   border-color:$color-green transparent transparent;
 }
 
@@ -464,13 +474,17 @@ background-color: transparent;
   color: $color-primary;
   .icon-bar-graph{
     color: $color-primary;
+  }
+.triangle{
+  visibility: visible;
+  border-color: transparent transparent $color-green transparent;
+}
 }
 
-}
 .telecoms:hover > .ts{
   visibility: visible;
   color:$color-primary;
-  background-color: $color-red;
+  background-color:darken($color-red, 10%);
   border-color:$color-red transparent transparent;
 }
 .telecoms:hover{
@@ -479,12 +493,16 @@ background-color: transparent;
   .icon-phone-call{
     color: $color-primary;
   }
+  .triangle{
+    visibility: visible;
+    border-color: transparent transparent $color-red transparent;
+  }
 }
 
 .web:hover > .wd{
   visibility: visible;
   color:$color-primary;
-  background-color: $color-purple;
+  background-color:darken($color-purple, 10%);
   border-color:$color-purple transparent transparent;
 }
 .web:hover{
@@ -493,12 +511,16 @@ background-color: transparent;
   .icon-embed{
     color: $color-primary;
   }
+  .triangle{
+    visibility: visible;
+    border-color: transparent transparent $color-purple transparent;
+  }
 }
 
 .cyber:hover > .cs{
   visibility: visible;
   color:$color-primary;
-  background-color: $color-pink;
+  background-color:darken($color-pink, 10%);
   border-color:$color-pink transparent transparent;
 }
 .cyber:hover{
@@ -507,18 +529,27 @@ background-color: transparent;
   .icon-security{
     color: $color-primary;
   }
+  .triangle{
+    visibility: visible;
+    border-color: transparent transparent $color-pink transparent;
+  }
 }
 
 .developer:hover > .dc{
   visibility: visible;
   color:$color-primary;
-  background-color: $color-red;
+  background-color:darken($color-red, 10%);
   border-color:$color-red transparent transparent;
 }
 .developer:hover{
   background-color:$color-red;
   color: $color-primary;
+  
   .icon-graduation-cap{
     color: $color-primary;
+  }
+  .triangle{
+    visibility: visible;
+    border-color: transparent transparent $color-red transparent;
   }
 }
