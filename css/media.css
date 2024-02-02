@@ -165,6 +165,9 @@
     margin-right: 100px !important;
     width: 100%;
   }
+  .side-menu {
+    width: 350px !important;
+  }
   .logo-container {
     padding-left: 15px;
     padding-right: 15px;

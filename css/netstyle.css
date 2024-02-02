@@ -166,6 +166,9 @@
     margin-right: 100px !important;
     width: 100%;
   }
+  .side-menu {
+    width: 350px !important;
+  }
   .logo-container {
     padding-left: 15px;
     padding-right: 15px;
@@ -658,6 +661,10 @@
 
 .icon-mortar-board:before {
   content: "\e901";
+}
+
+.header {
+  background-color: #fff;
 }
 
 .header-container {
@@ -1255,6 +1262,18 @@
 .developer:hover .triangle {
   visibility: visible;
   border-color: transparent transparent #d64541 transparent;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  padding: 21px;
+  height: 100%;
+  background: #333645;
+  width: 275px;
+  overflow: auto;
 }
 
 .carousel {
@@ -2133,7 +2152,7 @@
   margin: 0 auto 50px;
   width: 280px;
   justify-items: center;
-  transition: delay 0.5s ease;
+  transition: display 5s ease;
 }
 .hidden-box h3 {
   position: relative;
