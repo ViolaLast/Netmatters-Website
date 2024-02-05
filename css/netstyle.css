@@ -19,6 +19,19 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .cookie-footer {
+    flex-wrap: nowrap !important;
+  }
+  .change-btn {
+    width: 47% !important;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .cookie-button {
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .mobile {
     display: none !important;
     visibility: hidden !important;
@@ -661,6 +674,119 @@
 
 .icon-mortar-board:before {
   content: "\e901";
+}
+
+.cookie-pop-up {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.fade-out {
+  display: none;
+  transition: display 0.5s ease;
+}
+
+.cookie-content {
+  margin: auto;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cookie-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 1.625rem;
+  color: #333645;
+  line-height: 1.4;
+}
+
+.cookie-body {
+  position: relative;
+  padding: 20px;
+}
+.cookie-body p {
+  line-height: 1.875rem;
+  margin: 0 0 25px;
+  font-size: 16px;
+}
+
+.cookie-footer {
+  margin-top: 15px;
+  padding: 19px 20px 0;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.change-btn {
+  height: 56px;
+  line-height: 35px;
+  font-size: 1.125rem;
+  float: left;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: auto;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  height: auto;
+  width: 100%;
+  float: initial;
+  font-size: 1.063rem;
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+}
+
+.btn-change {
+  color: #fff;
+  background-color: #999aa2;
+  border-color: #999aa2;
+}
+.btn-change:hover {
+  background-color: #7e808a;
+  border-color: #72737d;
+}
+
+.btn-accept {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+.btn-accept:hover {
+  background-color: #79539a;
+  border-color: #6c4a89;
+}
+
+.cookie-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .header {

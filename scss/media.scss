@@ -31,6 +31,20 @@ margin-bottom: 50px!important;
                                                          }
                                                         @media screen and (min-width: 768px){
 
+.cookie-footer{
+  flex-wrap: nowrap !important;
+}                                                          
+.change-btn{
+  width: 47% !important;
+  float: left;
+  padding-left: 15px;
+    padding-right: 15px;
+}
+.cookie-button{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
   .mobile{
     display: none !important;
     visibility: hidden !important;
@@ -213,6 +227,9 @@ position: relative;
       width:350px !important;
 
     }
+    // .triangles{
+    //   border-width: 0px 77px 40px 80px !important;
+    // }
     // .inner {
     //   width: 970px;
     //   margin:0 -15px;

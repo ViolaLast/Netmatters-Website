@@ -14,3 +14,11 @@ window.onscroll = function() {
 
     header.classList.add("show");
   }
+
+//==================================================================Cookie pop up==============================================================//
+$(document).ready(function() {
+    // When the btn-accept button is clicked
+    $('.btn-accept a').on('click', function() {
+        $('.cookie-pop-up').addClass('fade-out');
+    });
+});

@@ -12,6 +12,10 @@
     width: 100%;
     margin: 0;
   }
+  @mixin darker($color) {
+    background-color: darken($color, 10%);
+    border-color: darken($color, 15%);
+  }
   
   @mixin mid-btn{
     display: inline-block;

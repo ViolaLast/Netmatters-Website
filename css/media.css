@@ -18,6 +18,19 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .cookie-footer {
+    flex-wrap: nowrap !important;
+  }
+  .change-btn {
+    width: 47% !important;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .cookie-button {
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .mobile {
     display: none !important;
     visibility: hidden !important;
