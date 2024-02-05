@@ -683,7 +683,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 300;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   outline: 0;
@@ -789,6 +789,15 @@
   justify-content: space-between;
 }
 
+#myHeader {
+  /* Your regular styles for the header */
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.is-stuck {
+  transform: translateY(-100%); /* Move the header off the screen when scrolling down */
+}
+
 .header {
   background-color: #fff;
 }
@@ -798,6 +807,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  background-color: #fff;
 }
 
 .inner {

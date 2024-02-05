@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 300;
     background-color: rgba(0,0,0,.7);
     display: flex;
     outline: 0;
@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
+
 }
 
 .fade-out {
@@ -99,48 +100,29 @@
 }
 
 
+//=====================================================================sticky header=====================================================//
+#myHeader {
+  /* Your regular styles for the header */
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.is-stuck {
+  transform: translateY(-100%); /* Move the header off the screen when scrolling down */
+}
 
 //------------------------------------------------------------------------------------------------------HEADER-----------------------------------------------------/
 .header{
   background-color: $color-primary;
 }
 
-// #myHeader {
-//   background-color: #f1f1f1;
-//   padding: 20px;
-//   text-align: center;
-//   transition: top 0.3s;
-// }
-// .sticky {
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   z-index: 1000;
-// }
-
-// .show {
-//   top: 0;
-// }
-
 .header-container{
   justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    background-color: $color-primary;
+
+
 }
 
 .inner {
