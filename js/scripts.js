@@ -43,7 +43,7 @@ $(document).ready(function () {
   
     $(window).scroll(updateDuplicateHeader);
   });
-//=====================================================================Slides===========================================================================//
+//=====================================================================Carousel Slides===========================================================================//
 
 $ (".carousel__viewport").slick({
 autoplay:true,
@@ -52,3 +52,16 @@ arrows:false,
 dots:true,
 
 });
+
+//==========================================================================autoplay slides===================================================================================//
+// $('.autoplay').slick({
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+//         variableWidth: true,
+//         prevArrow: false,
+//         nextArrow: false,
+//         draggable: false,
+//         swipe: false,
+//           infinite: true,
+//           slidesToScroll: 1
+//         });
