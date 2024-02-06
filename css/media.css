@@ -300,7 +300,7 @@
   .form-control {
     display: inline-block !important;
     border-radius: 0;
-    width: 240px;
+    width: 240px !important;
   }
   .logo {
     width: 370px !important;

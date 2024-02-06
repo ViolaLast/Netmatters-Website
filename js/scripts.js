@@ -43,4 +43,12 @@ $(document).ready(function () {
   
     $(window).scroll(updateDuplicateHeader);
   });
-  
+//=====================================================================Slides===========================================================================//
+
+$ (".carousel__viewport").slick({
+autoplay:true,
+autoplaySpeed:4000,
+arrows:false,
+dots:true,
+
+});
