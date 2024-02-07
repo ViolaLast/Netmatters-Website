@@ -1,112 +1,11 @@
-//=====================================================================================Cookie==================================================>
-.cookie-pop-up{
-  position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 300;
-    background-color: rgba(0,0,0,.7);
-    display: flex;
-    outline: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-
-}
-
-.fade-out {
- display:none;
-  transition: display 0.5s ease;
-}
-
-.cookie-content{
-  margin: auto;
-  position: relative;
-    background-color: $color-primary;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 5px;
-    outline: none;
-    max-width: 600px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.5);
-}
-
-.cookie-header{
-  padding: 15px 20px;
-  border-bottom: 1px solid #e5e5e5;
-  font-size: 1.625rem;
-  color: #333645;
-  line-height: 1.4;
-
-}
-.cookie-body{
-  position: relative;
-  padding: 20px;
-  & p{
-    line-height: 1.875rem;
-    margin: 0 0 25px;
-    font-size: 16px;
-  }
-}
-.cookie-footer{
-  margin-top: 15px;
-  padding: 19px 20px 0;
-  border-top: 1px solid #e5e5e5;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.change-btn{
-  @include header-btn;
-  height: auto;
-  width: 100%;
-  float: initial;
-  font-size: 1.063rem;
-  display:block;
-  margin-bottom: 30px;
-    font-weight: 400;
-    text-align: center;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
-}
-
-.btn-change{
-  color: #fff;
-  background-color: #999aa2;
-  border-color: #999aa2;
-  &:hover{
-    @include darker(#999aa2);
-  }
-}
-
-.btn-accept{
-  color: #fff;
-  background-color: #926fb1;
-  border-color: #926fb1;
-  &:hover{
-    @include darker(#926fb1);
-  }
-}
-
-.cookie-buttons{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 
 //=====================================================================sticky header=====================================================//
 #myHeader {
-  /* Your regular styles for the header */
-  transition: transform 0.3s ease; /* Add transition for smooth effect */
+  transition: transform 0.3s ease; 
 }
 
 .is-stuck {
-  transform: translateY(-100%); /* Move the header off the screen when scrolling down */
+  transform: translateY(-100%);
 }
 
 //------------------------------------------------------------------------------------------------------HEADER-----------------------------------------------------/
@@ -255,8 +154,22 @@
     }
 }
 
+// .hamburger-menu.active .ham-top {
+//   transform: translate(-50%, -50%) rotate(-315deg);
+//   top: 50%;
+// }
+
+// .hamburger-menu.active .ham-mid {
+//   opacity: 0;
+// }
+
+// .hamburger-menu.active .ham-bottom {
+//   transform: translate(-50%, -50%) rotate(-225deg);
+//   top: 50%;
+// }
 
 .ham-bar {
+  display: block;
   width: 50%;
   height: 4px;
   background-color: $color-primary;
@@ -276,6 +189,9 @@
 
 .ham-bottom {
   top: 70%;
+}
+.hamburger-menu {
+  display: block;
 }
 //-----------------------------------------------------------------------------------------------------------------------------SEARCH bar------------------------------------------
 .search-barm{
@@ -459,10 +375,6 @@ background-color: transparent;
     color: $color-pink;
   }
 
-.hidden{
-  display: none !important;
-  visibility: hidden !important;
-}
 
 .sub-menu-title{
   width: 100%;

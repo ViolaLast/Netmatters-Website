@@ -1,10 +1,75 @@
 //==================================================================Cookie pop up==============================================================//
-$(document).ready(function() {
-    // When the btn-accept button is clicked
-    $('.btn-accept a').on('click', function() {
-        $('.cookie-pop-up').addClass('fade-out');
-    });
+// $(document).ready(function() {
+//     // When the btn-accept button is clicked
+//     $('.btn-accept a').on('click', function() {
+//         $('.cookie-pop-up').addClass('fade-out');
+//     });
+// });
+
+const btnAcceptCookies = $(".btn-acceptcookies");
+const btnChangeSettings = $(".btn-change");
+const cookiePopUp = $(".cookie-pop-up");
+const webPage = $("body");
+
+btnAcceptCookies.click(() => {
+    hideCookiePopUp();
+    setCookie("cookie", true, 1); // 1 day
+    enableScroll();
+    console.log("Cookie should be stored now");
 });
+
+btnChangeSettings.click(() => {
+    // Implement logic to handle changing cookie settings if needed
+    console.log("Change Settings clicked");
+});
+
+function setCookie(name, value, duration) {
+    const date = new Date();
+    date.setDate(date.getDate() + duration); // sets the numeric value inputted into 'duration' in days
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + "; path=/";
+}
+
+function getCookie(name) {
+    const cName = name + "=";
+    const cDecoded = decodeURIComponent(document.cookie);
+    const cArray = cDecoded.split("; ");
+    let value;
+
+    cArray.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+    });
+
+    return value;
+}
+
+function hideCookiePopUp() {
+    cookiePopUp.hide();
+}
+
+function showCookiePopUp() {
+    cookiePopUp.show();
+}
+
+function disableScroll() {
+    webPage.addClass("no-scroll");
+}
+
+function enableScroll() {
+    webPage.removeClass("no-scroll");
+}
+
+function cookieMessage() {
+    if (!getCookie("cookie")) {
+        console.log("Cookie not here");
+        showCookiePopUp();
+        disableScroll();
+    }
+}
+
+// Run the cookieMessage function on page load
+$(document).ready(cookieMessage);
+
 
 //===================================================================Sticky Header=================================================================//
 
@@ -65,3 +130,5 @@ dots:true,
 //           infinite: true,
 //           slidesToScroll: 1
 //         });
+
+//============================================================================Side menu button=================================================================================================//

@@ -295,6 +295,16 @@
   .box-h {
     margin: 0 15px 45px 15px !important;
   }
+  .none {
+    display: none !important;
+  }
+  .side-bar {
+    width: 350px !important;
+  }
+  .ml {
+    display: block !important;
+    visibility: visible !important;
+  }
 }
 @media screen and (min-width: 1260px) {
   .form-control {

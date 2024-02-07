@@ -44,7 +44,7 @@
             </span>
         </div>
 <!--==============================================================================Cookies==============================================-->
-        <div class="cookie-pop-up hidden">
+        <div class="cookie-pop-up">
             <div class="cookie-content">
                 <div class="cookie-header">
                     <div class="cookie-title">Cookies Policy</div>
@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="change-btn btn-accept">
-                                <a>
+                                <a class="btn-acceptcookies">
                                     Accept Cookies
                                 </a>
                             </div>
@@ -112,8 +112,9 @@
                                         </button>
                                     </form>
                                     
-                                    
-                                    <button type="button" class="hamburger-button">   
+                                    <div class="overlay"></div>
+
+                                    <button type="button" class="hamburger-button" onclick="toggleSidebar()">   
                                         <span class="hamburger-menu">
                                             <span class="ham-bar ham-top"></span>
                                             <span class="ham-bar ham-mid"></span>
@@ -1310,22 +1311,22 @@
         </div>          
 
 <!--=====================================================================Hamburger menu side-bar=============================================-->
-                                <div class="container">
+                                <div class="container"> 
                                     <div class="side-bar">
 
-                                    <div class="main">
+                                    <div class="main-mob-side none">
                                         
                                         <nav class="mobilesize">
 
                                             <ul>
-                                                <li class="mobile-sidebar" id="mobile-contact">
+                                                <li class="mobile-sidebar mobile-side-but ">
                                                     <a href="#contact-us">Contact Us</a>
                                                 </li>
 
-                                                <li class="mobile-sidebar" id="mobile-software">
+                                                <li class="mobile-sidebar mobile-side-but ">
                                                     <a href="#bespoke-software">
-                                                        <span class="mi icon-laptop"></span><br>
-                                                    <span class=""><small>Bespoke</small><br>Software</span>
+                                                        <span class="mob icon-laptop"></span>
+                                                    <span class=""><small>Bespoke</small>Software</span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -1347,11 +1348,13 @@
                 </ul>
             </nav>
                                                         <ul>
-                                                            <li><a href="#"><span class=""></span>
+                                                            <li class="mobile-side-but">
+                                                                <a href="#">
+                                                                <span class="mob icon-display"></span>
                                                                     <small>IT</small>Support</a></li>
                                                         </ul>
 
-                                                        <nav class="sub-menu">
+                                                        <nav class="sub-menu ">
                                                             <ul class="mobile-sub">
                                                                 <li><a href="#">Managed IT Support</a></li>
                                                                 <li><a href="#">Business IT Support</a></li>
@@ -1362,11 +1365,12 @@
                                                             </ul>
                                                         </nav>
             <ul>                                           
-                <li><a href="#"><span class=""></span>
+                <li class="mobile-side-but "><a href="#">
+                    <span class="mob icon-bar-graph"></span>
                         <small>Digital</small>Marketing</a></li>
             </ul>
 
-            <nav class="sub-menu">
+            <nav class="sub-menu ">
                 <ul class="mobile-sub">
                     <li><a href="#">Search Engine Optimisation (SEO)</a></li>
                     <li><a href="#">Pay Per Click Advertising (PPC)</a></li>
@@ -1378,7 +1382,8 @@
             </nav>
 
                                                         <ul>
-                                                            <li><a href="#"><span class="">phone_in_talk</span>
+                                                            <li class="mobile-side-but"><a href="#">
+                                                                <span class="mob icon-phone-call"></span>
                                                                     <small>Telecoms</small>Services</a></li>
                                                         </ul>
 
@@ -1393,8 +1398,9 @@
                                                             </ul>
                                                         </nav>
             <ul>
-                <li>
-                    <a href="#"><span class=""></span>
+                <li class="mobile-side-but">
+                    <a href="#">
+                        <span class="mi icon-embed"></span>
                         <small>Web</small>Design</a>
                 </li>
             </ul>
@@ -1411,8 +1417,9 @@
             </nav>
 
                                                                     <ul>
-                                                                        <li>
-                                                                            <a href="#"><span class="">security</span>
+                                                                        <li class="mobile-side-but">
+                                                                            <a href="#">
+                                                                                <span class="mob icon-security"></span>
                                                                                 <small>Cyber</small>Security</a>
                                                                         </li>
                                                                     </ul>
@@ -1428,8 +1435,9 @@
                                                                         </ul>
                                                                     </nav>
             <ul>
-                <li>
-                    <a href="#"><span class="">school</span>
+                <li class="mobile-side-but">
+                    <a href="#">
+                        <span class="mob icon-graduation-cap"></span>
                         <small>Developer</small>Course</a>
                 </li>
             </ul>
@@ -1442,9 +1450,28 @@
                     <li><a href="#">Scion Collaborators</a></li>
                 </ul>
             </nav>
+                                            </div>
 
-                                                            <ul class="new-subsection">
-                                                                <li class=""><a href="#">Our Work</a>
+                        <ul class="new-subsection hidden ml">
+                            <li class="side-titles">
+                                <a href="#">Services</a>
+                            </li>
+                        </ul>
+
+                    <nav class="lower-sub-menu">
+                        <ul class="submini-menu">
+                            <li class="mini-menu"><a href="#">Bespoke Software</a></li>
+                            <li class="mini-menu"><a href="#">IT Support</a></li>
+                            <li class="mini-menu"><a href="#">Digital Marketing</a></li>
+                            <li class="mini-menu"><a href="#">Telecoms Services</a></li>
+                            <li class="mini-menu"><a href="#">Web Design</a></li>
+                            <li class="mini-menu"><a href="#">Cyber Security</a></li>
+                        </ul>
+                    </nav>
+
+                                                            <ul>
+                                                                <li class="side-titles">
+                                                                    <a href="#">Our Work</a>
                                                                 </li>
                                                             </ul>
 
@@ -1459,7 +1486,7 @@
                                                             </ul>
                                                         </nav>
             <ul>
-                <li class="lower-sub-menu"><a href="#">Our Knowledge</a>
+                <li class="side-titles"><a href="#">Our Knowledge</a>
                 </li>
             </ul>
                 <ul class="submini-menu">
@@ -1468,7 +1495,7 @@
                     <li class="mini-menu"><a href="#">Insights</a></li>
                 </ul>
                                                                 <ul>
-                                                                    <li class="lower-sub-menu"><a href="#">Training</a>
+                                                                    <li class="side-titles"><a href="#">Training</a>
                                                                     </li>
                                                                 </ul>
 
@@ -1479,7 +1506,7 @@
                                                                     <li class="mini-menu"><a href="#">Scion Collaborators</a></li>
                                                                 </ul>
             <ul>
-                <li class="lower-sub-menu"><a href="#">Our Company</a>
+                <li class="side-titles"><a href="#">Our Company</a>
                 </li>
             </ul>
 
@@ -1491,7 +1518,7 @@
                 <li class="mini-menu"><a href="#">Our Benefits</a></li>
             </ul>
                                                                         <ul>
-                                                                            <li class="lower-sub-menu"><a href="#">Contact Us</a>
+                                                                            <li class="side-titles"><a href="#">Contact Us</a>
                                                                             </li>
                                                                         </ul>
                                                                         <ul class="submini-menu">
@@ -1501,9 +1528,10 @@
                                                                             <li class="mini-menu"><a href="#">Great Yamouth Office</a></li>
                                                                         </ul>
             <ul>
-                <li class="lower-sub-menu"><a href="#">Covid Risk Assessments</a></li>
-                <li class="lower-sub-menu"><a href="#">Support</a></li>
+                <li class="side-titles"><a href="#">Covid Risk Assessments</a></li>
+                <li class="side-titles none"><a href="#">Support</a></li>
             </ul>
+
         </div>
     </div>
 
