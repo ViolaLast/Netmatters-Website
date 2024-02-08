@@ -1,78 +1,25 @@
 $(document).ready(function () {
-    var $originalHeader = $('#myHeader');
-    var $duplicateHeader = $originalHeader.clone().attr('id', 'duplicateHeader').appendTo('body');
-    var $cookiePopUp = $('.cookie-pop-up');
     var $sideBar = $('.side-bar');
     var $content = $('.content');
-    var $overlay = $('.overlay');
-    var lastScrollTop = 0;
-
-    function updateDuplicateHeader() {
-        // Check if the cookie popup is visible
-        var isCookiePopUpVisible = $cookiePopUp.is(':visible');
-        // Check if the side menu is active
+    var $inner = $('.inner');
+    
+    function updateStyles() {
         var isSideMenuActive = $sideBar.hasClass('active');
 
-        if (!isCookiePopUpVisible && !isSideMenuActive) {
-            var scrollTop = $(window).scrollTop();
+        // Move content to the left when side menu is open
+        var translateX = isSideMenuActive ? '-250px' : '0';
+        $content.css({
+            'transform': 'translateX(' + translateX + ')',
+            transition: 'transform 0.3s ease'
+        });
 
-            if (scrollTop > lastScrollTop) {
-                // Scrolling down, hide the duplicate header
-                $duplicateHeader.css({
-                    position: 'fixed',
-                    top: '-100%',
-                    transition: 'top 0.3s ease',
-                    'z-index': '300'
-                });
-
-                // Move content and overlay to the right when side menu is closed
-                $content.css({
-                    'margin-left': '0',
-                    transition: 'margin-left 0.3s ease'
-                });
-
-                $overlay.css({
-                    'margin-left': '0',
-                    transition: 'margin-left 0.3s ease'
-                });
-            } else {
-                // Scrolling up, show the duplicate header
-                $duplicateHeader.css({
-                    position: 'fixed',
-                    top: '0',
-                    transition: 'top 0.3s ease',
-                    'z-index': '300'
-                });
-
-                // Move content and overlay to the right when side menu is closed
-                $content.css({
-                    'margin-left': '0',
-                    transition: 'margin-left 0.3s ease'
-                });
-
-                $overlay.css({
-                    'margin-left': '0',
-                    transition: 'margin-left 0.3s ease'
-                });
-            }
-
-            lastScrollTop = scrollTop;
-        } else {
-            // Move content and overlay to the right when side menu is open
-            $content.css({
-                'margin-left': '250px', // Adjust based on your sidebar width
-                transition: 'margin-left 0.3s ease'
-            });
-
-            $overlay.css({
-                'margin-left': '250px', // Adjust based on your sidebar width
-                transition: 'margin-left 0.3s ease'
-            });
-        }
+        // Adjust margin-right on the .inner element
+        $inner.css('margin-right', isSideMenuActive ? '250px' : '0');
     }
 
-    // Initial positioning of the duplicate header
-    updateDuplicateHeader();
+    // Initial styling
+    updateStyles();
 
-    $(window).scroll(updateDuplicateHeader);
+    // Update styles on window scroll (you might want to use a more appropriate event)
+    $(window).scroll(updateStyles);
 });

@@ -3,6 +3,9 @@
 #myHeader {
   transition: transform 0.3s ease; 
 }
+#duplicateHeader.menu-open {
+  margin-right: 250px;
+}
 
 .is-stuck {
   transform: translateY(-100%);
