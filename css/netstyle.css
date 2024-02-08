@@ -1540,8 +1540,8 @@
   z-index: 3;
 }
 
-.content.active {
-  margin-right: 250px; /* moves the content over by 250*/
+::-webkit-scrollbar {
+  display: none;
 }
 
 .overlay {
@@ -1557,7 +1557,7 @@
 }
 
 .content {
-  transition: margin-right 0.3s ease;
+  transition: transform 0.3s ease, margin-right 0.3s ease;
   position: relative;
   float: right;
   width: 100%;
@@ -1567,13 +1567,14 @@
 .side-bar {
   position: fixed;
   top: 0;
-  right: -250px;
-  width: 250px;
+  right: -100%; /* hidden off-screen on the right */
+  width: 260px;
   height: 100%;
   background-color: #333;
   z-index: 70;
   overflow-y: auto;
-  transition: right 0.3s ease;
+  transition: right 0.2s ease; /* transition to right */
+  box-sizing: border-box;
 }
 
 .side-bar.active {
@@ -1581,7 +1582,7 @@
 }
 
 .content.active {
-  margin-right: 250px;
+  transform: translateX(-100%);
 }
 
 .no-scroll {
@@ -2023,13 +2024,9 @@
   max-height: 170px;
   margin: auto;
   overflow: hidden;
-  position: relative;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
 }
 .slider::before, .slider::after {
   content: "";
@@ -2305,9 +2302,10 @@
   margin: auto;
   position: relative;
   width: 100%;
-  overflow-x: scroll;
+  max-height: 170px;
 }
-.sliding .sliding-track {
+
+.sliding-track {
   display: flex;
   flex-direction: row;
   padding-top: 50px;
@@ -2315,7 +2313,8 @@
   margin: 0;
   width: fit-content;
 }
-.sliding .logo-img {
+
+.logo-img {
   margin-right: 10px;
   height: 100px;
   width: auto;
@@ -2323,7 +2322,7 @@
   grid-template-columns: auto-fit;
   align-self: center;
 }
-.sliding .logo-img img {
+.logo-img img {
   height: 60%;
   width: auto;
   padding: 10px;

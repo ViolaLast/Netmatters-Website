@@ -7,14 +7,14 @@ $(document).ready(function () {
         var isSideMenuActive = $sideBar.hasClass('active');
 
         // Move content to the left when side menu is open
-        var translateX = isSideMenuActive ? '-250px' : '0';
+        var translateX = isSideMenuActive ? '-260px' : '0';
         $content.css({
             'transform': 'translateX(' + translateX + ')',
             transition: 'transform 0.3s ease'
         });
 
         // Adjust margin-right on the .inner element
-        $inner.css('margin-right', isSideMenuActive ? '250px' : '0');
+        $inner.css('margin-right', isSideMenuActive ? '260px' : '0');
     }
 
     // Initial styling

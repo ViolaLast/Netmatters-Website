@@ -7,11 +7,14 @@ function toggleSidebar() {
     sidebar.toggleClass('active');
     overlay.toggleClass('active');
 
+    // Get the total width of the side menu (including padding and border)
+    var sidebarTotalWidth = window.innerWidth >= 992 ? 350 : 260;
+
     // Move content to the left when side menu is open
-    var translateX = sidebar.hasClass('active') ? '-250px' : '0';
+    var translateX = sidebar.hasClass('active') ? '-' + sidebarTotalWidth + 'px' : '0';
     content.css({
         'transform': 'translateX(' + translateX + ')',
-        transition: 'transform 0.3s ease'
+        transition: 'transform 0.5s ease'
     });
 
     // Toggle no-scroll class on body
