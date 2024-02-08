@@ -27,7 +27,8 @@
     </head>
 
         <body>
-            <div class="container">
+            <div class="content" >
+                <div class="container">
         
 <!--============================================================================Consent Policy =======================-->
     <div class="cookie-settings">
@@ -112,7 +113,7 @@
                                         </button>
                                     </form>
                                     
-                                    <div class="overlay"></div>
+                                    <div class="overlay" onclick="closeSidebar()"></div>
 
                                     <button type="button" class="hamburger-button" onclick="toggleSidebar()">   
                                         <span class="hamburger-menu">
@@ -586,7 +587,7 @@
 
                 <div class="text-overlay m750 m970 w1200">
                     <h2 class="h2"><strong>The East Of England's Leading Technology Company</strong></h2>
-                    <p>Performance-driven digital and technology services with complete transparency.</p>
+                    <p>Performance-driven digital and technology services <br> with complete transparency.</p>
                     <a href="#why-choose-us"><span class="slider-button sl-1 ">Why choose us? &nbsp;<span class="icon-arrow-right"></span></span></a>
                 </div>        
             </li>
@@ -597,7 +598,7 @@
                
                 <div class="text-overlay m750 m970 w1200">
                     <h2 class="h2"><strong>Bespoke Software</strong></h2>
-                    <p>Delivering expert bespoke software solutions across a range of industries.</p>
+                    <p>Delivering expert bespoke software  <br> solutions across a range of industries.</p>
                     <a href="#Bespoke-Software"><span class="slider-button sl-2 ">Find out more &nbsp;<span class="icon-arrow-right"></span></span></a>
                 </div>  
             </li>
@@ -607,7 +608,7 @@
                 
                 <div class="text-overlay m750 m970 w1200">
                     <h2 class="h2"><strong>IT Support</strong></h2>
-                <p>Fast and cost-effective IT support services for your business.</p>
+                <p>Fast and cost-effective IT support <br> services for your business.</p>
                 <a href="#It-Support"><span class="slider-button sl-3">Find out more &nbsp;<span class="icon-arrow-right"></span></span></a>
                 </div> 
             </li>
@@ -617,7 +618,7 @@
         
                 <div class="text-overlay m750 m970 w1200">
                     <h2 class="h2"><strong>Digital Marketing</strong></h2>
-                    <p>Generating your new business through results-driven marketing activities.</p>
+                    <p>Generating your new business through <br> results-driven marketing activities.</p>
                 <a href="#Digital-Marketing"><span class="slider-button sl-4 ">Find out more &nbsp;<span class="icon-arrow-right"></span></span></a>
                 </div>  
             </li>
@@ -628,7 +629,7 @@
         
                 <div class="text-overlay m750 m970 w1200">
                     <h2 class="h2"><strong>Telecoms Services</strong></h2>
-                    <p>A new approach to connectivity, see how we can help your business.</p>
+                    <p>A new approach to connectivity,<br> see how we can help your business.</p>
                     <a href="#Telecoms-Services"><span class="slider-button sl-5">Find out more &nbsp;<span class="icon-arrow-right"></span></span></a>
                 </div>  
             </li>
@@ -638,7 +639,7 @@
 
                 <div class="text-overlay m750 m970 w1200">
                     <h2 class="h2"><strong>Web Design</strong></h2>
-                    <p>For businesses looking to make a strong and effective first impression..</p>
+                    <p>For businesses looking to make a strong <br> and effective first impression.</p>
                     <a href="#Wed-Design"><span class="slider-button sl-1 ">Find out more &nbsp;<span class="icon-arrow-right"></span></span></a>
                 </div>  
             </li>
@@ -648,7 +649,7 @@
 
                 <div class="text-overlay m750 m970 w1200">
                     <h2 class="h2"><strong>Cyber Security</strong></h2>
-                    <p>Keeping businesses and their customers sensitive information protected.</p>
+                    <p>Keeping businesses and their customers <br> sensitive information protected.</p>
                     <a href="#Cyber-Security"><span class="slider-button sl-7">Find out more &nbsp;<span class="icon-arrow-right"></span></span></a>
                 </div>  
             </li>
@@ -739,8 +740,8 @@
                 </div>
             </main>
 <!--===========================================================================slider============================================-->  
-                            <div class="slider">
-                                <div class="slide-track sliding-partners">
+                            <div class="slider autoplay">
+                                <div class="slide-track sliding-partners autoplay">
                                     
                                     <div class="slide">
                                         <img src="https://www.netmatters.co.uk/assets/images/accreditations/google-partner.jpg" alt="Google Partners">
@@ -1308,7 +1309,8 @@
                                         </span>     
                                     </div>              
                                 </footer>
-        </div>          
+        </div>
+    </div>       
 
 <!--=====================================================================Hamburger menu side-bar=============================================-->
                                 <div class="container"> 
@@ -1538,6 +1540,9 @@
         <script src="js/jquery-3.7.1.min.js" defer></script>
         <script src="js\slick\slick\slick.min.js"defer></script>
         <script src="js\scripts.js" defer></script>
+        <script src="js\cookie.js" defer></script>
+        <script src="js\StickyHeader.js" defer></script>
+        <script src="js\sideMenu.js" defer></script>
 
     </body>
 </html>

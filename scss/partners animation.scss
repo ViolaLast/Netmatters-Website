@@ -18,7 +18,10 @@
 	position: relative;
 	width: 100%;
     padding-top: 50px;
-  padding-bottom: 50px;
+	padding-bottom: 50px;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
 	
 	&::before,
@@ -30,21 +33,14 @@
 	}
 	
 	.slide-track {
-		display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     margin: 0;
 		width:fit-content;
 	}
 	
 	.slide {
     margin-right: 10px;
-	// 	height: auto;
-	// 	width: auto;
-    // display: grid;
-	display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+		height: auto;
+		width: auto;
     align-self: center;
     & img{
 		width: auto;

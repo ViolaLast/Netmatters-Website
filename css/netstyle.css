@@ -200,8 +200,8 @@
     line-height: 5rem;
   }
   .text-overlay p {
-    font-size: 1.625rem;
-    line-height: 2.5rem;
+    font-size: 1.625rem !important;
+    line-height: 2.5rem !important;
   }
   .ikon-nav-menu {
     display: inline-flex !important;
@@ -1309,6 +1309,15 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 .fade-in {
@@ -1371,7 +1380,6 @@
 }
 
 .cookie-footer {
-  margin-top: 15px;
   padding: 19px 20px 0;
   border-top: 1px solid #e5e5e5;
   display: flex;
@@ -1396,7 +1404,7 @@
   float: initial;
   font-size: 1.063rem;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 400;
   text-align: center;
   cursor: pointer;
@@ -1432,7 +1440,6 @@
 
 .overlay {
   display: none;
-  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -1444,20 +1451,14 @@
 }
 
 .side-bar {
-  height: 100%;
-  width: 0;
   position: fixed;
-  z-index: -1;
   top: 0;
-  right: 0;
-  overflow-x: hidden;
-  transition: 0.5s;
+  right: -250px; /* Initially hidden off-screen on the right */
+  width: 250px;
   height: 100%;
-  background: #333645;
-  overflow-y: scroll;
-}
-.side-bar a {
-  font-size: 14px;
+  background-color: #333;
+  transition: right 0.3s ease;
+  z-index: 2;
 }
 
 .side-bar.side-bar-visible {
@@ -1539,6 +1540,35 @@
 .mini-menu::before {
   content: "»";
   padding-right: 15px;
+}
+
+.side-bar.active {
+  right: 0;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: right 0.3s ease;
+  z-index: 2;
+  overflow-y: auto; /* Allow scrolling in the side menu */
+}
+
+.content {
+  transition: margin-right 0.3s ease;
+}
+
+.content.active {
+  margin-right: 250px; /* Adjust based on your sidebar width */
+  overflow: hidden; /* Disable scrolling when the sidebar is active */
+}
+
+.overlay.active {
+  display: block; /* Ensure the overlay is displayed when active */
 }
 
 .carousel {
@@ -1980,6 +2010,9 @@
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .slider::before, .slider::after {
   content: "";
@@ -1988,17 +2021,13 @@
   width: 200px;
 }
 .slider .slide-track {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   margin: 0;
   width: fit-content;
 }
 .slider .slide {
   margin-right: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  height: auto;
+  width: auto;
   align-self: center;
 }
 .slider .slide img {

@@ -198,8 +198,8 @@
     line-height: 5rem;
   }
   .text-overlay p {
-    font-size: 1.625rem;
-    line-height: 2.5rem;
+    font-size: 1.625rem !important;
+    line-height: 2.5rem !important;
   }
   .ikon-nav-menu {
     display: inline-flex !important;
