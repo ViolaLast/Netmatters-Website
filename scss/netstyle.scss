@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'Poppins';
+  src: url("../Poppins/Poppins-Medium.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 //-----------------------------------------------------------------------------------------------------------------------mixins----------------------------------------------------------------------------/
 @mixin grey-to-color {
   filter:grayscale(1);

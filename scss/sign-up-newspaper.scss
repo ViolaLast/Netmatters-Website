@@ -52,9 +52,9 @@ i{
 
 
 .left-check{
-
 width:52px;
 }
+
 .checkbox{
     border-radius: 3px;
     height: 32px;
@@ -66,48 +66,42 @@ width:52px;
     text-align: center;
   }
 
-    .checkbox:checked{
-    border-radius: 3px;
-    height: 32px;
-    width: 32px;
-    position: relative;
-    float: left;
-    margin-right: 20px;
-    border: 3px solid #333645;
-    .icon-checkbox-checked{
-      display: inline-flex;
-      margin-left: -5px;
-    }
-    }
+  .checkbox:checked{
+  border-radius: 3px;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  border: 3px solid #333645;
+      .icon-checkbox-checked{
+          display: inline-flex;
+          margin-left: -5px;
+        }
+  }
+
+.checked {
+  display: none; 
+}
 
     .icon-checkbox-checked{
-      display: none;
-      position: relative;
-      font-size: 2em;
-      text-align: center;
-          line-height: 26px;
-        border: none;
-        }     
+      display: inline-flex;
+        position: relative;
+         font-size: 2em;
+         text-align: center;
+             line-height: 26px;
+           // font-size: 31px;
+           margin-left: -4px;
+           border: none;
+        }
 
 .tick{
   line-height: 32px;
   display: flex;
   margin-bottom: 15px;
   cursor: pointer;
-
-  &:focus{
-    .icon-checkbox-checked{
-     display: inline-flex;
-     position: relative;
-      font-size: 2em;
-      text-align: center;
-          line-height: 26px;
-        // font-size: 31px;
-        margin-left: -5px;
-        border: none;
-     }
   }
-}
+
 
 .submit{
   @include header-btn;

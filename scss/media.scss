@@ -369,13 +369,15 @@ position: relative;
   display: block !important;
   visibility: visible !important;
 }
-                                                                            }
-                                                                                 @media screen and (min-width:1137px) {
-                  
-    
+
                                                               }
                                                                                 @media screen and (min-width:1260px) {
-
+.triangle {
+  border-width: 0px 70px 40px 80px !important;
+}
+.nav-box{
+width: 162px !important;
+}
  .form-control {
     display: inline-block !important;
     border-radius: 0;
