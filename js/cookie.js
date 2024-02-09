@@ -52,3 +52,9 @@ function cookieMessage() {
 
 // Run the cookieMessage function on document ready
 $(document).ready(cookieMessage);
+
+// Add the following event handler to make the cookie pop-up reappear when "Manage Consent" is clicked
+btnManageConsent.click(() => {
+    showCookiePopUp();
+    disableScroll();
+});

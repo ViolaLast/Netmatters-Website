@@ -141,7 +141,7 @@
 
     display: inline-block;
 
-    width: 20px;
+    width: 31px;
     height: 20px;
     margin: 0 5px;
     padding: 0;
@@ -155,8 +155,8 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 11px;
+    height: 11px;
     padding: 0;
 
     cursor: pointer;
@@ -184,7 +184,7 @@
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: 25%;
 
     width: 11px;
     height: 11px;
@@ -209,8 +209,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 11px;
-    width: 22px;
-    height: 21px;
+    width: 23px;
+    height: 23px;
+    justify-items: center;
     border-radius: 50%;
     border: 2px solid #fff;
     background-color: transparent;

@@ -21,7 +21,11 @@
     background-color: darken($color, 10%);
     border-color: darken($color, 15%);
   }
-  
+  @mixin lighter($color) {
+    background-color: lighten($color, 10%);
+    border-color: lighten($color, 15%);
+  }
+
   @mixin mid-btn{
     display: inline-block;
     margin-bottom: 0;

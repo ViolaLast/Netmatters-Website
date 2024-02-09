@@ -14,14 +14,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     }
 
 .no-scroll {
   overflow: hidden;
   height: 100%;
 }
-
+.cookie-body{
+  a:hover{
+  text-decoration: underline;
+  }
+}
 
 .fade-in {
     animation: fadeIn 0.5s ease-out;

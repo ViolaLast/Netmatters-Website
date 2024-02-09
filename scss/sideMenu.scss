@@ -1,14 +1,15 @@
 
-.side-bar {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Initially hidden off-screen on the right */
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    transition: right 0.3s ease;
-    z-index: 20;
-}
+// .side-bar {
+//     position: fixed;
+//     top: 0;
+//     right: -260px; /* Initially hidden off-screen on the right */
+//     width: 260px;
+//     height: 100%;
+//     background-color: #333;
+//     transition: right 0.3s ease;
+//     z-index: 20;
+  
+// }
 
 .side-bar.side-bar-visible {
     display: block;
@@ -57,7 +58,6 @@
     display: block;
 }
 .side-titles{
-    border-top: 1px solid hsla(0,0%,100%,.1);
     display: block;
     color: $color-primary;
     padding: 20px;
@@ -66,6 +66,9 @@
     line-height: 1;
     font-size: .875rem;
     position: relative;
+    &:hover {
+        background-color: #444;
+    }
 }
 .new-subsection{
     border-top: 1px solid rgba(0,0,0,.25);
@@ -88,7 +91,7 @@
 }
 
 .overlay.active {
-    display: block; /* Ensure the overlay is displayed when active */
+    display: block; /*overlay is displayed when active */
     z-index: 3;
 }
 
@@ -109,7 +112,7 @@
 }
 
 .content {
-    transition: transform 0.3s ease, margin-right 0.3s ease;
+    transition: transform 0.2s ease, margin-right 0.2s ease;
     position: relative;
     float: right;
     width: 100%;
@@ -119,14 +122,15 @@
 .side-bar {
     position: fixed;
     top: 0;
-    right: -100%; /* hidden off-screen on the right */
+    right: -100%; /* hidden off-screen on the right ?*/
     width: 260px;
     height: 100%;
     background-color: #333;
     z-index: 70;
     overflow-y: auto;
-    transition: right 0.2s ease; /* transition to right */
+    transition: right 0.3s ease; /* transition to right */
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .side-bar.active {
