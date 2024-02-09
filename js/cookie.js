@@ -1,8 +1,8 @@
-//==================================================================Cookie pop up==============================================================//
 const btnAcceptCookies = $(".btn-acceptcookies");
 const btnChangeSettings = $(".btn-change");
 const cookiePopUp = $(".cookie-pop-up");
 const webPage = $("body");
+const btnManageConsent = $(".cookie-btn");
 
 btnAcceptCookies.click(() => {
     hideCookiePopUp();
@@ -13,6 +13,12 @@ btnAcceptCookies.click(() => {
 
 btnChangeSettings.click(() => {
     console.log("Change Settings clicked");
+});
+
+btnManageConsent.click(() => {
+    console.log("Manage Consent clicked");
+    showCookiePopUp();
+    disableScroll();
 });
 
 function hideCookiePopUp() {

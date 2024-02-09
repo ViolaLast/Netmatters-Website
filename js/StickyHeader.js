@@ -13,13 +13,11 @@ $(document).ready(function () {
             transition: 'transform 0.3s ease'
         });
 
-        // Adjust margin-right on the .inner element
+        //  margin-right
         $inner.css('margin-right', isSideMenuActive ? '260px' : '0');
     }
 
-    // Initial styling
     updateStyles();
 
-    // Update styles on window scroll (you might want to use a more appropriate event)
     $(window).scroll(updateStyles);
 });

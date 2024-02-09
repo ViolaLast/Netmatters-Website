@@ -10,28 +10,28 @@ $(document).ready(function () {
         sidebar.toggleClass('active');
         overlay.toggleClass('active');
 
-        // Get the total width of the side menu (including padding and border)
+        // total width of the side menu
         var sidebarTotalWidth = window.innerWidth >= 992 ? 350 : 260;
 
-        // Move content to the left when side menu is open
+        // Move content to the left
         var translateX = sidebar.hasClass('active') ? '-' + sidebarTotalWidth + 'px' : '0';
         content.css({
             'transform': 'translateX(' + translateX + ')',
             transition: 'transform 0.3s ease'
         });
 
-        // Toggle no-scroll class on body
+        // no-scroll class on body
         body.toggleClass('no-scroll', sidebar.hasClass('active'));
 
         // Activate/deactivate hamburger button styles
         hamburgerButton.toggleClass('hamburger-active', sidebar.hasClass('active'));
     }
 
-    // Attach click events to the overlay and hamburger button
+    // click events to the overlay
     $('.overlay').on('click', toggleSidebar);
     $('.hamburger-button').on('click', toggleSidebar);
 
-    // Prevent body click event when clicking inside the sidebar
+    // Prevent click 
     $('.side-bar').on('click', function (e) {
         e.stopPropagation();
     });
