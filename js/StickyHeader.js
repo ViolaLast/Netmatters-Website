@@ -32,7 +32,7 @@ $(document).ready(function () {
             } else {
                 // Scrolling up, show the duplicate header
                 $duplicateHeader.css({
-                    position: isSideMenuActive ? 'relative' : 'fixed',
+                    position: isSideMenuActive || isCookiePopUpVisible ? 'relative' : 'fixed',
                     top: '0',
                     transition: 'top 0.3s ease',
                     'z-index': '50'
@@ -47,23 +47,46 @@ $(document).ready(function () {
 
             lastScrollTop = scrollTop;
         } else {
+            // Hide the duplicate header when cookie pop-up is active
+            $duplicateHeader.hide();
+
             // Move content to the right when side menu is open
             var sidebarWidth = isSideMenuActive ? 260 : 0; // Adjust based on your sidebar width
             $content.css({
                 'margin-left': sidebarWidth + 'px',
                 transition: 'margin-left 0.3s ease'
             });
-
-            // Move duplicate header with content
-            $duplicateHeader.css({
-                'margin-right': sidebarWidth + 'px',
-                transition: 'margin-right 0.3s ease'
-            });
         }
     }
+
+    // Function to show the duplicate header
+    function showDuplicateHeader() {
+        $duplicateHeader.show();
+    }
+
+    // Event listener for the cookie button
+    $('.cookie-btn').on('click', function () {
+        if ($cookiePopUp.is(':visible')) {
+            // Cookie popup is visible, hide the duplicate header
+            hideDuplicateHeader();
+        } else {
+            // Cookie popup is not visible, show the duplicate header
+            showDuplicateHeader();
+        }
+    });
 
     // Initial positioning of the duplicate header
     updateDuplicateHeader();
 
     $(window).scroll(updateDuplicateHeader);
 });
+
+// Function to hide the duplicate header
+function hideDuplicateHeader() {
+    $('#duplicateHeader').css({
+        position: 'fixed',
+        top: '-100%',
+        transition: 'top 0.3s ease',
+        'z-index': '0'
+    });
+}

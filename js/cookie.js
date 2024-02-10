@@ -6,9 +6,9 @@ const btnManageConsent = $(".cookie-btn");
 
 btnAcceptCookies.click(() => {
     hideCookiePopUp();
-    sessionStorage.setItem("cookieAccepted", "true");
+    localStorage.setItem("cookieAccepted", "true");
     enableScroll();
-    console.log("Cookie should be stored for the session");
+    console.log("Cookie should be stored persistently");
 });
 
 btnChangeSettings.click(() => {
@@ -38,13 +38,13 @@ function enableScroll() {
 }
 
 function cookieMessage() {
-    // Check if the user has not accepted cookies for the session
-    if (!sessionStorage.getItem("cookieAccepted")) {
+    // Check if the user has not accepted cookies persistently
+    if (!localStorage.getItem("cookieAccepted")) {
         console.log("Cookie not here");
         showCookiePopUp();
         disableScroll();
     } else {
-        // Cookies have been accepted for the session, hide the popup
+        // Cookies have been accepted persistently, hide the popup
         hideCookiePopUp();
         enableScroll();
     }

@@ -1509,9 +1509,22 @@
   background-color: rgba(0, 0, 0, 0.25);
   text-decoration: none;
   border-top: 1px solid hsla(0, 0%, 100%, 0.05);
-  font-size: 14px;
-  line-height: 1.42857143;
-  font-weight: bold;
+  font-size: 16px;
+}
+
+.submini-menu {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.sideSm {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.hightLight:hover .side-titles {
+  background-color: #3e4154;
+  border-color: #3e4154;
 }
 
 .mob {
@@ -1526,15 +1539,17 @@
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1;
-  font-size: 0.875rem;
+  font-size: 1rem;
   position: relative;
+  background-color: #333645;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 .side-titles:hover {
-  background-color: #444;
+  background-color: #3e4154;
+  border-color: #3e4154;
 }
 
 .new-subsection {
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
@@ -1557,10 +1572,6 @@
 .overlay.active {
   display: block; /*overlay is displayed when active */
   z-index: 3;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 .overlay {
@@ -1586,11 +1597,10 @@
 .side-bar {
   position: fixed;
   top: 0;
-  right: -100%; /* hidden off-screen on the right ?*/
+  right: 0;
   width: 260px;
   height: 100%;
-  background-color: #333;
-  z-index: 70;
+  background-color: #333645;
   overflow-y: auto;
   transition: right 0.3s ease; /* transition to right */
   box-sizing: border-box;

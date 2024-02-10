@@ -48,11 +48,23 @@
         background-color: rgba(0,0,0,.25);
         text-decoration: none;
         border-top: 1px solid hsla(0,0%,100%,.05);
-        font-size: 14px;
-        line-height: 1.42857143;
-        font-weight: bold;
+        font-size: 16px;
     }
 }
+.submini-menu{
+    border-top: 1px solid hsla(0,0%,100%,.1);
+    border-bottom: 1px solid rgba(0,0,0,.25);
+    }
+    .sideSm{
+        border-top: 1px solid hsla(0,0%,100%,.1);
+        border-bottom: 1px solid rgba(0,0,0,.25);
+    }
+
+.hightLight:hover{
+    .side-titles{
+        @include lighter($color-dark-grey)
+    }
+}    
 .mob {
     font-size: 1.438rem;
     display: block;
@@ -64,14 +76,15 @@
     text-transform: uppercase;
     text-decoration: none;
     line-height: 1;
-    font-size: .875rem;
+    font-size: 1rem;
     position: relative;
+    background-color: $color-dark-grey ;
+    border-top: 1px solid hsla(0,0%,100%,.1);
     &:hover {
-        background-color: #444;
-    }
+        @include lighter($color-dark-grey)
+}
 }
 .new-subsection{
-    border-top: 1px solid rgba(0,0,0,.25);
     border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 .mini-menu{
@@ -93,10 +106,6 @@
 .overlay.active {
     display: block; /*overlay is displayed when active */
     z-index: 3;
-}
-
-::-webkit-scrollbar { 
-    display: none; 
 }
 
 .overlay {
@@ -122,11 +131,10 @@
 .side-bar {
     position: fixed;
     top: 0;
-    right: -100%; /* hidden off-screen on the right ?*/
+    right: 0;
     width: 260px;
     height: 100%;
-    background-color: #333;
-    z-index: 70;
+    background-color: $color-dark-grey ;
     overflow-y: auto;
     transition: right 0.3s ease; /* transition to right */
     box-sizing: border-box;

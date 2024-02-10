@@ -22,8 +22,8 @@
     border-color: darken($color, 15%);
   }
   @mixin lighter($color) {
-    background-color: lighten($color, 10%);
-    border-color: lighten($color, 15%);
+    background-color: lighten($color, 5%);
+    border-color: lighten($color, 5%);
   }
 
   @mixin mid-btn{
@@ -172,7 +172,9 @@ input:focus{
   display: none ;
   visibility: hidden;
 }
-
+// ::-webkit-scrollbar { 
+//     display: none; 
+// }
 //-----------------------------------------------------------------------------------H1 - H6-------------------------------------------------------------------------------------------//
 .h2 {
   font-size: 2.5rem;
