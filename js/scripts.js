@@ -27,7 +27,7 @@ $('.play').slick({
   variableWidth: true,
   prevArrow: false,
   nextArrow: false,
-  draggable: false,
+  draggable: false
 });
 
 

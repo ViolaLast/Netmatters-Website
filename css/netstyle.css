@@ -2338,7 +2338,6 @@
   position: relative;
   width: 100%;
   max-height: 170px;
-  overflow: hidden;
 }
 
 .sliding-track {
@@ -2347,7 +2346,6 @@
   padding-top: 50px;
   padding-bottom: 50px;
   margin: 0;
-  overflow: hidden;
 }
 
 .logo-img {
@@ -2367,9 +2365,10 @@
 .tooltip-text {
   display: none;
   position: absolute;
-  z-index: 5;
+  z-index: 500;
   width: 280px;
   justify-content: center;
+  overflow: visible;
 }
 
 .hover-img:hover .tooltip-text {
@@ -2378,17 +2377,16 @@
   transition: display 10s;
   user-select: auto;
   justify-content: center;
+  overflow: visible;
 }
 
 .top {
-  top: -200px;
+  bottom: 550px;
   left: -100%;
   right: -100%;
-}
-
-.top::before {
-  top: 80%;
-  left: 45%;
+  position: absolute;
+  z-index: 100;
+  overflow: visible;
 }
 
 .hover-img {
@@ -2403,10 +2401,9 @@
   text-align: center;
   z-index: 100;
   max-width: 280px;
-  position: absolute;
-  top: 1%;
   justify-content: center;
   transition: display 100s ease;
+  overflow: visible;
 }
 
 .hidden-box {
@@ -2417,8 +2414,10 @@
   text-align: center;
   margin: 0 auto 50px;
   width: 280px;
+  z-index: 100;
   justify-items: center;
   transition: display 100s ease;
+  overflow: visible;
 }
 .hidden-box h3 {
   position: relative;
