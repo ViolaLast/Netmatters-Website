@@ -17,15 +17,28 @@ dots:true,
     slidesToScroll: 1
   });
 
-  $('.play').slick({
-    autoplay: true,
-    autoplaySpeed: 2000,
-    swipe: false,
-    infinite: true,
-    prevArrow: false,
-    nextArrow: false,
-    draggable: false,
-  });
+//==========================================================================Client Slide===============================================================//
+
+$('.play').slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  swipe: false,
+  infinite: true,
+  variableWidth: true,
+  prevArrow: false,
+  nextArrow: false,
+  draggable: false,
+});
+
+
+  
+
+
+
+
+
+
+
 //=============================================================================TickBox===============================================================================================//
 // click event listener
 document.querySelector('.tick').addEventListener('click', function () {

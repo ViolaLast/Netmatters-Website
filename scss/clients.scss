@@ -1,12 +1,15 @@
 
 //-----------------------------------------------------------------------------------SLIDING client-----------------------------------------------------------------------------------
-
+.item{
+  width: min-content
+}
 .sliding {
 	margin: auto;
 	position: relative;
 	width: 100%;
   max-height: 170px;
   overflow:hidden;
+
 	}
 
 	.sliding-track {
@@ -15,18 +18,18 @@
     padding-top: 50px;
     padding-bottom: 50px;
     margin: 0;
-		width:fit-content;
+    overflow: hidden;
 	}
+
 	
 	.logo-img{
     margin-right: 10px;
-		height: 100px;
+		height: 100%;
 		width: auto;
     display: flex;
-    // grid-template-columns: auto-fit;
     align-self: center;
     & img{
-      height:100%;
+      height:70px;
       width: auto;
       padding: 10px;
       margin-left:30px;
@@ -36,50 +39,48 @@
 //------------------------------------------------------------------hidden-sliding-client---------------------------------------------------------------------------------------------------------------------------/
 
 .tooltip-text {
-  // display: none;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
+  // visibility: hidden;
+  // opacity: 0;
   position: absolute;
   z-index: 5;
 width: 280px;
 justify-content: center;
-transition: visibility 0s, opacity 0.5s linear;
+// transition: opacity 100s ease-in-out;
 }
 
 .hover-img:hover .tooltip-text {
-  visibility: visible;
+  display: block;
+  // visibility: visible;
   opacity: 1;
   transition: display 10s ;
   // display:inline-flex;
   // flex-wrap: wrap;
   user-select: auto;
   justify-content: center;
-  transition: display 5s ease;
+  // transition: display 100s ease;
 }
 
 .top {
- bottom: 100px;
+ top: -200px;
  left: -100%;
  right: -100%;
 }
 
-// .top::before {
-//   top: 80%;
-//   left: 45%;
-// }
+.top::before {
+  top: 80%;
+  left: 45%;
+}
 
 .hover-img {
   position: relative;
   display: inline;
   text-align: center;
-  // &:hover .hidden-box::before {
-  //   display: inline-flex; // Adjust as needed
-  // }
 }
 
 .detailed-box{
-// display:none;
-visibility: hidden;
+ display:none;
+// visibility: hidden;
     bottom: 100%;
   text-align: center;
   z-index: 100;
@@ -87,6 +88,7 @@ visibility: hidden;
     position: absolute;
     top:1%;
     justify-content: center;
+transition: display 100s ease;
 }
 
 
@@ -99,7 +101,7 @@ visibility: hidden;
   margin: 0 auto 50px;
   width: 280px;
   justify-items: center;
-  transition: display 5s ease;
+  transition: display 100s ease;
 
   & h3{ 
     position: relative;

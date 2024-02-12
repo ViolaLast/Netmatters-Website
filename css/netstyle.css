@@ -2329,6 +2329,10 @@
   border-color: #ce4125;
 }
 
+.item {
+  width: min-content;
+}
+
 .sliding {
   margin: auto;
   position: relative;
@@ -2343,46 +2347,48 @@
   padding-top: 50px;
   padding-bottom: 50px;
   margin: 0;
-  width: fit-content;
+  overflow: hidden;
 }
 
 .logo-img {
   margin-right: 10px;
-  height: 100px;
+  height: 100%;
   width: auto;
   display: flex;
   align-self: center;
 }
 .logo-img img {
-  height: 100%;
+  height: 70px;
   width: auto;
   padding: 10px;
   margin-left: 30px;
 }
 
 .tooltip-text {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   position: absolute;
   z-index: 5;
   width: 280px;
   justify-content: center;
-  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .hover-img:hover .tooltip-text {
-  visibility: visible;
+  display: block;
   opacity: 1;
   transition: display 10s;
   user-select: auto;
   justify-content: center;
-  transition: display 5s ease;
 }
 
 .top {
-  bottom: 100px;
+  top: -200px;
   left: -100%;
   right: -100%;
+}
+
+.top::before {
+  top: 80%;
+  left: 45%;
 }
 
 .hover-img {
@@ -2392,7 +2398,7 @@
 }
 
 .detailed-box {
-  visibility: hidden;
+  display: none;
   bottom: 100%;
   text-align: center;
   z-index: 100;
@@ -2400,6 +2406,7 @@
   position: absolute;
   top: 1%;
   justify-content: center;
+  transition: display 100s ease;
 }
 
 .hidden-box {
@@ -2411,7 +2418,7 @@
   margin: 0 auto 50px;
   width: 280px;
   justify-items: center;
-  transition: display 5s ease;
+  transition: display 100s ease;
 }
 .hidden-box h3 {
   position: relative;
