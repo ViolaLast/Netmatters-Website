@@ -771,7 +771,7 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 300;
+  z-index: 3000;
 }
 .chat-container i {
   width: 65px;
@@ -2381,7 +2381,7 @@
 }
 
 .top {
-  bottom: 550px;
+  bottom: 450px;
   left: -100%;
   right: -100%;
   position: absolute;

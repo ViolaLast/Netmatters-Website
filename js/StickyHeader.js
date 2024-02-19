@@ -7,21 +7,19 @@ $(document).ready(function () {
     var lastScrollTop = 0;
 
     function updateDuplicateHeader() {
-        // Check if the cookie popup is visible
         var isCookiePopUpVisible = $cookiePopUp.is(':visible');
-        // Check if the side menu is active
         var isSideMenuActive = $sideBar.hasClass('active');
+        var scrollTop = $(window).scrollTop();
 
         if (!isCookiePopUpVisible) {
-            var scrollTop = $(window).scrollTop();
-
             if (scrollTop > lastScrollTop) {
                 // Scrolling down, hide the duplicate header
                 $duplicateHeader.css({
                     position: 'fixed',
                     top: '-100%',
                     transition: 'top 0.3s ease',
-                    'z-index': '50'
+                    'z-index': '50',
+                    'margin-right': '0'
                 });
 
                 // Move content to the right when side menu is closed
@@ -32,10 +30,11 @@ $(document).ready(function () {
             } else {
                 // Scrolling up, show the duplicate header
                 $duplicateHeader.css({
-                    position: isSideMenuActive || isCookiePopUpVisible ? 'relative' : 'fixed',
+                    position: isSideMenuActive ? 'relative' : 'fixed',
                     top: '0',
                     transition: 'top 0.3s ease',
-                    'z-index': '50'
+                    'z-index': '50',
+                    'margin-right': isSideMenuActive ? (window.innerWidth < 992 ? '260px' : '350px') : '0'
                 });
 
                 // Move content to the right when side menu is closed
@@ -47,16 +46,25 @@ $(document).ready(function () {
 
             lastScrollTop = scrollTop;
         } else {
-            // Hide the duplicate header when cookie pop-up is active
-            $duplicateHeader.hide();
+            // Hide the duplicate header when the cookie pop-up is active
+            $duplicateHeader.css({
+                position: 'fixed',
+                top: '-100%',
+                transition: 'top 0.3s ease',
+                'z-index': '50',
+                'margin-right': '0'
+            });
 
-            // Move content to the right when side menu is open
-            var sidebarWidth = isSideMenuActive ? 260 : 0; // Adjust based on your sidebar width
+            // Move content to the right when the side menu is open
+            var sidebarWidth = isSideMenuActive ? (window.innerWidth < 992 ? '260px' : '350px') : '0';
             $content.css({
-                'margin-left': sidebarWidth + 'px',
+                'margin-left': sidebarWidth,
                 transition: 'margin-left 0.3s ease'
             });
         }
+
+        // Set the display property based on visibility
+        $duplicateHeader.css('display', isCookiePopUpVisible ? 'none' : 'block');
     }
 
     // Function to show the duplicate header
@@ -87,6 +95,7 @@ function hideDuplicateHeader() {
         position: 'fixed',
         top: '-100%',
         transition: 'top 0.3s ease',
-        'z-index': '0'
+        'z-index': '0',
+        'margin-right': '0'
     });
 }
