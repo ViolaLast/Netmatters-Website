@@ -5,6 +5,7 @@
 
     display: block;
     box-sizing: border-box;
+    z-index: 2;
 
     -webkit-user-select: none;
        -moz-user-select: none;

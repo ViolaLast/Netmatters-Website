@@ -1151,7 +1151,7 @@
   visibility: hidden;
   position: absolute;
   top: 100%;
-  left: -350px;
+  left: 0;
   right: 0;
   min-width: 100vw !important;
   z-index: 10;
@@ -2393,7 +2393,7 @@
 }
 
 .top {
-  bottom: 70px;
+  bottom: 100%;
   left: -100%;
   right: -100%;
   position: absolute;
@@ -2444,7 +2444,7 @@
 
 .btn {
   margin-top: 11px;
-  font-size: 1 rem;
+  font-size: 16px;
   height: auto;
   padding: 5px 15px;
   text-transform: uppercase;
