@@ -46,16 +46,16 @@ $(document).ready(function () {
 
             lastScrollTop = scrollTop;
         } else {
-            // Hide the duplicate header when the cookie pop-up is active
+            // Hide the duplicate header when cookie pop-up is active
             $duplicateHeader.css({
                 position: 'fixed',
                 top: '-100%',
                 transition: 'top 0.3s ease',
-                'z-index': '50',
+                'z-index': '4000',
                 'margin-right': '0'
             });
 
-            // Move content to the right when the side menu is open
+            // Move content to the right when side menu is open
             var sidebarWidth = isSideMenuActive ? (window.innerWidth < 992 ? '260px' : '350px') : '0';
             $content.css({
                 'margin-left': sidebarWidth,
@@ -63,7 +63,7 @@ $(document).ready(function () {
             });
         }
 
-        // Set the display property based on visibility
+        // Set display property based on visibility
         $duplicateHeader.css('display', isCookiePopUpVisible ? 'none' : 'block');
     }
 

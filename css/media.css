@@ -9,6 +9,11 @@
     width: 320px !important;
   }
 }
+@media screen and (max-width: 480px) {
+  #slick-slide00 {
+    height: 581px !important;
+  }
+}
 @media screen and (min-width: 553px) {
   .why-choose-us, .our-culture {
     margin-bottom: 50px !important;
@@ -138,9 +143,9 @@
     display: inline !important;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .header-container {
-    height: 168px;
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  .hidden-b {
+    display: none !important;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {

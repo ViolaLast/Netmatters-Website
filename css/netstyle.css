@@ -17,6 +17,11 @@
     width: 320px !important;
   }
 }
+@media screen and (max-width: 480px) {
+  #slick-slide00 {
+    height: 581px !important;
+  }
+}
 @media screen and (min-width: 553px) {
   .why-choose-us, .our-culture {
     margin-bottom: 50px !important;
@@ -146,9 +151,9 @@
     display: inline !important;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .header-container {
-    height: 168px;
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  .hidden-b {
+    display: none !important;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -767,7 +772,7 @@
   border-top-right-radius: 10px;
   padding: 0 0 0 10px;
   cursor: pointer;
-  z-index: 100;
+  z-index: 5000;
   font-size: 0.8rem;
 }
 
@@ -775,7 +780,7 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 3000;
+  z-index: 5000;
 }
 .chat-container i {
   width: 65px;
@@ -1067,7 +1072,7 @@
   flex-direction: row;
   padding: 0 10%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .nav-container .nav-item {
   text-align: center;
@@ -1142,11 +1147,13 @@
 }
 
 .sub-nav-menu {
+  content: "";
   visibility: hidden;
   position: absolute;
   top: 100%;
-  left: 0;
-  min-width: 100% !important;
+  left: -350px;
+  right: 0;
+  min-width: 100vw !important;
   z-index: 10;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1628,12 +1635,12 @@
   position: relative;
   z-index: 1;
   perspective: 100px;
-  overflow-y: hidden;
+  min-height: 550px;
 }
 
 .text-overlay {
   align-self: center;
-  width: 80%;
+  width: 100%;
   color: #fff;
   text-align: center;
   display: flex;
@@ -1678,7 +1685,7 @@
   opacity: 0.5;
 }
 .carousel__slide img {
-  height: 100%;
+  height: 550px;
   object-fit: cover;
 }
 
@@ -2386,7 +2393,7 @@
 }
 
 .top {
-  bottom: 450px;
+  bottom: 70px;
   left: -100%;
   right: -100%;
   position: absolute;
@@ -2655,7 +2662,6 @@ body {
   height: 100%;
   font: inherit;
   position: relative;
-  overflow-x: hidden;
   background-color: white;
 }
 
@@ -2681,6 +2687,14 @@ input:focus {
 .hidden {
   display: none;
   visibility: hidden;
+}
+
+body, html, .content, .content-inner {
+  height: 100%;
+}
+
+.content-inner {
+  overflow: auto;
 }
 
 .h2 {
