@@ -138,9 +138,9 @@
     display: inline !important;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 992px) {
-  .hidden-b {
-    display: none !important;
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .header-container {
+    height: 168px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -200,6 +200,10 @@
   .text-overlay p {
     font-size: 1.625rem !important;
     line-height: 2.5rem !important;
+  }
+  .carousel__slide::before {
+    content: "";
+    background: linear-gradient(270deg, transparent 25%, #000) !important;
   }
   .ikon-nav-menu {
     display: inline-flex !important;

@@ -166,16 +166,13 @@ position: relative;
 //----------------------------------------------------------------------------------------------BETWEEN @MEDIA-------------------------------------------------------------------------------------/
                                       @media screen and (min-width:0px) and (max-width:992px) {
 
-  .hidden-b {
-    display:none!important
-  }
+
                                 }
                                       @media screen and (min-width:0px) and (max-width:768px) {
 
-  // .form-control {
-  //   display: none;
-  //   visibility: hidden;
-  // }
+.header-container{
+  height:168px
+}
                                       }
                                             @media screen and (min-width:768px) and (max-width:992px) {
 
@@ -257,8 +254,12 @@ position: relative;
     // .why-choose-us {
     //   margin-bottom: 17px !important;
     // }
-
-
+.carousel__slide {
+  &::before {
+    content: '';
+    background: linear-gradient(270deg, transparent 25%, #000) !important;
+  }
+}
   .ikon-nav-menu{
     display: inline-flex !important;
   }
