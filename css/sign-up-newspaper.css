@@ -1,9 +1,9 @@
 /* Error: Undefined mixin.
  *     ,
- * 107 |   @include header-btn;
+ * 106 |   @include header-btn;
  *     |   ^^^^^^^^^^^^^^^^^^^
  *     '
- *   scss\sign-up-newspaper.scss 107:3  root stylesheet */
+ *   scss\sign-up-newspaper.scss 106:3  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a     \2577 \a 107 \2502    @include header-btn;\d\a     \2502    ^^^^^^^^^^^^^^^^^^^\a     \2575 \a   scss\\sign-up-newspaper.scss 107:3  root stylesheet";
+  content: "Error: Undefined mixin.\a     \2577 \a 106 \2502    @include header-btn;\d\a     \2502    ^^^^^^^^^^^^^^^^^^^\a     \2575 \a   scss\\sign-up-newspaper.scss 106:3  root stylesheet";
 }

@@ -344,7 +344,8 @@ position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin:0 15px 0px -15px !important;
+      margin-left: -15px !important;
+      margin-right: -15px !important;
   }
   .form-input{
       width: 50%;
@@ -503,20 +504,30 @@ display: inline-block;
     .footer-container{
         padding-top: 47px !important;
     }
+.footer-inner{
+  flex-wrap: nowrap !important;
+}
     .media-menu{
         width: 400px;
+        h4{
+          margin-top: 24px !important;
+        }
     }
     .footer-links{
         display:flex;
         flex-direction: row !important; 
         flex-wrap: wrap;
         float:left;
-        width: auto;
+        width: 800px !important;
         margin-bottom: 40px !important;
         }
         .fl{
           width: 25%;
           padding: 0 15px;
           margin:0 !important;
+        }
+        h4{
+          width: 170px;
+          margin-top: 0 !important;
         }
                                                                                                     }
