@@ -113,8 +113,6 @@
   .m750 {
     width: 750px !important;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
   }
   .social-media-links {
     justify-content: space-between;
@@ -176,8 +174,6 @@
   .m970 {
     width: 970px !important;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
   }
   .buttons-hidden {
     display: inline;
@@ -1183,7 +1179,7 @@
   width: 100%;
   color: #fff;
   font-size: 2rem;
-  margin: 15px 0px 10px 30px;
+  margin: 15px 0px 10px 0px;
 }
 
 .item-text {
@@ -1202,7 +1198,6 @@
   float: left;
   color: #fff !important;
   width: auto;
-  margin-left: 30px;
   font-size: 1.2rem;
 }
 

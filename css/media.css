@@ -105,8 +105,6 @@
   .m750 {
     width: 750px !important;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
   }
   .social-media-links {
     justify-content: space-between;
@@ -168,8 +166,6 @@
   .m970 {
     width: 970px !important;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
   }
   .buttons-hidden {
     display: inline;

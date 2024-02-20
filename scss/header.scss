@@ -380,7 +380,7 @@ width: 134px;
   width: 100%;
   color: $color-primary;
   font-size: 2rem;
-  margin: 15px 0px 10px 30px;
+  margin: 15px 0px 10px 0px;
 }
 .item-text{
   color: $color-primary;
@@ -397,7 +397,7 @@ width: 134px;
  float: left;
   color: $color-primary !important;
   width: auto;
-  margin-left: 30px;
+  // margin-left: 30px;
   font-size: 1.2rem;
 }
 .sub-nav-menu{
