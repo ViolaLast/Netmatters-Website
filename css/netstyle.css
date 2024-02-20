@@ -17,11 +17,6 @@
     width: 320px !important;
   }
 }
-@media screen and (max-width: 480px) {
-  #slick-slide00 {
-    height: 581px !important;
-  }
-}
 @media screen and (min-width: 553px) {
   .why-choose-us, .our-culture {
     margin-bottom: 50px !important;
@@ -1720,7 +1715,7 @@
   position: relative;
   z-index: 1;
   perspective: 100px;
-  min-height: 550px;
+  height: 550px;
 }
 
 .text-overlay {
@@ -1757,6 +1752,7 @@
   display: flex;
   justify-content: center;
   z-index: 1;
+  height: 550px !important;
   overflow: hidden;
 }
 .carousel__slide::before {

@@ -3,7 +3,7 @@
   position: relative;
   z-index: 1;
   perspective: 100px;
-  min-height:550px;
+height:550px;
 }
 
 .text-overlay{
@@ -41,6 +41,7 @@ z-index: 2;
   display: flex;
   justify-content: center;
   z-index: 1;
+  height: 550px !important;
   overflow: hidden;
 
   &::before {
