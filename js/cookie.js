@@ -4,29 +4,12 @@ const cookiePopUp = $(".cookie-pop-up");
 const webPage = $("body");
 const btnManageConsent = $(".cookie-btn");
 
-btnAcceptCookies.click(() => {
-    hideCookiePopUp();
-    localStorage.setItem("cookieAccepted", "true");
-    enableScroll();
-    console.log("Cookie should be stored persistently");
-});
-
-btnChangeSettings.click(() => {
-    console.log("Change Settings clicked");
-});
-
-btnManageConsent.click(() => {
-    console.log("Manage Consent clicked");
-    showCookiePopUp();
-    disableScroll();
-});
-
 function hideCookiePopUp() {
     cookiePopUp.hide();
 }
 
 function showCookiePopUp() {
-    cookiePopUp.show();
+    cookiePopUp.css('display', 'flex');
 }
 
 function disableScroll() {
@@ -55,6 +38,25 @@ $(document).ready(cookieMessage);
 
 // Add the following event handler to make the cookie pop-up reappear when "Manage Consent" is clicked
 btnManageConsent.click(() => {
+    if (!localStorage.getItem("cookieAccepted")) {
+        showCookiePopUp();
+        disableScroll();
+    }
+});
+
+btnAcceptCookies.click(() => {
+    hideCookiePopUp();
+    localStorage.setItem("cookieAccepted", "true");
+    enableScroll();
+    console.log("Cookie should be stored persistently");
+});
+
+btnChangeSettings.click(() => {
+    console.log("Change Settings clicked");
+});
+
+btnManageConsent.click(() => {
+    console.log("Manage Consent clicked");
     showCookiePopUp();
     disableScroll();
 });

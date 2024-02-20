@@ -314,6 +314,7 @@ background-color: transparent;
 //--------------------------------------------------------------------------------------------------NAV-HIDDEN-MENU----------------------------------------------------------------------------/
 .ikon-nav-menu{
   display: none;
+  position:relative;
   background-color:#333645;
   margin: 0;
   width: 100vw;
@@ -326,7 +327,6 @@ width: 134px;
 }
 
 .nav-container{
-  position: relative;
   display:inline-flex;
   flex-wrap: nowrap;
   flex-direction:row;

@@ -33,4 +33,6 @@ function toggleSidebar() {
 
     // Adjust margin-right of the duplicate header when the sidebar is active
     duplicateHeader.css('margin-right', sidebar.hasClass('active') ? sidebarTotalWidth + 'px' : '0');
+
+    
 }

@@ -179,13 +179,13 @@ input:focus{
 body, html, .content, .content-inner{
   height: 100%;
 }
-// body, .content{
-  // overflow: hidden;
+// body,.content {
+//   overflow: hidden;
 //   z-index: 4000;
 // }
-.content-inner{
-  overflow: auto;
-}
+// .content-inner{
+//   overflow: auto;
+// }
 //-----------------------------------------------------------------------------------H1 - H6-------------------------------------------------------------------------------------------//
 .h2 {
   font-size: 2.5rem;
