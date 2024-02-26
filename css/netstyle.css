@@ -17,6 +17,14 @@
     width: 320px !important;
   }
 }
+@media screen and (max-width: 480px) {
+  #slick-slide00 {
+    height: 581px !important;
+  }
+  #slick-slide00 img {
+    height: 581px;
+  }
+}
 @media screen and (min-width: 553px) {
   .why-choose-us, .our-culture {
     margin-bottom: 50px !important;
@@ -1477,6 +1485,7 @@
   line-height: 1.875rem;
   margin: 0 0 25px;
   font-size: 16px;
+  color: #666666;
 }
 
 .cookie-footer {
@@ -2483,18 +2492,17 @@
 }
 
 .tooltip-text {
-  display: none;
+  opacity: 0;
   position: absolute;
   z-index: 500;
   width: 280px;
   justify-content: center;
   overflow: visible;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .hover-img:hover .tooltip-text {
-  display: block;
   opacity: 1;
-  transition: display 10s;
   user-select: auto;
   justify-content: center;
   overflow: visible;
@@ -2516,7 +2524,6 @@
 }
 
 .detailed-box {
-  display: none;
   bottom: 100%;
   text-align: center;
   z-index: 100;
@@ -2536,7 +2543,6 @@
   width: 280px;
   z-index: 100;
   justify-items: center;
-  transition: display 100s ease;
   overflow: visible;
 }
 .hidden-box h3 {
