@@ -2478,6 +2478,7 @@
 }
 
 .logo-img {
+  position: relative;
   margin-right: 10px;
   height: 100%;
   width: auto;
@@ -2493,6 +2494,7 @@
 
 .tooltip-text {
   opacity: 0;
+  display: none;
   position: absolute;
   z-index: 500;
   width: 280px;
@@ -2503,13 +2505,14 @@
 
 .hover-img:hover .tooltip-text {
   opacity: 1;
+  display: block;
   user-select: auto;
   justify-content: center;
   overflow: visible;
 }
 
 .top {
-  bottom: 100px;
+  bottom: 50px;
   left: -100%;
   right: -100%;
   position: absolute;
