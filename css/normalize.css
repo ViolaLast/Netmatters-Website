@@ -98,9 +98,7 @@ samp {
  * Add the correct font size in all browsers.
  */
 small {
-  display: block;
-  font-size: 0.625rem;
-  padding-bottom: 1px;
+  font-size: 80%;
 }
 
 /**

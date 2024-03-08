@@ -2752,6 +2752,13 @@ i {
   border-color: #191a22;
 }
 
+.pageHeader {
+  margin-bottom: 50px;
+  background-color: #333645;
+  padding: 24px 0;
+  color: #fff;
+}
+
 * {
   margin: 0;
   width: 100%;
