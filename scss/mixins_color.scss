@@ -111,3 +111,9 @@
       }
     }
     
+@mixin paragraph{
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color:   $color-dark-grey;
+}

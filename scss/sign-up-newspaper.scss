@@ -28,18 +28,20 @@ label{
     font-weight: 700;
     color: #333645;
     display: inline-block;
-    margin-top: 5px;
+    // margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-i{
-    color: #d24d57;
+i::after{
+  content: " *";
+color: #d24d57;
 }
 .input-news{
   display: flex;
   flex-wrap: wrap;
 }
 
-#newsletter-email, #newsletter-name {
+.newsletter{
   height: 47px;
   padding: 5px 15px;
   width: 100%;
@@ -48,7 +50,10 @@ i{
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
+.policy{
+  line-height: 32px;
+    cursor: pointer;
+}
 
 .left-check{
 width:52px;
@@ -105,8 +110,8 @@ width:52px;
 .submit{
   @include header-btn;
   height:auto;
-  background-color: #333645;
-  border: 1px solid #333645;
+  background-color: $color-dark-grey;
+  border: 1px solid $color-dark-grey;
   font-size: 1.063rem;
   &:hover {
     background-color: #22242e;
