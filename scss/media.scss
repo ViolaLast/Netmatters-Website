@@ -8,10 +8,11 @@
     text-align: center !important;
   }
 }
+
 @media screen and (min-width: 480px){
 
   .checkBoxContainer label::before{
-    margin-bottom: 8rem !important;
+    margin-bottom: 7rem !important;
   }
   .social-media-links{
     flex-wrap: nowrap !important;
@@ -37,13 +38,18 @@ width: 320px !important;
 .why-choose-us, .our-culture{
 margin-bottom: 50px!important;
 }
+.checkBoxContainer label::before{
+  margin-bottom: 5rem !important;
+}
 
 .welcome-selection {
     padding-bottom: 0px !important;
 }
                                                          }
                                                         @media screen and (min-width: 768px){
-
+  .checkBoxContainer label::before{
+    margin-bottom: 3rem !important;
+  }
 .cookie-footer{
   flex-wrap: nowrap !important;
 }                                                          
@@ -413,7 +419,9 @@ position: relative;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-
+}
+.officeAddress{
+  margin: 0 -15px;
 }
                                                               }
                                                                                 @media screen and (min-width:1260px) {

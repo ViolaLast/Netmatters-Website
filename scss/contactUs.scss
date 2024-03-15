@@ -82,18 +82,16 @@ text-decoration: underline;
 .box{
     border-radius: 20px 20px 0 0 ;
     overflow: hidden;
-    text-decoration: none;
     margin-top: 30px;
-    text-align: center;
-    position: relative;
-    top: 0;
-    transition: .5s ease;
 }
 
 .officeImage{
     width: 100%;
     height: auto;
     vertical-align: middle;
+    & a{
+        display: flex;
+    }
 }
 
 .btn, .btnWeb {
@@ -241,7 +239,7 @@ textarea{
     border: 3px solid #333645;
     text-align: center;
     cursor: pointer;
-    margin-bottom: 10rem;
+    margin-bottom: 11rem;
 
 
 }

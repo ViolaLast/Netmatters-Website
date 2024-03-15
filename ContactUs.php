@@ -26,7 +26,7 @@
                 </div>
             </div>
 <!--============================================================================== Offices -->
-            <div class="form-group">
+            <div class="">
                 <div class="officeList m750 m970 w1200 general">
                     <div class="officeAddress">
 

@@ -16,7 +16,7 @@
 }
 @media screen and (min-width: 480px) {
   .checkBoxContainer label::before {
-    margin-bottom: 8rem !important;
+    margin-bottom: 7rem !important;
   }
   .social-media-links {
     flex-wrap: nowrap !important;
@@ -40,11 +40,17 @@
   .why-choose-us, .our-culture {
     margin-bottom: 50px !important;
   }
+  .checkBoxContainer label::before {
+    margin-bottom: 5rem !important;
+  }
   .welcome-selection {
     padding-bottom: 0px !important;
   }
 }
 @media screen and (min-width: 768px) {
+  .checkBoxContainer label::before {
+    margin-bottom: 3rem !important;
+  }
   .cookie-footer {
     flex-wrap: nowrap !important;
   }
@@ -355,6 +361,9 @@
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .officeAddress {
+    margin: 0 -15px;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -2885,18 +2894,16 @@ i::after {
 .box {
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  text-decoration: none;
   margin-top: 30px;
-  text-align: center;
-  position: relative;
-  top: 0;
-  transition: 0.5s ease;
 }
 
 .officeImage {
   width: 100%;
   height: auto;
   vertical-align: middle;
+}
+.officeImage a {
+  display: flex;
 }
 
 .btn, .btnWeb {
@@ -3096,7 +3103,7 @@ textarea {
   border: 3px solid #333645;
   text-align: center;
   cursor: pointer;
-  margin-bottom: 10rem;
+  margin-bottom: 11rem;
 }
 
 .checkBoxContainer input[type=checkbox]:checked + label::before {
@@ -3175,7 +3182,7 @@ input {
   font: inherit;
 }
 
-input:focus {
+input:focus, textarea:focus {
   border-color: #5bc0de !important;
   outline: 0;
   filter: drop-shadow(0 0 0.75rem rgba(3, 250, 250, 0.2));
