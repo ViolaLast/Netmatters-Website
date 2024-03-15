@@ -1,4 +1,15 @@
+@media screen and (max-width: 375px) {
+  .action-block {
+    flex-direction: column-reverse;
+  }
+  .helperText {
+    text-align: center !important;
+  }
+}
 @media screen and (min-width: 480px) {
+  .checkBoxContainer label::before {
+    margin-bottom: 8rem !important;
+  }
   .social-media-links {
     flex-wrap: nowrap !important;
   }
@@ -142,6 +153,9 @@
   }
   .sm {
     display: inline !important;
+  }
+  .pageHeaderLar {
+    display: inherit !important;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 992px) {
@@ -314,6 +328,26 @@
     display: block !important;
     visibility: visible !important;
   }
+  .pageHeaderMid {
+    display: none !important;
+  }
+  .box {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+  }
+  .form-group {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+  .inputfield {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 @media screen and (min-width: 1260px) {
   .triangle {
@@ -454,6 +488,9 @@
   h4 {
     width: 170px;
     margin-top: 0 !important;
+  }
+  .innerForm {
+    width: 66% !important;
   }
 }
 

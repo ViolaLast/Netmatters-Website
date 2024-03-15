@@ -9,12 +9,24 @@
     <main class="middle">
         <div> 
             <div class="pageHeader">
-                <div class="general m750 m970 w1200 ">
-                    <h1>Our Offices</h1>
+
+                <div class="pageHeaderLar">
+                    <div class="headerInner m750 m970 w1200 general">
+                        <ul>
+                            <li class="link">
+                                <a href="/">Home</a>
+                            </li> 
+                            <li class="OurOffices">Our Offices
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pageHeaderMid">
+                    <h1 class="headerH1 m750 m970 w1200 general">Our Offices</h1>
                 </div>
             </div>
 <!--============================================================================== Offices -->
-            <div class="offices">
+            <div class="form-group">
                 <div class="officeList m750 m970 w1200 general">
                     <div class="officeAddress">
 
@@ -144,8 +156,8 @@
         </div>
     </div>
 <!--============================================================================== End of Great Yarmouth Office -->
-            <div>
-                <div class="contactBlock m750 m970 w1200 general" id="contactInfo">
+            <div class="m750 m970 w1200 general">
+                <div class="contactBlock" id="contactInfo">
                     <p class="email">
                         <strong>Email us on:</strong><br>
                     </p>
@@ -161,15 +173,15 @@
 
                 <div>
                     <div class="block" id="">
-                        <div class="general">
+                        <div class="">
                             <div class="out-of-hours">
                                 <div class="question out-of-hours">
                                     <p>
                                         <a href="#">
-                                            <p class="questionText">Out of Hours IT Support <em style="font-style: normal" class="fa fa-chevron-down rotate"></em></p>
+                                            <p class="dropDown">Out of Hours IT Support <em class="fa fa-chevron-down line"></em></p>
                                         </a>
                                     </p>
-                                        <div class="answerText hidden">
+                                        <div class="dropDownText hidden">
                                             <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                                             <p>
                                                 <strong>Monday - Friday 18:00 - 22:00
@@ -191,59 +203,55 @@
 <!--============================================================================== End of Contact Info -->
 <!--============================================================================== CONTACT FORM -->
 
-<form method="POST" action="" accept-charset="UTF-8" id="contactForm" class="m750 m970 w1200 general">
+<form method="POST" action="" accept-charset="UTF-8" id="contactForm" class="m750 m970 w1200 general formDB">
     
     <div class="innerForm">
+        <div class="form-group">
 
             <div class="inputBox">
-                <div class="inBox form-input">
+                <div class="inBox inputfield">
                     <label for="name" class="n-name required">Your Name<i></i></label>
                     <input class="form-middle newsletter" name="name" type="text" value="" id="name">
                 </div>
             </div>
 
                         <div class="inputBox">
-                    <div class="inBox form-input">
+                    <div class="inBox inputfield">
                         <label for="company" class="n-name">Company Name</label>
                         <input class="form-middle newsletter" name="company" type="text" value="" id="company">
                     </div>
                 </div>
             
             <div class="inputBox">
-                <div class="inBox form-input">
+                <div class="inBox inputfield">
                     <label for="email" class="n-email required">Your Email <i></i></label>
                     <input class="form-middle newsletter" name="email" type="email" value="" id="email">
                 </div>
             </div>
 
             <div class="inputBox">
-                <div class="inBox form-input">
+                <div class="inBox inputfield">
                     <label for="telephone" class="n-name required">Your Telephone Number <i></i></label>
                     <input class="form-middle newsletter" name="telephone" type="text" value="" id="telephone">
                 </div>
             </div>
 
-
-            <div class="inBox form-input">
+        </div>
+            <div class="inBox">
                 <label for="message" class="n-name required">Message<i></i></label>
                 <textarea class="form-middle" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
             </div>
 
 
-        <div class="inMediaBox">
-            <label class="formheckbox">
-                <span class="mediaBox">
-                    <span class="media-left checkbox-left">
-                        <span class="button">
-                            <span class="action-done"></span>
-                            <input name="marketing_preference" type="checkbox" value="1">
-                        </span>
-                    </span>
+        <div class="checkBoxContainer">
+            
+                            <input name="marketing_preference" type="checkbox" id="ch1" value="1">
+                            
+            <label for="ch1" class="formTobox">
                     <span class="policy">
                         Please tick this box if you wish to receive marketing information from us.
                         Please see our <a href="#/privacy-policy" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.
                     </span>
-                </span>
             </label>
         </div>
 
@@ -259,7 +267,7 @@
             </button>
 
             <small class="helperText">
-                <span class="text-danger">*</span> Fields Required
+                <span class="text-danger"><i></i></span> Fields Required
             </small>
         </div>
     </div>
