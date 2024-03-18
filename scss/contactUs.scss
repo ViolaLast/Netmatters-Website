@@ -215,6 +215,18 @@ textarea{
 .small{
     font-size: 85%;
 }
+.success-message{
+    @include message;
+    background-color: green;
+}
+.error-message{
+    @include message;
+    background-color: red; 
+}
+.error input{
+        border:1px solid red;
+    }
+
 
 //============================================================checkbox==========================================================================//
 .checkBoxContainer{

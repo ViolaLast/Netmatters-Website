@@ -7,5 +7,6 @@
         <script src="js/cookie.js" defer></script>
         <script src="js/StickyHeader.js" defer></script>
         <script src="js/sideMenu.js" defer></script>
+        <script src="clientSideValidation.js" defer></script>
 
     </html>

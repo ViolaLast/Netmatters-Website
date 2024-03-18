@@ -5,7 +5,6 @@
     <body>
 <!--==================================================================Header==============================================-->
     <?php include 'header.php';?>
-
     <main class="middle">
         <div> 
             <div class="pageHeader">
@@ -203,15 +202,36 @@
 <!--============================================================================== End of Contact Info -->
 <!--============================================================================== CONTACT FORM -->
 
-<form method="POST" action="" accept-charset="UTF-8" id="contactForm" class="m750 m970 w1200 general formDB">
+
+<?php include_once 'formhandler.inc.php';?> 
+
+<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="UTF-8" id="contactForm" 
+class="m750 m970 w1200 general formDB">
     
     <div class="innerForm">
+
+    <div class="messageArea">
+  <?php if (!empty($successMessage)): ?>
+    <div class="success-message"><?php echo $successMessage; ?></div>
+<?php endif; ?>
+
+<?php if (!empty($errorMessage)): ?>
+    <div class="error-message"><?php echo $errorMessage; ?></div>
+<?php endif; ?>
+                    <div>
         <div class="form-group">
 
+                    
+
             <div class="inputBox">
-                <div class="inBox inputfield">
-                    <label for="name" class="n-name required">Your Name<i></i></label>
-                    <input class="form-middle newsletter" name="name" type="text" value="" id="name">
+                <div class="inputBox <?php if (!empty($errors['name'])) echo 'error'; ?>">
+                    <div class="inBox inputfield">
+                        <label for="name" class="n-name required">Your Name<i></i></label>
+
+                        <input class="form-middle newsletter" name="name" type="text" 
+                            value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>" id="name">
+
+                    </div>
                 </div>
             </div>
 
@@ -223,29 +243,40 @@
                 </div>
             
             <div class="inputBox">
-                <div class="inBox inputfield">
-                    <label for="email" class="n-email required">Your Email <i></i></label>
-                    <input class="form-middle newsletter" name="email" type="email" value="" id="email">
+                <div class="inputBox <?php if (!empty($errors['email'])) echo 'error'; ?>">
+                    <div class="inBox inputfield">
+                        <label for="email" class="n-email required">Your Email <i></i></label>
+                        <input class="form-middle newsletter" name="email" type="email" 
+                            value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" id="email">
+
+                    </div>
                 </div>
             </div>
 
             <div class="inputBox">
-                <div class="inBox inputfield">
-                    <label for="telephone" class="n-name required">Your Telephone Number <i></i></label>
-                    <input class="form-middle newsletter" name="telephone" type="text" value="" id="telephone">
+                <div class="inputBox <?php if (!empty($errors['telephone'])) echo 'error'; ?>">
+                    <div class="inBox inputfield">
+                        <label for="telephone" class="n-name required">Your Telephone Number <i></i></label>
+                        <input class="form-middle newsletter" name="telephone" type="text" 
+                            value="<?php echo isset($_POST['telephone']) ? $_POST['telephone'] : ''; ?>" id="telephone">
+
+                    </div>
                 </div>
             </div>
 
         </div>
             <div class="inBox">
-                <label for="message" class="n-name required">Message<i></i></label>
-                <textarea class="form-middle" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
-            </div>
+                <div class="inputBox <?php if (!empty($errors['message'])) echo 'error'; ?>">
+                    <label for="message" class="n-name required">Message<i></i></label>
+                    <textarea class="form-middle" name="message" cols="50" rows="10"  id="message"><?php echo isset($_POST['message']) ? $_POST['message'] : ''; ?>Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                    
+                </div>
+                
 
 
         <div class="checkBoxContainer">
             
-                            <input name="marketing_preference" type="checkbox" id="ch1" value="1">
+                            <input name="preference" type="checkbox" id="ch1" value="1">
                             
             <label for="ch1" class="formTobox">
                     <span class="policy">
@@ -262,7 +293,7 @@
             <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
         <div class="action-block">
-            <button class="submit send">
+            <button type="submit" class="submit send">
                 Send Enquiry
             </button>
 
