@@ -30,11 +30,19 @@ $('.play').slick({
   draggable: false
 });
 
+//========================================================================DropDown==========================================================================================//
 
-  
-
-
-
+    $(document).ready(function() {
+        $(".dropDown").click(function(event) {
+            event.preventDefault(); // Prevent the default behavior of the anchor tag
+            var dropDownText = $(this).closest(".out-of-hours").find(".dropDownText");
+            if (dropDownText.is(":hidden")) {
+                dropDownText.slideDown();
+            } else {
+                dropDownText.slideUp();
+            }
+        });
+    });
 
 
 

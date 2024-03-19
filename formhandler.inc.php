@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"])) {
         $errors['email'] = "Email is required";
     } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = "Invalid email";
+        $errors['email'] = "Please enter a valid email address.";
     } elseif (!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $_POST["email"])) {
         $errors['email'] = "Invalid email format";
     }
@@ -36,11 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["telephone"]) || strlen($_POST["telephone"]) > 11) {
         $errors['telephone'] = "Telephone is required, max 11 characters";
     } elseif (!preg_match("/^(?:(?:\+?44\s?(?:(\d{1,5})|\d{1,5})|\d{4}|\d{5})\s?\d{3}\s?\d{3}\s?)$/", $_POST["telephone"])) {
-        $errors['telephone'] = "Invalid telephone format";
+        $errors['telephone'] = "The telephone format is incorrect.";
     }
 
     if (empty($_POST["message"])) {
         $errors['message'] = "Message is required";
+    } elseif (strlen($_POST["message"]) < 5) {
+        $errors['message'] = "Message must be at least 5 characters.";
     }
 
   // Proceed with database insertion if there are no validation errors
@@ -63,6 +65,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Bind parameters and execute the statement
         $stmt->execute([$name, $company, $email, $telephone, $message, $preference]);
 
+          // Clear form fields after successful submission
+          $_POST["name"] = "";
+          $_POST["company"] = "";
+          $_POST["email"] = "";
+          $_POST["telephone"] = "";
+          $_POST["message"] = "";
+
+            // Output JavaScript code to scroll to the contact form
+    echo '<script>window.location = "#contactForm";</script>';
+    
         // success message
         $successMessage = "Your message has been sent!";
 

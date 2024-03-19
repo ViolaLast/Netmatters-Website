@@ -56,6 +56,8 @@
                                 </div>
                             </div>
                             <div class="officeMap" id="LondonMap"> 
+                                <img src="https://netmatters.esmee-fulcher.netmatters-scs.co.uk/images/Offices/maps/london.png" alt="London Office"
+                class="officeMapImg london-office-img">
                             
                             </div>
                         </div>
@@ -63,7 +65,7 @@
                         <div class="box officeCambridge">
                             <div class="officeImage">
                                 <a href="#">
-                                    <img src="https://www.netmatters.co.uk/assets/images/offices/cambridge.jpg" alt="Cambridge office">
+                                    <img src="https://www.netmatters.co.uk/assets/images/offices/cambridge.jpg" alt="Cambridge Office Map">
                                 </a>
                             </div>
                             <div class="officeText">
@@ -88,14 +90,15 @@
 
                             </div>
                             <div class="officeMap" id="CambridgeMap"> 
-                            
+                            <img src="https://netmatters.esmee-fulcher.netmatters-scs.co.uk/images/Offices/maps/cambridge%20-%20Copy.png" alt="Cambridge Office"
+                class="officeMapImg ">
                             </div>
                         </div>
 <!--============================================================================== End of Cambridge Office -->
                         <div class="box officeWymondham">
                             <div class="officeImage">
                                 <a href="#">
-                                    <img src="https://www.netmatters.co.uk/assets/images/offices/wymondham.jpg" alt="Wymondham office">
+                                    <img src="https://www.netmatters.co.uk/assets/images/offices/wymondham.jpg" alt="Wymondham Office Map">
                                 </a>
                             </div>
                             <div class="officeText">
@@ -118,14 +121,15 @@
                                 </div>
                             </div>
                             <div class="officeMap" id="Wymondham"> 
-                            
+                            <img src="https://netmatters.esmee-fulcher.netmatters-scs.co.uk/images/Offices/maps/wymondham.png" alt="Wymondham Office"
+                class="officeMapImg">
                             </div>
                         </div>
 <!--============================================================================== End of Wymondham Office -->
                         <div class="box officeGreatYarmouth">
                             <div class="officeImage">
                                 <a href="#">
-                                    <img src="https://www.netmatters.co.uk/assets/images/offices/yarmouth-2.jpg" alt="Great Yarmouth office">
+                                    <img src="https://www.netmatters.co.uk/assets/images/offices/yarmouth-2.jpg" alt="Great Yarmouth office Map">
                                 </a>
                             </div>
                             <div class="officeText">
@@ -148,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="officeMap" id="GreatYarmouth"> 
-                            
+                            <img src="https://netmatters.esmee-fulcher.netmatters-scs.co.uk/images/Offices/maps/yarmouth.png" alt="Great Yarmouth Office Map" class="officeMapImg">
                             </div>
                         </div>
             </div>
@@ -176,12 +180,12 @@
                             <div class="out-of-hours">
                                 <div class="question out-of-hours">
                                     <p>
-                                        <a href="#">
+                                        <a href="#dropDown" id="dropDown">
                                             <p class="dropDown">Out of Hours IT Support <em class="fa fa-chevron-down line"></em></p>
                                         </a>
                                     </p>
-                                        <div class="dropDownText hidden">
-                                            <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                                        <div class="dropDownText" id="dropDownText">
+                                            <p class="p">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                                             <p>
                                                 <strong>Monday - Friday 18:00 - 22:00
                                                 </strong><br>
@@ -189,7 +193,7 @@
                                                 </strong><br>
                                                 <strong>Sunday 10:00 - 18:00</strong>
                                             </p>
-                                                <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp; 
+                                                <p class="p">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp; 
                                                     voicemail. A technician will contact you on the number provided within 45 minutes of your call.&nbsp;
                                                 </p>
                                         </div>
@@ -206,101 +210,97 @@
 <?php include_once 'formhandler.inc.php';?> 
 
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="UTF-8" id="contactForm" 
-class="m750 m970 w1200 general formDB">
+    class="m750 m970 w1200 general formDB" onsubmit="return Distance();">
     
     <div class="innerForm">
+<!--================================================================================= Error messages -->
+            <div class="messageArea">
+                        <?php if (!empty($successMessage)): ?>
+                        <div class="success-message"><?php echo $successMessage; ?></div>
+                    <?php endif; ?>
 
-    <div class="messageArea">
-  <?php if (!empty($successMessage)): ?>
-    <div class="success-message"><?php echo $successMessage; ?></div>
-<?php endif; ?>
-
-<?php if (!empty($errorMessage)): ?>
-    <div class="error-message"><?php echo $errorMessage; ?></div>
-<?php endif; ?>
-                    <div>
-        <div class="form-group">
-
+                    <?php if (!empty($errorMessage)): ?>
+                        <div class="error-message"><?php echo $errorMessage; ?></div>
+                    <?php endif; ?>
                     
+            </div>       
 
-            <div class="inputBox">
-                <div class="inputBox <?php if (!empty($errors['name'])) echo 'error'; ?>">
-                    <div class="inBox inputfield">
-                        <label for="name" class="n-name required">Your Name<i></i></label>
-
-                        <input class="form-middle newsletter" name="name" type="text" 
-                            value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>" id="name">
-
-                    </div>
-                </div>
-            </div>
+                <div class="form-group">
 
                         <div class="inputBox">
-                    <div class="inBox inputfield">
-                        <label for="company" class="n-name">Company Name</label>
-                        <input class="form-middle newsletter" name="company" type="text" value="" id="company">
-                    </div>
-                </div>
-            
-            <div class="inputBox">
-                <div class="inputBox <?php if (!empty($errors['email'])) echo 'error'; ?>">
-                    <div class="inBox inputfield">
-                        <label for="email" class="n-email required">Your Email <i></i></label>
-                        <input class="form-middle newsletter" name="email" type="email" 
-                            value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" id="email">
+                            <div class="inBox inputfield">
+                                <label for="name" class="n-name required">Your Name<i></i></label>
 
-                    </div>
-                </div>
-            </div>
+                                <input class="form-middle newsletter <?php if (!empty($errors['name'])) echo 'error'; ?>" name="name" type="text" 
+                                    value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>" id="name">
 
-            <div class="inputBox">
-                <div class="inputBox <?php if (!empty($errors['telephone'])) echo 'error'; ?>">
-                    <div class="inBox inputfield">
-                        <label for="telephone" class="n-name required">Your Telephone Number <i></i></label>
-                        <input class="form-middle newsletter" name="telephone" type="text" 
-                            value="<?php echo isset($_POST['telephone']) ? $_POST['telephone'] : ''; ?>" id="telephone">
+                            </div>
+                        </div>
 
-                    </div>
-                </div>
-            </div>
-
-        </div>
-            <div class="inBox">
-                <div class="inputBox <?php if (!empty($errors['message'])) echo 'error'; ?>">
-                    <label for="message" class="n-name required">Message<i></i></label>
-                    <textarea class="form-middle" name="message" cols="50" rows="10"  id="message"><?php echo isset($_POST['message']) ? $_POST['message'] : ''; ?>Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                                <div class="inputBox">
+                            <div class="inBox inputfield">
+                                <label for="company" class="n-name">Company Name</label>
+                                <input class="form-middle newsletter" name="company" type="text" value="" id="company">
+                            </div>
+                        </div>
                     
-                </div>
-                
+                    
+                        <div class="inputBox ">
+                            <div class="inBox inputfield">
+                                <label for="email" class="n-email required">Your Email <i></i></label>
+                                <input class="form-middle newsletter <?php if (!empty($errors['email'])) echo 'error'; ?>" name="email" type="email" 
+                                    value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" id="email">
 
+                            </div>
+                        </div>
+                    
 
-        <div class="checkBoxContainer">
-            
-                            <input name="preference" type="checkbox" id="ch1" value="1">
+                        <div class="inputBox ">
+                            <div class="inBox inputfield">
+                                <label for="telephone" class="n-name required">Your Telephone Number <i></i></label>
+                                <input class="form-middle newsletter <?php if (!empty($errors['telephone'])) echo 'error'; ?>" name="telephone" type="text" 
+                                    value="<?php echo isset($_POST['telephone']) ? $_POST['telephone'] : ''; ?>" id="telephone">
+
+                            </div>
+                        </div>
+
+                </div>        
+                    <div class="inBox">
+                        <div class="inputBox ">
+                            <label for="message" class="n-name required">Message<i></i></label>
+                            <textarea class="form-middle <?php if (!empty($errors['message'])) echo 'error'; ?>" name="message" cols="50" rows="10"  id="message"><?php echo isset($_POST['message']) ? $_POST['message'] : ''; ?>Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
                             
-            <label for="ch1" class="formTobox">
-                    <span class="policy">
-                        Please tick this box if you wish to receive marketing information from us.
-                        Please see our <a href="#/privacy-policy" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.
-                    </span>
-            </label>
-        </div>
+                        </div>
+                        
 
-        <div class="inBox form-label recaptcha-terms">
-            <span>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"><u>Privacy Policy</u></a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer"><u>Terms of Service</u></a> apply.</span>
-        </div>
+                <div class="checkBoxContainer">
+                    
+                                    <input name="preference" type="checkbox" id="ch1" value="1">
+                                    
+                    <label for="ch1" class="formTobox">
+                            <span class="policy">
+                                Please tick this box if you wish to receive marketing information from us.
+                                Please see our <a href="#/privacy-policy" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.
+                            </span>
+                    </label>
+                </div>
 
-            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                <div class="inBox form-label recaptcha-terms">
+                    <span>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"><u>Privacy Policy</u></a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer"><u>Terms of Service</u></a> apply.</span>
+                </div>
 
-        <div class="action-block">
-            <button type="submit" class="submit send">
-                Send Enquiry
-            </button>
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
-            <small class="helperText">
-                <span class="text-danger"><i></i></span> Fields Required
-            </small>
-        </div>
+                <div class="action-block">
+                    <button type="submit" onclick="validateForm()" class="submit send">
+                        Send Enquiry
+                    </button>
+
+                    <small class="helperText">
+                        <span class="text-danger"><i></i></span> Fields Required
+                    </small>
+                    </div>
+                </div>
     </div>
 </form>
 <!--============================================================================== CONTACT FORM END-->

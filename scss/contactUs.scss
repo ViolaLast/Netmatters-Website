@@ -128,6 +128,13 @@ border-color: $color-purple;
         @include paragraph;
 }
 }
+
+.p{
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+    font-weight: 400 !important;
+}
+
 // .email{
 //     line-height: 1.875rem;
 //     margin-bottom: 25px;
@@ -148,9 +155,19 @@ border-color: $color-purple;
         text-decoration: underline;
     }
 }
+.dropDownText{
+    display:none;
+}
+
 .line{
     display: inline !important;
 }
+.officeMapImg{
+    height: 250px;
+    object-fit: none;
+    border-radius: 0 0 20px 20px;
+}
+
 //=================================================================================ContactForm=============================================//
 #contactForm{
     padding-bottom: 50px;
@@ -221,11 +238,13 @@ textarea{
 }
 .error-message{
     @include message;
-    background-color: red; 
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
 }
-.error input{
-        border:1px solid red;
-    }
+.error{
+    border:1px solid #d64541;
+}
 
 
 //============================================================checkbox==========================================================================//
