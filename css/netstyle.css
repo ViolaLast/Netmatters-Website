@@ -506,8 +506,27 @@
     width: 170px;
     margin-top: 0 !important;
   }
-  .innerForm {
-    width: 66% !important;
+  .formDB {
+    width: 100% !important;
+  }
+  .inlineRow1200 {
+    display: grid;
+    grid-template-columns: 66.6% 33.3%;
+    flex-direction: revert;
+  }
+  #contactForm {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: -15px;
+  }
+  .emailSide {
+    grid-column-start: 2;
+    width: 100% !important;
+    margin-right: -15px;
+  }
+  .row15 {
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }
 @font-face {
@@ -2846,6 +2865,16 @@ i::after {
   padding: 24px 0;
 }
 
+.officeContainer {
+  margin-bottom: 40px;
+}
+
+.officeBlock {
+  border: 1px solid #ccc;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+
 .textHeader {
   color: #333645;
   font-weight: 400;
@@ -2866,7 +2895,6 @@ i::after {
   height: 100%;
   flex-direction: column;
   color: #333645;
-  border: 1px solid #ccc;
 }
 
 .address {
@@ -2892,8 +2920,6 @@ i::after {
 }
 
 .box {
-  border-radius: 20px 20px 0 0;
-  overflow: hidden;
   margin-top: 30px;
 }
 
@@ -2904,6 +2930,9 @@ i::after {
 }
 .officeImage a {
   display: flex;
+}
+.officeImage img {
+  border-radius: 20px 20px 0 0;
 }
 
 .btn, .btnWeb {
@@ -2996,10 +3025,11 @@ i::after {
   display: inline !important;
 }
 
-.officeMapImg {
+iframe {
   height: 250px;
   object-fit: none;
   border-radius: 0 0 20px 20px;
+  border: none;
 }
 
 #contactForm {

@@ -37,6 +37,15 @@
 .headerH1{
     padding: 24px 0;
 }
+
+.officeContainer{
+    margin-bottom: 40px;
+}
+.officeBlock{
+    border:1px solid #ccc;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
+}
 .textHeader{
 color: #333645;
 font-weight: 400;
@@ -56,7 +65,7 @@ text-decoration: underline;
     height: 100%;
     flex-direction: column;
     color: #333645;
-    border: 1px solid #ccc;
+    
 }
 .address{
     font-size: .8125rem;
@@ -80,8 +89,7 @@ text-decoration: underline;
 }
 }
 .box{
-    border-radius: 20px 20px 0 0 ;
-    overflow: hidden;
+    // overflow: hidden;
     margin-top: 30px;
 }
 
@@ -91,6 +99,9 @@ text-decoration: underline;
     vertical-align: middle;
     & a{
         display: flex;
+    }
+    & img{
+        border-radius: 20px 20px 0 0;
     }
 }
 
@@ -162,11 +173,13 @@ border-color: $color-purple;
 .line{
     display: inline !important;
 }
-.officeMapImg{
+iframe{
     height: 250px;
     object-fit: none;
     border-radius: 0 0 20px 20px;
+    border: none;
 }
+
 
 //=================================================================================ContactForm=============================================//
 #contactForm{
@@ -245,7 +258,6 @@ textarea{
 .error{
     border:1px solid #d64541;
 }
-
 
 //============================================================checkbox==========================================================================//
 .checkBoxContainer{
