@@ -2935,7 +2935,7 @@ i::after {
   border-radius: 20px 20px 0 0;
 }
 
-.btn, .btnWeb {
+.usBtn, .btnWeb {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -2966,15 +2966,15 @@ i::after {
   background-color: #926fb1;
   border-color: #926fb1;
 }
-.btn:hover, .btnWeb:hover {
+.usBtn:hover, .btnWeb:hover {
   background-color: #f0f0f0;
 }
-.btn:focus, .btnWeb:focus {
+.usBtn:focus, .btnWeb:focus {
   outline: none;
   border-color: #fff;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
-.btn:hover, .btnWeb:hover {
+.usBtn:hover, .btnWeb:hover {
   background-color: #79539a;
   border-color: #6c4a89;
 }

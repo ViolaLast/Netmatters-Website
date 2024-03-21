@@ -3,6 +3,7 @@
  <?php include 'head.php';?>
 
     <body>
+
 <!--==================================================================Header==============================================-->
     <?php include 'header.php';?>
     <main class="middle">
@@ -53,7 +54,7 @@
                                     </div>
                                 
                                     <div class="viewMore">
-                                        <a href="/london-office" class="btn btnWeb">View More</a>
+                                        <a href="/london-office" class="usBtn btnWeb">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +88,7 @@
                                     </div>
                                 
                                     <div class="viewMore">
-                                        <a href="#cambridge-office" class="btn btnWeb">View More</a>
+                                        <a href="#cambridge-office" class="usBtn btnWeb">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +121,7 @@
                                     </div>
                                 
                                     <div class="viewMore">
-                                        <a href="#wymondham-office" class="btn btnWeb">View More</a>
+                                        <a href="#wymondham-office" class="usBtn btnWeb">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +154,7 @@
                                     </div>
                                 
                                     <div class="viewMore">
-                                        <a href="#GreatYarmouth-office" class="btn btnWeb">View More</a>
+                                        <a href="#GreatYarmouth-office" class="usBtn btnWeb">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +215,12 @@
 <!--============================================================================== End of Contact Info -->
 <!--============================================================================== CONTACT FORM -->
 
-
+                                            <?php
+                                            require_once realpath(__DIR__ . "/vendor/autoload.php");
+                                            use Dotenv\Dotenv;
+                                            $dotenv = Dotenv::createImmutable(__DIR__);
+                                            $dotenv->load();
+                                            ?>
                                                                 <?php include_once 'formhandler.inc.php';?> 
 
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="UTF-8" id="contactForm" 
