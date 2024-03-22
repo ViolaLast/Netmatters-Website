@@ -26,8 +26,8 @@
                 </div>
             </div>
 <!--============================================================================== Offices -->
-            <div class="officeContainer">
-                <div class="officeList m750 m970 w1200 general">
+            <div class="officeContainer m750 m970 w1200 general">
+                <div class="officeList">
                     <div class="officeAddress">
 
                         <div class="box officeLondon">
@@ -60,7 +60,7 @@
                             </div>
                             <div class="officeMap" id="LondonMap"> 
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1588.7014621447013!2d-0.0045234001621918506!3d51.681550324871026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761fff09271cbd%3A0xbfed51d9cf061321!2sPixel%20Business%20Centre%2C%20Brooker%20Rd%2C%20Waltham%20Abbey%20EN9%201JH!5e0!3m2!1sen!2suk!4v1710945556200!5m2!1sen!2suk"
-                                 width="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                width="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
 <!--============================================================================== End of London Office -->
@@ -163,9 +163,11 @@
                                 width="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
+            
+                        </div>
+                </div>
             </div>
-        </div>
-    </div>
+    
 <!--============================================================================== End of Great Yarmouth Office -->
         <div class="inlineRow1200 m750 m970 w1200 general">
             <div class="emailSide ">
@@ -183,48 +185,43 @@
 
                 </div>
 
-                <div>
-                    <div class="block" id="">
-                        <div class="">
-                            <div class="out-of-hours">
-                                <div class="question out-of-hours">
-                                    <p>
-                                        <a href="#dropDown" id="dropDown">
-                                            <p class="dropDown">Out of Hours IT Support <em class="fa fa-chevron-down line"></em></p>
-                                        </a>
-                                    </p>
-                                        <div class="dropDownText" id="dropDownText">
-                                            <p class="p">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                        <div>
+                            <div class="block">
+                                <div class="">
+                                    <div class="out-of-hours">
+                                        <div class="question out-of-hours">
                                             <p>
-                                                <strong>Monday - Friday 18:00 - 22:00
-                                                </strong><br>
-                                                <strong>Saturday 08:00 - 16:00
-                                                </strong><br>
-                                                <strong>Sunday 10:00 - 18:00</strong>
+                                                <a href="#dropDown" id="dropDown">
+                                                    <p class="dropDown">Out of Hours IT Support<em class="fa fa-chevron-down line"></em></p>
+                                                </a>
                                             </p>
-                                                <p class="p">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp; 
-                                                    voicemail. A technician will contact you on the number provided within 45 minutes of your call.&nbsp;
-                                                </p>
+                                                <div class="dropDownText" id="dropDownText">
+                                                    <p class="p">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                                                    <p>
+                                                        <strong>Monday - Friday 18:00 - 22:00
+                                                        </strong><br>
+                                                        <strong>Saturday 08:00 - 16:00
+                                                        </strong><br>
+                                                        <strong>Sunday 10:00 - 18:00</strong>
+                                                    </p>
+                                                        <p class="p">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp; 
+                                                            voicemail. A technician will contact you on the number provided within 45 minutes of your call.&nbsp;
+                                                        </p>
+                                                </div>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
-            </div>
+            
+        
 <!--============================================================================== End of Contact Info -->
 <!--============================================================================== CONTACT FORM -->
-
-                                            <?php
-                                            require_once realpath(__DIR__ . "/vendor/autoload.php");
-                                            use Dotenv\Dotenv;
-                                            $dotenv = Dotenv::createImmutable(__DIR__);
-                                            $dotenv->load();
-                                            ?>
-                                                                <?php include_once 'formhandler.inc.php';?> 
+                                                                <?php include 'formhandler.inc.php';?> 
 
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="UTF-8" id="contactForm" 
-                class="m750 m970 w1200 general formDB row15" onsubmit="return Distance();">
+                class="formDB row15" onsubmit="return Distance();">
                 
                 <div class="innerForm">
 <!--================================================================================= Error messages -->
@@ -236,12 +233,14 @@
                                 <?php if (!empty($errorMessage)): ?>
                                     <div class="error-message"><?php echo $errorMessage; ?></div>
                                 <?php endif; ?>
-                                
+
+                                        <?php error_reporting(E_ALL);
+                                        ini_set('display_errors', 1);?>
                         </div>       
 
                             <div class="form-group">
 
-                                    <div class="inputBox">
+                                    <div class="inputBox b1">
                                         <div class="inBox inputfield">
                                             <label for="name" class="n-name required">Your Name<i></i></label>
 
@@ -259,7 +258,7 @@
                                     </div>
                                 
                                 
-                                    <div class="inputBox ">
+                                    <div class="inputBox b1">
                                         <div class="inBox inputfield">
                                             <label for="email" class="n-email required">Your Email <i></i></label>
                                             <input class="form-middle newsletter <?php if (!empty($errors['email'])) echo 'error'; ?>" name="email" type="email" 

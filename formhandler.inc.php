@@ -1,7 +1,6 @@
-<?php
-
+<?php 
 // Database connection logic
-require_once "createMysqlDB.php";
+include "createMysqlDB.php";
 
 // success and error messages
 $errorMessage = "";
@@ -10,11 +9,11 @@ $successMessage= "";
 // Array to store validation errors
 $errors = [];
 
-// Instantiate the Dbh class
-$dbh = new Dbh();
-
 // Establish the database connection
-$pdo = $dbh->connect();
+$conn = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
 //================================================================FORM VALIDATION=======================================================//
 
@@ -45,42 +44,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['message'] = "Message must be at least 5 characters.";
     }
 
-  // Proceed with database insertion if there are no validation errors
-  if (empty($errors)) {
+    // Proceed with database insertion if there are no validation errors
+    if (empty($errors)) {
+        // Extract form data
+        $name = $_POST["name"];
+        $company = $_POST["company"];
+        $email = $_POST["email"];
+        $telephone = $_POST["telephone"];
+        $message = $_POST["message"];
+        $preference = isset($_POST["preference"]) ? $_POST["preference"] : 0;
 
- // Proceed with database insertion if there are no validation errors
-    // Extract form data
-    $name = $_POST["name"];
-    $company = $_POST["company"];
-    $email = $_POST["email"];
-    $telephone = $_POST["telephone"];
-    $message = $_POST["message"];
-    $preference = isset($_POST["preference"]) ? $_POST["preference"] : 0;
-
-    // Insert form data into the database
-    try {
-       // Prepare SQL statement
-        $stmt = $pdo->prepare("INSERT INTO contactform (name, company, email, telephone, message, preference) VALUES (?, ?, ?, ?, ?, ?)");
-
-        // Bind parameters and execute the statement
-        $stmt->execute([$name, $company, $email, $telephone, $message, $preference]);
-
-          // Clear form fields after successful submission
-          $_POST["name"] = "";
-          $_POST["company"] = "";
-          $_POST["email"] = "";
-          $_POST["telephone"] = "";
-          $_POST["message"] = "";
+        // Insert form data into the database
+        $stmt = $conn->prepare("INSERT INTO contactform (name, company, email, telephone, message, preference) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssi", $name, $company, $email, $telephone, $message, $preference);
+        if ($stmt->execute()) {
+            // Clear form fields after successful submission
+            $_POST["name"] = "";
+            $_POST["company"] = "";
+            $_POST["email"] = "";
+            $_POST["telephone"] = "";
+            $_POST["message"] = "";
 
             // Output JavaScript code to scroll to the contact form
-    echo '<script>window.location = "#contactForm";</script>';
-    
-        // success message
-        $successMessage = "Your message has been sent!";
+            echo '<script>window.location = "#contactForm";</script>';
 
-    } catch (PDOException $e) {
-        // Handle database errors
-        echo $errorMessage = "Error saving data to the database: " . $e->getMessage();
+            // success message
+            $successMessage = "Your message has been sent!";
+        } else {
+            // Handle database errors
+            $errorMessage = "Error saving data to the database: " . $conn->error;
+            echo $errorMessage;
+        }
+        $stmt->close();
     }
 }
-}
+

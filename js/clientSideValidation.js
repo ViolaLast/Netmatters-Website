@@ -39,12 +39,12 @@ $(document).ready(function() {
                     return false; // Return false if validation fails
                 }
                 break;
-            case "message":
-                if (!input.val()) {
-                    input.addClass("error");
-                    return false; // Return false if validation fails
-                }
-                break;
+                case "message":
+                    if (!input.val() || input.val().length < 5) {
+                        input.addClass("error");
+                        return false; // Return false if validation fails
+                    }
+                    break;
         }
         return true; // Return true if validation passes
     }
@@ -75,6 +75,7 @@ $(document).ready(function() {
 });
 
 //============================================================ Redirect user back to the form section
+
 
 
 
