@@ -335,7 +335,17 @@
     visibility: visible !important;
   }
   .pageHeaderMid {
-    display: none !important;
+    background-color: transparent !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 28px;
+    color: #333645 !important;
+    padding-top: 50px;
+    padding-bottom: 0 !important;
+    margin-bottom: 0px !important;
+  }
+  .pageHeaderMid .headerH1 {
+    padding: 0 0 !important;
   }
   .box {
     width: 50%;
@@ -356,7 +366,6 @@
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
-    padding-right: 15px;
   }
   .officeAddress {
     margin: 0 -15px;
@@ -518,7 +527,10 @@
   .emailSide {
     grid-column-start: 2;
     width: 100% !important;
-    margin-right: -15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
   .row15 {
     margin-left: -15px;

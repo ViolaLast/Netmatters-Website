@@ -1,13 +1,14 @@
-<?php 
+<?php
+// Error reporting and display settings
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Database connection logic
 include "createMysqlDB.php";
 
-// success and error messages
+// Initialize error and success message variables
 $errorMessage = "";
-$successMessage= "";
-
-// Array to store validation errors
-$errors = [];
+$successMessage = "";
 
 // Establish the database connection
 $conn = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
@@ -21,34 +22,38 @@ if (!$conn) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate form fields
     if (empty($_POST["name"])) {
-        $errors['name'] = "First Name is required";
+        $errorMessage .= "<div class='error-message'>First Name is required</div>";
+    } elseif (strlen($_POST["name"]) > 60) {
+        $errorMessage .= "<div class='error-message'>Name is too long (maximum 60 characters allowed)</div>";
     }
 
     if (empty($_POST["email"])) {
-        $errors['email'] = "Email is required";
+        $errorMessage .= "<div class='error-message'>Email is required</div>";
     } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = "Please enter a valid email address.";
+        $errorMessage .= "<div class='error-message'>Please enter a valid email address.</div>";
     } elseif (!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $_POST["email"])) {
-        $errors['email'] = "Invalid email format";
+        $errorMessage .= "<div class='error-message'>Invalid email format</div>";
     }
 
     if (empty($_POST["telephone"]) || strlen($_POST["telephone"]) > 11) {
-        $errors['telephone'] = "Telephone is required, max 11 characters";
+        $errorMessage .= "<div class='error-message'>Telephone is required, max 11 characters</div>";
     } elseif (!preg_match("/^(?:(?:\+?44\s?(?:(\d{1,5})|\d{1,5})|\d{4}|\d{5})\s?\d{3}\s?\d{3}\s?)$/", $_POST["telephone"])) {
-        $errors['telephone'] = "The telephone format is incorrect.";
+        $errorMessage .= "<div class='error-message'>The telephone format is incorrect.</div>";
     }
 
     if (empty($_POST["message"])) {
-        $errors['message'] = "Message is required";
+        $errorMessage .= "<div class='error-message'>Message is required</div>";
     } elseif (strlen($_POST["message"]) < 5) {
-        $errors['message'] = "Message must be at least 5 characters.";
+        $errorMessage .= "<div class='error-message'>Message must be at least 5 characters.</div>";
+    } elseif (strlen($_POST["message"]) > 255) {
+        $errorMessage .= "<div class='error-message'>Message is too long, must be less than 255 characters.</div>";
     }
 
     // Proceed with database insertion if there are no validation errors
-    if (empty($errors)) {
+    if (empty($errorMessage)) {
         // Extract form data
         $name = $_POST["name"];
-        $company = $_POST["company"];
+        $company = $_POST["company"] ?? "";
         $email = $_POST["email"];
         $telephone = $_POST["telephone"];
         $message = $_POST["message"];
@@ -69,13 +74,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo '<script>window.location = "#contactForm";</script>';
 
             // success message
-            $successMessage = "Your message has been sent!";
+            $successMessage = "<div class='success-message'>Your message has been sent!</div>";
         } else {
             // Handle database errors
-            $errorMessage = "Error saving data to the database: " . $conn->error;
-            echo $errorMessage;
+            $errorMessage .= "<div class='error-message'>Error saving data to the database: " . $conn->error . "</div>";
         }
         $stmt->close();
     }
 }
-

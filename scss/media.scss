@@ -400,8 +400,20 @@ position: relative;
   visibility: visible !important;
 }
 .pageHeaderMid{
-  display: none !important;
+  // display: none !important;
+  background-color: transparent !important;
+  font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 28px;
+    color: #333645 !important;
+    padding-top: 50px;
+    padding-bottom: 0 !important;
+    margin-bottom: 0px !important;
+    & .headerH1{
+        padding: 0 0 !important;
+    }
 }
+
 .box{
   width: 50%;
   float: left;
@@ -414,6 +426,7 @@ position: relative;
   margin-right: 0px !important;
   margin-left: 0px !important;
 }
+
 .b1{
   margin-left: -15px !important;
     margin-right: -15px !important;
@@ -422,7 +435,6 @@ position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
-  padding-right: 15px;
 }
 .officeAddress{
   margin: 0 -15px;
@@ -595,7 +607,10 @@ display: inline-block;
         .emailSide{
           grid-column-start: 2;
           width: 100% !important;
-          margin-right: -15px;
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 15px !important;
+          padding-right: 15px !important;
           }
           .out-of-hours{
           

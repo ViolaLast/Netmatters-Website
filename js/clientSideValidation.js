@@ -1,17 +1,7 @@
-
-
 $(document).ready(function() {
     // Bind input event listeners to perform validation as the user types
     $("#name, #email, #telephone, #message").on("input", function() {
         validateInput($(this));
-    });
-
-    // Prevent form submission from jumping to the top of the page
-    $("#contactForm").on("submit", function(event) {
-        // Perform validation before submitting the form
-        if (!validateForm()) {
-            event.preventDefault(); // Prevent default form submission if validation fails
-        }
     });
 
     // Validate input field
@@ -39,26 +29,20 @@ $(document).ready(function() {
                     return false; // Return false if validation fails
                 }
                 break;
-                case "message":
-                    if (!input.val() || input.val().length < 5) {
-                        input.addClass("error");
-                        return false; // Return false if validation fails
-                    }
-                    break;
+            case "message":
+                if (!input.val()) {
+                    input.addClass("error");
+                    return false; // Return false if validation fails
+                } else if (input.val().length < 5) {
+                    input.addClass("error");
+                    return false; // Return false if message is too short
+                } else if (input.val().length > 255) {
+                    input.addClass("error");
+                    return false; // Return false if message is too long
+                }
+                break;
         }
         return true; // Return true if validation passes
-    }
-
-    // Validate entire form
-    function validateForm() {
-        var isValid = true;
-        // Validate each input field
-        $("#name, #email, #telephone, #message").each(function() {
-            if (!validateInput($(this))) {
-                isValid = false;
-            }
-        });
-        return isValid; // Return true if all fields pass validation
     }
 
     // Function to validate email format
@@ -73,9 +57,3 @@ $(document).ready(function() {
         return telephoneRegex.test(telephone);
     }
 });
-
-//============================================================ Redirect user back to the form section
-
-
-
-

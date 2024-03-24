@@ -255,12 +255,9 @@ textarea{
     color: #a94442;
 }
 .error{
-    border:1px solid #d64541;
+    border:1px solid #d64541 !important;
 }
-.form-group{
-    margin-left: -15px ;
-    margin-right: -15px;
-}
+
 //============================================================checkbox==========================================================================//
 .checkBoxContainer{
     margin-bottom: 30px;

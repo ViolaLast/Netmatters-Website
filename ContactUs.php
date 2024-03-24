@@ -27,7 +27,7 @@
             </div>
 <!--============================================================================== Offices -->
             <div class="officeContainer m750 m970 w1200 general">
-                <div class="officeList">
+                <div class="officeList row15">
                     <div class="officeAddress">
 
                         <div class="box officeLondon">
@@ -221,22 +221,19 @@
                                                                 <?php include 'formhandler.inc.php';?> 
 
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="UTF-8" id="contactForm" 
-                class="formDB row15" onsubmit="return Distance();">
+                class="formDB row15">
                 
                 <div class="innerForm">
 <!--================================================================================= Error messages -->
-                        <div class="messageArea">
-                                    <?php if (!empty($successMessage)): ?>
-                                    <div class="success-message"><?php echo $successMessage; ?></div>
-                                <?php endif; ?>
-
-                                <?php if (!empty($errorMessage)): ?>
-                                    <div class="error-message"><?php echo $errorMessage; ?></div>
-                                <?php endif; ?>
-
-                                        <?php error_reporting(E_ALL);
-                                        ini_set('display_errors', 1);?>
-                        </div>       
+                                            <div class="messageArea">
+                                                <?php
+                                                // Display error message
+                                                echo $errorMessage;
+                                            
+                                                // Display success message
+                                                echo $successMessage;
+                                                ?>
+                                            </div> 
 
                             <div class="form-group">
 
@@ -244,7 +241,7 @@
                                         <div class="inBox inputfield">
                                             <label for="name" class="n-name required">Your Name<i></i></label>
 
-                                            <input class="form-middle newsletter <?php if (!empty($errors['name'])) echo 'error'; ?>" name="name" type="text" 
+                                            <input class="form-middle newsletter" name="name" type="text" 
                                                 value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>" id="name">
 
                                         </div>
@@ -261,7 +258,7 @@
                                     <div class="inputBox b1">
                                         <div class="inBox inputfield">
                                             <label for="email" class="n-email required">Your Email <i></i></label>
-                                            <input class="form-middle newsletter <?php if (!empty($errors['email'])) echo 'error'; ?>" name="email" type="email" 
+                                            <input class="form-middle newsletter" name="email" type="email" 
                                                 value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" id="email">
 
                                         </div>
@@ -271,19 +268,20 @@
                                     <div class="inputBox ">
                                         <div class="inBox inputfield">
                                             <label for="telephone" class="n-name required">Your Telephone Number <i></i></label>
-                                            <input class="form-middle newsletter <?php if (!empty($errors['telephone'])) echo 'error'; ?>" name="telephone" type="text" 
+                                            <input class="form-middle newsletter" name="telephone" type="text" 
                                                 value="<?php echo isset($_POST['telephone']) ? $_POST['telephone'] : ''; ?>" id="telephone">
 
                                         </div>
                                     </div>
 
-                            </div>        
+                            </div>   
+
                                 <div class="inBox">
-                                    <div class="inputBox ">
+                                    <div class="inputBox">
                                         <label for="message" class="n-name required">Message<i></i></label>
-                                        <textarea class="form-middle <?php if (!empty($errors['message'])) echo 'error'; ?>" name="message" cols="50" rows="10"  id="message"><?php echo isset($_POST['message']) ? $_POST['message'] : ''; ?>Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
-                                        
+                                            <textarea class="form-middle" name="message" cols="50" rows="10"  id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?<?php echo isset($_POST['message']) ? $_POST['message'] : ''; ?></textarea>
                                     </div>
+                                </div>
                                     
 
                             <div class="checkBoxContainer">
